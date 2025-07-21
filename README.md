@@ -10,13 +10,13 @@ This source code is published in accordance with the AGPLv3 requirements.
 - Sensitive and unrelated configurations (e.g., API keys, API endpoints, partner info, credentials) have been removed
 
 ## How to Build (Android Studio)
-1. Make sure you have **Android Studio Ladybug Feature Drop | 2024.2.2 Patch 2** installed  
-2. Install **Oracle JDK version 17**
+1. Install **Oracle JDK version 17**
+2. Make sure you have **Android Studio Ladybug Feature Drop | 2024.2.2 Patch 2** installed  
 3. Open Android Studio
 4. Go to **File → New → Project from Version Control**
 5. Clone the repository using the URL:
    ```
-   https://github.com/tlt-itinfra-developer/TLT_Simply_Android_Play_Store
+   https://github.com/tlt-itinfra-developer/TLT_Simply_Android_Play_Store.git
    ```
 6. Wait until the sync and index process completes
 7. Click **Run Project** (green ▶️ button) or press `Shift+F10`
