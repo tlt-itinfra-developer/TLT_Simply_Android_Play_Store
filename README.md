@@ -1,6 +1,6 @@
-# MyApp "TLT Simply" v1.0.0 (AGPLv3 Compliance Release - Android Version)
+# MyApp "TLT Simply" v 5.0 (AGPLv3 Compliance Release - Android Version)
 
-This is the open-source release of MyApp version 1.0.0 (Android), which used the iText PDF library under the AGPLv3 license.  
+This is the open-source release of MyApp version 5.0 (Android), which used the iText PDF library under the AGPLv3 license.  
 This source code is published in accordance with the AGPLv3 requirements.
 
 ## What's Included
