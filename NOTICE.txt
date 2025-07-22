@@ -1,0 +1,83 @@
+NOTICE
+
+This project includes various third-party open-source libraries. Where applicable, each library is subject to its own licensing terms. This file provides attribution and license notice for these libraries, including the iText library licensed under AGPLv3.
+
+---
+
+iText PDF Library
+Library: com.itextpdf:itextg:5.5.10
+License: GNU Affero General Public License v3 (AGPLv3)
+Copyright (c) iText Software / Apryse
+https://itextpdf.com
+
+This software is used under the terms of AGPLv3. The source code of this application, including the parts that use iText, has been made available publicly to comply with AGPLv3.
+
+Full license text: https://www.gnu.org/licenses/agpl-3.0.txt
+
+---
+
+The following libraries are used under their respective open-source licenses (Apache 2.0, MIT, BSD, or others). Refer to each library's own license for details:
+
+com.android.support:appcompat-v7:28.0.0
+com.android.support:recyclerview-v7:28.0.0
+com.android.support:design:28.0.0
+com.android.support:support-v4:28.0.0
+com.android.support:exifinterface:28.0.0
+androidx.core:core-ktx:1.2.0
+androidx.appcompat:appcompat:1.1.0
+androidx.exifinterface:exifinterface:1.0.0
+androidx.recyclerview:recyclerview:1.0.0
+androidx.lifecycle:lifecycle-compiler:2.0.0
+androidx.constraintlayout:constraintlayout:1.1.3
+androidx.lifecycle:lifecycle-extensions:2.0.0
+androidx.multidex:multidex:2.0.0
+androidx.browser:browser:1.0.0
+androidx.work:work-runtime-ktx:2.7.1
+com.google.code.gson:gson:2.8.2
+com.google.android.gms:play-services-auth:16.0.0
+com.google.android.gms:play-services-base:17.0.0
+com.google.firebase:firebase-auth-ktx:19.4.0
+com.google.android.gms:play-services-maps:17.0.0
+com.google.android.gms:play-services-location:17.0.0
+com.google.android.gms:play-services-places:17.0.0
+com.google.android.gms:play-services-vision:15.0.1
+com.google.firebase:firebase-messaging-ktx:20.3.0
+com.google.firebase:firebase-core:17.3.0
+com.google.firebase:firebase-analytics:16.0.3
+com.google.firebase:firebase-crashlytics-ktx:17.2.2
+com.google.firebase:firebase-crashlytics-ndk:17.2.2
+com.google.firebase:firebase-dynamic-links:19.0.0
+com.google.firebase:firebase-perf:16.0.0
+org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.1
+org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1
+com.squareup.retrofit2:retrofit:2.3.0
+com.squareup.retrofit2:converter-scalars:2.3.0
+com.squareup.retrofit2:converter-gson:2.3.0
+com.squareup.okhttp3:logging-interceptor:3.10.0
+com.github.bumptech.glide:glide:4.6.1
+de.hdodenhof:circleimageview:2.2.0
+com.github.lsjwzh:recyclerviewpager:v1.1.2
+com.github.ajalt.reprint:core:3.2.1@aar
+com.github.ajalt.reprint:reprint_spass:3.3.2@aar
+com.aurelhubert:ahbottomnavigation:2.1.0
+org.greenrobot:eventbus:3.1.1
+com.karumi:dexter:5.0.0
+com.github.nisrulz:sensey
+com.airbnb.android:lottie:2.5.4
+org.apache.commons:commons-compress:1.17
+com.jakewharton.threetenabp:threetenabp:1.1.1
+com.google.maps.android:android-maps-utils:0.5+
+com.github.delight-im:Android-AdvancedWebView:v3.0.0
+com.googlecode.libphonenumber:libphonenumber:8.10.3
+com.scottyab:rootbeer-lib:0.0.7
+com.jaredrummler:android-device-names:1.1.8
+line-sdk-4.0.8
+com.facebook.android:facebook-core:5.13.0
+com.facebook.android:facebook-applinks:5.13.0
+com.facebook.android:facebook-login:5.13.0
+com.facebook.android:facebook-share:5.13.0
+com.journeyapps:zxing-android-embedded:3.6.0
+io.jsonwebtoken:jjwt-impl:0.10.5
+io.jsonwebtoken:jjwt-orgjson:0.10.5
+com.madgag.spongycastle:prov:1.58.0.0
+com.github.smart-fun:XmlToJson:1.4.4
