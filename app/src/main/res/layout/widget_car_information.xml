@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <tlt.th.co.toyotaleasing.view.LazyImageView
+        android:id="@+id/car_iv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:imageResource="@drawable/ic_carshieldmain"
+        tools:srcCompat="@drawable/ic_carshieldmain" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/car_information_no_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/rsu_bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_extra_large_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/car_iv"
+        tools:text="กต 1528 - กรุงเทพมหานคร" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/car_information_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rsu_bold"
+        android:gravity="center"
+        android:textColor="@color/text_normal_lighter"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/car_information_no_tv"
+        tools:text="นายอนุพัล รักจริง" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/car_information_contract_number_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rsu_bold"
+        android:gravity="center"
+        android:textColor="@color/text_normal_lighter"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/car_information_name_tv"
+        tools:text="เลขที่สัญญา : AHP2137891273" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/car_information_date_no_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rsu_regular"
+        android:gravity="center"
+        android:textColor="@color/text_normal_lighter"
+        android:textSize="@dimen/text_small_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/car_information_contract_number_tv"
+        tools:text="11 ม.ค. 2561" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

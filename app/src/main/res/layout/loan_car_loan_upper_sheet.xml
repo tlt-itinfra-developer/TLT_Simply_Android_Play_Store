@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:text="http://schemas.android.com/tools"
+    android:id="@+id/map_bottom_sheet_onhand_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="200dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/map_bottom_sheet_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:srcCompat="@drawable/bg_metal" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/lay_ref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="right"
+                android:background="@drawable/bg_header_ref"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/h_ref"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_ref"
+                    android:layout_marginEnd="@dimen/margin_12"
+                    android:textColor="@color/grey_4"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/txt_ref_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/grey_4"
+                    android:textStyle="bold"
+                    app:text="@string/txt_ref_value" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/stpEconsent"
+                app:layout_constraintEnd_toEndOf="@+id/stpEconsent"
+                app:layout_constraintStart_toStartOf="@+id/stpUploadIMG"
+                app:layout_constraintTop_toTopOf="@+id/stpEconsent" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:fontFamily="@font/custom_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lay_ref" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/stpPerInfo"
+                android:layout_width="75dp"
+                android:layout_height="70dp"
+                android:background="@drawable/step_personal"
+                android:layout_marginTop="@dimen/margin_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lay_ref" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/stpUploadIMG"
+                android:layout_width="75dp"
+                android:layout_height="70dp"
+                android:background="@drawable/step_upload"
+                app:layout_constraintEnd_toStartOf="@+id/stpPerInfo"
+                app:layout_constraintTop_toTopOf="@+id/stpPerInfo" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/stpEconsent"
+                android:layout_width="75dp"
+                android:layout_height="70dp"
+                android:background="@drawable/step_econsent"
+                app:layout_constraintStart_toEndOf="@+id/stpPerInfo"
+                app:layout_constraintTop_toTopOf="@+id/stpPerInfo" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/step1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/custom_regular"
+                android:gravity="center"
+                android:text="@string/step_upload_document"
+                android:textColor="@color/unactive"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/stpUploadIMG"
+                app:layout_constraintStart_toStartOf="@+id/stpUploadIMG"
+                app:layout_constraintTop_toBottomOf="@+id/stpUploadIMG" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/step2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/custom_regular"
+                android:gravity="top|center"
+                android:text="@string/step_personal_information"
+                android:textColor="@color/unactive"
+                app:layout_constraintEnd_toEndOf="@+id/stpPerInfo"
+                app:layout_constraintStart_toStartOf="@+id/stpPerInfo"
+                app:layout_constraintTop_toTopOf="@+id/step1" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/step3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/custom_regular"
+                android:text="@string/step_e_consent"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/unactive"
+                app:layout_constraintEnd_toEndOf="@+id/stpEconsent"
+                app:layout_constraintStart_toStartOf="@+id/stpEconsent"
+                app:layout_constraintTop_toBottomOf="@+id/stpEconsent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/header_customer_information"
+        app:toolbarSize="normal"/>
+
+
+    <!--    HEADER      -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/layout_normal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <include
+            android:id="@+id/map_online_require_upper_sheet"
+            layout="@layout/loan_require_upper_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/step_03"
+        android:visibility="gone"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_normal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:text="@string/txt_fill_header"
+        android:textColor="@color/text_normal"
+        android:textSize="@dimen/text_extra_large_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_step" />
+
+    <!--   END  HEADER      -->
+
+    <androidx.cardview.widget.CardView
+        style="@style/MyCardView"
+        android:id="@+id/mycardview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toTopOf="@+id/space_bottom">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                style="@style/MyCardView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="32dp">
+
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/dok_sex"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="*"
+                                        android:textColor="@color/remark"
+                                        android:textSize="@dimen/text_large_size"
+                                        app:layout_constraintBottom_toBottomOf="@+id/title_sex"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/title_sex" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/title_sex"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/custom_regular"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/hint_sex"
+                                        android:textColor="@color/text_hint"
+                                        android:textSize="@dimen/form_text_size"
+                                        app:layout_constraintStart_toEndOf="@+id/dok_sex"
+                                        app:layout_constraintTop_toTopOf="@+id/spinner_sex" />
+
+                                    <RadioGroup
+                                        android:id="@+id/spinner_sex"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_normal"
+                                        android:orientation="horizontal"
+                                        android:layout_marginStart="@dimen/margin_12"
+                                        app:layout_constraintStart_toEndOf="@+id/title_sex"
+                                        app:layout_constraintTop_toBottomOf="@+id/text_surname">
+
+                                        <androidx.appcompat.widget.AppCompatRadioButton
+                                            android:id="@+id/radio_female"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:enabled="false"
+                                            android:fontFamily="@font/custom_regular"
+                                            android:gravity="top"
+                                            android:text="@string/txt_female"
+                                            android:textColor="@color/text_hint"
+                                            android:textSize="@dimen/text_button_size"
+                                            app:buttonTint="@color/grey_dark1" />
+
+                                        <androidx.appcompat.widget.AppCompatRadioButton
+                                            android:id="@+id/radio_male"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:enabled="false"
+                                            android:fontFamily="@font/custom_regular"
+                                            android:gravity="top"
+                                            android:text="@string/txt_male"
+                                            android:layout_marginStart="@dimen/margin_12"
+                                            android:textColor="@color/text_hint"
+                                            android:textSize="@dimen/text_button_size"
+                                            app:buttonTint="@color/grey_dark1" />
+                                    </RadioGroup>
+
+                                    <Space
+                                        android:layout_width="0dp"
+                                        android:layout_height="16dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/btn_confirm" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/dok_id"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="*"
+                                        android:textColor="@color/remark"
+                                        android:textSize="@dimen/text_large_size"
+                                        app:layout_constraintBottom_toBottomOf="@+id/text_id_card"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/text_id_card" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/text_id_card"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/margin_normal"
+                                        android:textColor="@color/text_normal"
+                                        android:textColorHint="@color/text_hint"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <tlt.th.co.toyotaleasing.view.OwaspEditText
+                                            android:id="@+id/edittext_id_card"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:maxLength="13"
+                                            android:fontFamily="@font/custom_regular"
+                                            android:hint="@string/insert_id_card_13hint"
+                                            android:inputType="number|textNoSuggestions"
+                                            android:textColor="@color/text_normal"
+                                            android:textColorHint="@color/text_hint"
+                                            android:textSize="@dimen/form_text_size"
+                                            android:layout_marginStart="@dimen/margin_small"/>
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/dok_laser"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="*"
+                                        android:textColor="@color/remark"
+                                        android:textSize="@dimen/text_large_size"
+                                        app:layout_constraintBottom_toTopOf="@+id/text_name"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/text_laser_code1" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/text_laser_code1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:nextFocusForward="@+id/edittext_laser_code2"
+                                        android:textColor="@color/text_normal"
+                                        android:textColorHint="@color/text_hint"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/text_id_card">
+
+                                        <tlt.th.co.toyotaleasing.view.OwaspEditText
+                                            android:id="@+id/edittext_laser_code1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/margin_small"
+                                            android:enabled="true"
+                                            android:fontFamily="@font/custom_regular"
+                                            android:hint="@string/hint_laser_code_example"
+                                            android:inputType="textCapCharacters|textNoSuggestions"
+                                            android:maxLength="14"
+                                            android:textColorHint="@color/text_hint"
+                                            android:textSize="@dimen/form_text_size" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                    <androidx.appcompat.widget.AppCompatImageButton
+                                        android:id="@+id/notice_dialog_laser_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@android:color/transparent"
+                                        android:padding="@dimen/padding_small"
+                                        android:src="@drawable/ic_info_alert"
+                                        app:layout_constraintBottom_toBottomOf="@+id/text_laser_code1"
+                                        app:layout_constraintEnd_toEndOf="@+id/text_laser_code1"
+                                        app:layout_constraintTop_toTopOf="@+id/text_laser_code1" />
+
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/dok_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="*"
+                                        android:textColor="@color/remark"
+                                        android:textSize="@dimen/text_large_size"
+                                        app:layout_constraintBottom_toTopOf="@+id/text_surname"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/text_name" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/text_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/text_normal"
+                                        android:textColorHint="@color/text_hint"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/text_laser_code1">
+
+                                        <tlt.th.co.toyotaleasing.view.OwaspEditText
+                                            android:id="@+id/edittext_name"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/margin_small"
+                                            android:enabled="true"
+                                            android:fontFamily="@font/custom_regular"
+                                            android:hint="@string/hint_name"
+                                            android:inputType="textNoSuggestions"
+                                            android:maxLength="13"
+                                            android:textColor="@color/text_normal"
+                                            android:textColorHint="@color/text_hint"
+                                            android:textSize="@dimen/form_text_size" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/dok_sur_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="*"
+                                        android:textColor="@color/remark"
+                                        android:textSize="@dimen/text_large_size"
+                                        app:layout_constraintBottom_toBottomOf="@+id/text_surname"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/text_surname" />
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/text_surname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/text_normal"
+                                        android:textColorHint="@color/text_hint"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/text_name"
+                                        >
+
+                                        <tlt.th.co.toyotaleasing.view.OwaspEditText
+                                            android:id="@+id/edittext_surname"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:maxLength="13"
+                                            android:fontFamily="@font/custom_regular"
+                                            android:hint="@string/hint_surname"
+                                            android:enabled="true"
+                                            android:inputType="textNoSuggestions"
+                                            android:textColor="@color/text_normal"
+                                            android:textColorHint="@color/text_hint"
+                                            android:textSize="@dimen/form_text_size"
+                                            android:layout_marginStart="@dimen/margin_small" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/dok_db"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="*"
+                                        android:textColor="@color/remark"
+                                        android:textSize="@dimen/text_large_size"
+                                        app:layout_constraintBottom_toBottomOf="@+id/text_birthdate"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/text_birthdate" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/text_birthdate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/text_normal"
+                                        android:textColorHint="@color/text_hint"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/spinner_sex">
+
+                                        <tlt.th.co.toyotaleasing.view.OwaspEditText
+                                            android:id="@+id/edittext_birthdate"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="16dp"
+                                            android:maxLength="13"
+                                            android:fontFamily="@font/custom_regular"
+                                            android:hint="@string/hint_dateofbirth"
+                                            android:inputType="number|textNoSuggestions"
+                                            android:textColor="@color/text_normal"
+                                            android:textColorHint="@color/text_hint"
+                                            android:textSize="@dimen/form_text_size"
+                                            android:layout_marginStart="@dimen/margin_small"
+                                            android:enabled="false"/>
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/text_household_id"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/text_normal"
+                                        android:textColorHint="@color/text_hint"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/text_birthdate">
+
+                                        <tlt.th.co.toyotaleasing.view.OwaspEditText
+                                            android:id="@+id/edittext_household_id"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:maxLength="11"
+                                            android:fontFamily="@font/custom_regular"
+                                            android:hint="@string/txt_househousehold"
+                                            android:inputType="number|textNoSuggestions"
+                                            android:textColor="@color/text_normal"
+                                            android:textColorHint="@color/text_hint"
+                                            android:textSize="@dimen/form_text_size"
+                                            android:layout_marginStart="@dimen/margin_small"/>
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/dok_house"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="*"
+                                        android:textColor="@color/remark"
+                                        android:textSize="@dimen/text_large_size"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="@+id/text_household_id"
+                                        app:layout_constraintStart_toStartOf="@+id/text_birthdate"
+                                        app:layout_constraintTop_toTopOf="@+id/text_household_id" />
+
+<!--                                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                                        android:id="@+id/text_address"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_gravity="center"-->
+<!--                                        android:textColor="@color/text_normal"-->
+<!--                                        android:textColorHint="@color/text_hint"-->
+<!--                                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                                        app:layout_constraintTop_toBottomOf="@+id/text_birthdate">-->
+
+<!--                                        <tlt.th.co.toyotaleasing.view.OwaspEditText-->
+<!--                                            android:id="@+id/edittext_address"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:maxLength="13"-->
+<!--                                            android:fontFamily="@font/custom_regular"-->
+<!--                                            android:hint="@string/hint_address"-->
+<!--                                            android:inputType="number|textNoSuggestions"-->
+<!--                                            android:textColor="@color/text_normal"-->
+<!--                                            android:textColorHint="@color/text_hint"-->
+<!--                                            android:textSize="@dimen/form_text_size"-->
+<!--                                            android:layout_marginStart="@dimen/margin_small" />-->
+<!--                                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/dok_addr"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="*"
+                                        android:textColor="@color/remark"
+                                        android:textSize="@dimen/text_large_size"
+                                        app:layout_constraintBottom_toBottomOf="@+id/text_address"
+                                        app:layout_constraintStart_toStartOf="@+id/text_household_id"
+                                        app:layout_constraintTop_toTopOf="@+id/edittext_current_address" />
+
+                                    <tlt.th.co.toyotaleasing.view.OwaspEditText
+                                        android:id="@+id/edittext_current_address"
+                                        style="@style/Text_Bold_Large"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_normal"
+                                        android:gravity="top"
+                                        android:hint="@string/txt_personal_current_address"
+                                        android:inputType="textMultiLine|textNoSuggestions"
+                                        android:maxLines="4"
+                                        android:maxLength="150"
+                                        android:textColor="@color/brownish_grey"
+                                        app:layout_constraintEnd_toStartOf="@+id/btn_geo"
+                                        app:layout_constraintStart_toEndOf="@+id/dok_addr"
+                                        app:layout_constraintTop_toBottomOf="@id/text_household_id" />
+
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/btn_geo"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/icon_pin_map"
+                                        app:layout_constraintBottom_toBottomOf="@+id/edittext_current_address"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/edittext_current_address" />
+
+
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/dok_postcode"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="*"
+                                        android:textColor="@color/remark"
+                                        android:textSize="@dimen/text_large_size"
+                                        app:layout_constraintBottom_toBottomOf="@+id/text_postcode"
+                                        app:layout_constraintStart_toStartOf="@+id/dok_addr"
+                                        app:layout_constraintTop_toTopOf="@+id/text_postcode" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/text_postcode"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/text_normal"
+                                        android:textColorHint="@color/text_hint"
+                                        app:layout_constraintTop_toBottomOf="@+id/edittext_current_address" >
+
+                                        <tlt.th.co.toyotaleasing.view.OwaspEditText
+                                            android:id="@+id/edittext_postcode"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="16dp"
+                                            android:fontFamily="@font/custom_regular"
+                                            android:hint="@string/txt_postcode"
+                                            android:inputType="number"
+                                            android:maxLines="1"
+                                            android:maxLength="5"
+                                            android:textColor="@color/text_normal"
+                                            android:textColorHint="@color/text_hint"
+                                            android:textSize="@dimen/form_text_size"
+                                            android:layout_marginStart="@dimen/margin_small" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/dok_province"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="*"
+                                        android:textColor="@color/remark"
+                                        android:textSize="@dimen/text_large_size"
+                                        app:layout_constraintBottom_toBottomOf="@+id/text_province"
+                                        app:layout_constraintStart_toStartOf="@+id/dok_postcode"
+                                        app:layout_constraintTop_toTopOf="@+id/text_province" />
+
+                                    <LinearLayout
+                                        android:id="@+id/text_province"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/dok_province"
+                                        app:layout_constraintTop_toBottomOf="@+id/text_postcode">
+
+                                        <tlt.th.co.toyotaleasing.view.SpinnerView
+                                            android:id="@+id/spinner_province"
+                                            style="@style/MySpinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/text_normal"
+                                            android:textSize="@dimen/text_large_size"
+                                            app:hint="@string/hint_province" />
+
+                                    </LinearLayout>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/dok_amphur"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="*"
+                                        android:textColor="@color/remark"
+                                        android:textSize="@dimen/text_large_size"
+                                        app:layout_constraintBottom_toBottomOf="@+id/text_amphur"
+                                        app:layout_constraintStart_toStartOf="@+id/dok_province"
+                                        app:layout_constraintTop_toTopOf="@+id/text_amphur" />
+
+                                    <LinearLayout
+                                        android:id="@+id/text_amphur"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/dok_amphur"
+                                        app:layout_constraintTop_toBottomOf="@+id/text_province">
+
+                                        <tlt.th.co.toyotaleasing.view.SpinnerView
+                                            android:id="@+id/spinner_amphur"
+                                            style="@style/MySpinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/text_normal"
+                                            android:textSize="@dimen/text_large_size"
+                                            app:hint="@string/hint_district" />
+
+                                    </LinearLayout>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    BOTTOM      -->
+    <Space
+        android:id="@+id/space_bottom"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_small"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mycardview" />
+
+    <tlt.th.co.toyotaleasing.view.TLTButton
+        android:id="@+id/btn_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_white"
+        android:enabled="true"
+        android:fontFamily="@font/custom_bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:paddingEnd="42dp"
+        android:paddingStart="42dp"
+        android:text="@string/btn_back"
+        android:textColor="@color/grey_dark1"
+        android:textSize="@dimen/text_button_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintBottom_toTopOf="@id/space3"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/space3"/>
+
+    <tlt.th.co.toyotaleasing.view.TLTButton
+        android:id="@+id/btn_next_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:background="@drawable/selector_btn_confirm_edit_mailing_address"
+        android:enabled="true"
+        android:fontFamily="@font/custom_bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:paddingEnd="42dp"
+        android:paddingStart="42dp"
+        android:text="@string/btn_confirm"
+        android:textColor="@drawable/selector_text_normal"
+        android:textSize="@dimen/text_button_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintBottom_toTopOf="@+id/space3" />
+    <Space
+        android:id="@+id/space3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  END BOTTOM      -->
+</androidx.constraintlayout.widget.ConstraintLayout>
+

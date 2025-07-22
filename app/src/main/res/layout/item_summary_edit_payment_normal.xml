@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/text_summary_payment_item_paid"
+        style="@style/Text_Bold_Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:gravity="start|center_vertical"
+        android:text="@string/summary_insurance_payment_item_paid"
+        android:textSize="@dimen/text_small_size"
+        app:buttonTint="@color/green"
+        app:layout_constraintEnd_toStartOf="@id/edittext_summary_payment_item_paid_money"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <tlt.th.co.toyotaleasing.view.OwaspEditText
+        android:id="@+id/edittext_summary_payment_item_paid_money"
+        style="@style/Text_Bold_Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_edit"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:gravity="end"
+        android:hint="@string/summary_edit_payment_price_hint"
+        android:inputType="number|textNoSuggestions"
+        android:textColor="@color/text_normal_lighter"
+        android:textSize="@dimen/text_small_size"
+        android:digits="0123456789"
+        app:layout_constraintBottom_toBottomOf="@id/text_summary_payment_item_paid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/text_summary_payment_item_paid"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="15,000.00" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/insurance_payment_detail_title"
+        app:toolbarSize="normal" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/insurance_status_nestedscrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <tlt.th.co.toyotaleasing.view.insurance.CarInformationWidget
+                android:id="@+id/insurance_status_car_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <tlt.th.co.toyotaleasing.view.insurance.InsurancePaymentWidget
+                android:id="@+id/insurance_status_information_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_status_car_view" />
+
+            <LinearLayout
+                android:id="@+id/insurance_layout_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/insurance_status_information_view">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/insurance_payment_budget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rsu_bold"
+                    android:textColor="@color/brownish_grey"
+                    android:textSize="@dimen/text_large_size"
+                    tools:text="@string/insurance_payment_budget_pre" />
+
+                <tlt.th.co.toyotaleasing.view.TLTButtonWidget
+                    android:id="@+id/insurance_payment_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:iconDrawable="@drawable/ic_carshieldmain"
+                    app:title="@string/insurance_payment_detail_btn" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/insurance_layout_not_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/insurance_status_information_view">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/insurance_error_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rsu_bold"
+                    android:text="@string/insurance_error_tv"
+                    android:textColor="@color/appintro_description"
+                    android:textSize="@dimen/text_medium_size" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

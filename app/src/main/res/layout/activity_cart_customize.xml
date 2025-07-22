@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/toolbar_medium_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/summary_edit_payment_title"
+        app:toolbarSize="medium" />
+
+    <androidx.cardview.widget.CardView
+        style="@style/MyCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/toolbar_large_content_card_margin_top">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:padding="@dimen/padding_normal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_summary_insurance_payment_title"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/summary_edit_payment_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_summary_insurance_payment_date"
+                    style="@style/Text_Regular_Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey"
+                    app:layout_constraintBottom_toBottomOf="@id/text_summary_insurance_payment_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text_summary_insurance_payment_title"
+                    tools:text="11 ม.ค. 2561" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_summary_insurance_payment_car_license"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_summary_insurance_payment_title"
+                    tools:text="กต - 1528 กรุงเทพมหานคร" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_summary_insurance_payment_contract_number"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_summary_insurance_payment_car_license"
+                    tools:text="เลขที่สัญญา : AHP1789534" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_summary_insurance_payment_contract_number"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_cart" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btn_add_summary"
+                    style="@style/Text_Regular_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:drawableStart="@drawable/ic_add_circle_outline_png"
+                    android:gravity="center_vertical"
+                    android:text="@string/summary_edit_payment_add_new"
+                    android:textColor="@color/grey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_view" />
+
+
+                <View
+                    android:id="@+id/divier"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/grey_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_add_summary"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_list_detail_description_payment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/custom_bold"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/payment_list_text_description"
+                    android:textColor="@color/text_disable"
+                    android:textSize="@dimen/text_small_size"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divier" />
+
+                <Space
+                    android:id="@+id/barrier_add_summary"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title_list_detail_description_payment" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_confirm"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_btn_confirm_green"
+                    android:text="@string/summary_edit_payment_confirm"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_add_summary"
+                    app:layout_constraintVertical_bias="1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

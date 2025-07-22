@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/location_dealer_filter"
+        app:toolbarSize="normal" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/header"
+                android:layout_marginTop="@dimen/margin_small"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/padding_normal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_company_name"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="บริษัท โตโยต้ามหานคร จำกัด" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_branch_name"
+                        style="@style/Text_Bold_Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="@color/text_normal_lighter"
+                        app:layout_constraintEnd_toStartOf="@id/txt_distance"
+                        app:layout_constraintHorizontal_weight="4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_company_name"
+                        tools:text="สาขา พหลโยธิน" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_distance"
+                        style="@style/Text_Bold_Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textColor="@color/text_normal_lighter"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@id/txt_branch_name"
+                        tools:text="2.3 กม." />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/body"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_normal">
+
+                    <tlt.th.co.toyotaleasing.view.DrawableTextViewWidget
+                        android:id="@+id/txt_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:iconDrawable="@drawable/ic_building_orange"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:text="@string/location_detail_office" />
+
+                    <tlt.th.co.toyotaleasing.view.DrawableTextViewWidget
+                        android:id="@+id/txt_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        app:iconDrawable="@drawable/ic_pin_orange"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_type"
+                        app:text="@string/location_detail_address" />
+
+                    <tlt.th.co.toyotaleasing.view.DrawableTextViewWidget
+                        android:id="@+id/txt_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        app:iconDrawable="@drawable/ic_phone_orange"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_address"
+                        app:text="@string/location_detail_tel" />
+
+                    <tlt.th.co.toyotaleasing.view.DrawableTextViewWidget
+                        android:id="@+id/txt_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        app:iconDrawable="@drawable/ic_clock_orange"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_tel"
+                        app:text="@string/location_detail_time" />
+
+                    <tlt.th.co.toyotaleasing.view.DrawableTextViewWidget
+                        android:id="@+id/txt_website"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        app:iconDrawable="@drawable/ic_globe_orange"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_time"
+                        app:text="@string/location_detail_website" />
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:background="@color/unactive"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_website" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/location_direction"
+                        style="@style/Text_Bold_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:drawableStart="@drawable/ic_direction_green"
+                        android:drawablePadding="4dp"
+                        android:text="@string/location_direction"
+                        android:textColor="@color/teal_500"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/location_tel"
+                        style="@style/Text_Bold_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginEnd="@dimen/margin_large"
+                        android:drawableStart="@drawable/ic_phone_green"
+                        android:drawablePadding="4dp"
+                        android:text="@string/location_tel"
+                        android:textColor="@color/teal_500"
+                        app:layout_constraintEnd_toStartOf="@id/location_direction"
+                        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/margin_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/location_tel" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

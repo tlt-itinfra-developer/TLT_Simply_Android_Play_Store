@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/hotline_contact_us_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/padding_normal"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_normal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text_normal"
+                    android:textColorHint="@color/text_hint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <tlt.th.co.toyotaleasing.view.OwaspEditText
+                        android:id="@+id/edittext_fullname"
+                        style="@style/Text_Regular_Large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="@string/hotline_contactus_hint_fullname"
+                        android:inputType="textNoSuggestions"
+                        android:maxLines="1"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_hint" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text_normal"
+                    android:textColorHint="@color/text_hint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textinput_fullname">
+
+                    <tlt.th.co.toyotaleasing.view.OwaspEditText
+                        android:id="@+id/edittext_tel"
+                        style="@style/Text_Regular_Large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="@string/hotline_contactus_hint_tel"
+                        android:inputType="textNoSuggestions"
+                        android:maxLines="1"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_hint" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text_normal"
+                    android:textColorHint="@color/text_hint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textinput_tel">
+
+                    <tlt.th.co.toyotaleasing.view.OwaspEditText
+                        android:id="@+id/edittext_email"
+                        style="@style/Text_Regular_Large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="@string/hotline_contactus_hint_email"
+                        android:inputType="textNoSuggestions"
+                        android:maxLines="1"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_hint" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <tlt.th.co.toyotaleasing.view.SpinnerView
+                    android:id="@+id/hotline_contact_us_topic_spinner"
+                    style="@style/MySpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large_size"
+                    app:hint="@string/hotline_contact_us_topic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textinput_email" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/hotline_contact_us_detail_title"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="start"
+                    android:text="@string/hotline_contact_us_detail"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/hotline_contact_us_topic_spinner"
+                    app:layout_constraintStart_toStartOf="@+id/hotline_contact_us_topic_spinner"
+                    app:layout_constraintTop_toBottomOf="@+id/hotline_contact_us_topic_spinner" />
+
+                <tlt.th.co.toyotaleasing.view.OwaspEditText
+                    android:id="@+id/hotline_contact_us_detail_et"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:lines="4"
+                    android:maxLines="4"
+                    android:textColor="@color/brownish_grey"
+                    app:layout_constraintEnd_toEndOf="@+id/hotline_contact_us_detail_title"
+                    app:layout_constraintStart_toStartOf="@+id/hotline_contact_us_detail_title"
+                    app:layout_constraintTop_toBottomOf="@+id/hotline_contact_us_detail_title" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/hotline_contact_us_upload_tv"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="start"
+                    android:text="@string/hotline_contact_us_upload"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/hotline_contact_us_topic_spinner"
+                    app:layout_constraintStart_toStartOf="@+id/hotline_contact_us_topic_spinner"
+                    app:layout_constraintTop_toBottomOf="@+id/hotline_contact_us_detail_et" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/hotline_contact_us_upload_limit_size_tv"
+                    style="@style/Text_Bold_Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/hotline_contact_us_upload_limit_size"
+                    android:textColor="@color/appintro_description"
+                    app:layout_constraintEnd_toEndOf="@+id/hotline_contact_us_topic_spinner"
+                    app:layout_constraintStart_toStartOf="@+id/hotline_contact_us_topic_spinner"
+                    app:layout_constraintTop_toBottomOf="@+id/hotline_contact_us_upload_tv" />
+
+                <tlt.th.co.toyotaleasing.view.AddGalleryWidget
+                    android:id="@+id/hotline_contact_us_upload_widget"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/hotline_contact_us_topic_spinner"
+                    app:layout_constraintStart_toStartOf="@+id/hotline_contact_us_topic_spinner"
+                    app:layout_constraintTop_toBottomOf="@+id/hotline_contact_us_upload_limit_size_tv"
+                    app:maximumImage="6" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/hotline_contact_us_send_btn"
+                    style="@style/Button_Success"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:enabled="false"
+                    android:text="@string/hotline_contact_us_request_question"
+                    app:layout_constraintEnd_toEndOf="@+id/hotline_contact_us_topic_spinner"
+                    app:layout_constraintStart_toStartOf="@+id/hotline_contact_us_topic_spinner"
+                    app:layout_constraintTop_toBottomOf="@+id/hotline_contact_us_upload_widget" />
+
+                <Space
+                    android:id="@+id/space1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_large"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hotline_contact_us_send_btn" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_contact_call_center"
+                    style="@style/Text_Bold_Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:text="@string/txt_insurance_contact_via_phone"
+                    android:textColor="@color/appintro_description"
+                    app:layout_constraintStart_toStartOf="@+id/space1"
+                    app:layout_constraintTop_toBottomOf="@+id/hotline_contact_us_send_btn" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_contact_call_cente_link"
+                    style="@style/Text_Bold_Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:gravity="start"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/txt_insurance_contact_phone"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_contact_call_center"
+                    app:layout_constraintTop_toBottomOf="@+id/hotline_contact_us_send_btn" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_contact_call_cente_day"
+                    style="@style/Text_Bold_Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/txt_insurance_contact_phone_day"
+                    android:textColor="@color/appintro_description"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txt_contact_call_cente_link"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_contact_call_cente_link" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_contact_line"
+                    style="@style/Text_Bold_Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/txt_insurance_contact_via_line"
+                    android:textColor="@color/appintro_description"
+                    app:layout_constraintStart_toStartOf="@+id/txt_contact_web"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_company_website_link" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_contact_line_link"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="start"
+                    android:text=" @tibclub"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toEndOf="@+id/txt_contact_line"
+                    app:layout_constraintTop_toTopOf="@+id/txt_contact_line" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_contact_web"
+                    style="@style/Text_Bold_Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/txt_insurance_contact_via_web"
+                    android:textColor="@color/appintro_description"
+                    app:layout_constraintStart_toStartOf="@+id/space2"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_contact_call_cente_day" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_company_website_link"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:text="@string/txt_insurance_contact_website"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_contact_web"
+                    app:layout_constraintTop_toTopOf="@+id/txt_contact_web" />
+
+                <Space
+                    android:id="@+id/space2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_large"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_contact_line_link" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group_customer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="textinput_fullname,textinput_tel,textinput_email" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

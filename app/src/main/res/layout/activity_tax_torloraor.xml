@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modules.tax.torloraor.TorloraorTaxActivity">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/attach_inspection_title"
+        app:toolbarSize="medium" />
+
+    <androidx.cardview.widget.CardView
+        style="@style/MyCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="38dp"
+        android:layout_marginRight="@dimen/margin_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/attach_nested"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/space_between_nested_footer"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginEnd="@dimen/margin_large">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/date_tv"
+                        style="@style/Text_Regular_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:text="@string/attach_inspection_date_mock"
+                        android:textColor="@color/grey"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/act_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/date_tv"
+                        app:srcCompat="@drawable/ic_tax_b" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/attach_documents_title"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/attach_inspection_title_2"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/act_image_view" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/attach_description_tv"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/attach_inspection_description"
+                        android:textColor="@color/terracotta_253"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/attach_documents_title" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/support_file_tv"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/attach_inspection_support"
+                        android:textColor="@color/appintro_description"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/attach_description_tv" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/status_title_tv"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_alert_warning"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:textColor="@color/brownish_grey"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/support_file_tv"
+                        tools:text="สถานะ : ยังไม่แนบเอกสาร" />
+
+                    <tlt.th.co.toyotaleasing.view.imagehistory.ImageHistoriesWidget
+                        android:id="@+id/imageHistories"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/status_title_tv" />
+
+                    <tlt.th.co.toyotaleasing.view.AddGalleryWidget
+                        android:id="@+id/attach_upload_widget"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageHistories"
+                        app:maximumImage="6" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/attach_btn"
+                        style="@style/Button_Success"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="@dimen/text_button_size"
+                        android:text="@string/attach_inspection_button"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/attach_upload_widget" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_skip"
+                        style="@style/Text_Bold_Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:textSize="@dimen/text_button_size"
+                        android:text="@string/tax_txt_skip"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/attach_btn" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/margin_large"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_skip" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <View
+                android:id="@+id/space_between_nested_footer"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:background="@color/grey_2"
+                app:layout_constraintBottom_toTopOf="@+id/attach_footer_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/attach_nested" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/attach_footer_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/choice_to_attach_tv"
+                    style="@style/Text_Bold_Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attach_inspection_choice_title"
+                    android:textColor="@color/brownish_grey"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/attach_via_line"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/attach_via_line"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_line_square"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:text="@string/attach_inspection_via_line"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/choice_to_attach_tv"
+                    app:layout_constraintRight_toLeftOf="@+id/line_between_item"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/line_between_item"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:background="@color/indicator_unactive"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/attach_via_line"
+                    app:layout_constraintRight_toLeftOf="@+id/attach_via_email"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/attach_via_email"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:text="@string/attach_inspection_via_email"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/line_between_item"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+     </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

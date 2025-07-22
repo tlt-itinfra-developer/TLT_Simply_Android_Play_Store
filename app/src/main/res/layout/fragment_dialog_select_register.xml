@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:background="#3fff00ff">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dialog_padding_horizontal"
+        android:layout_marginEnd="@dimen/dialog_padding_horizontal"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:background="@drawable/bg_white_corner_radius"
+        android:paddingStart="15dp"
+        android:paddingTop="@dimen/padding_normal"
+        android:paddingEnd="15dp"
+        android:paddingBottom="@dimen/padding_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:fontFamily="@font/custom_bold"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/alert_dialog_select_register_type_title" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/simply_id_type_cv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/MyCardView_MarginTop_Zero"
+                    android:layout_marginTop="@dimen/margin_xlarge"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:layout_constraintTop_toBottomOf="@+id/title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/simply_id_type_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/custom_bold"
+                        android:textSize="@dimen/text_large_size"
+                        android:textColor="@color/brownish_grey"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/padding_normal"
+                        android:text="@string/alert_dialog_simply_type_button" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/id_card_type_cv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/MyCardView_MarginTop_Zero"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:layout_constraintTop_toBottomOf="@+id/simply_id_type_cv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/id_card_type_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/custom_bold"
+                        android:textSize="@dimen/text_large_size"
+                        android:textColor="@color/brownish_grey"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/padding_normal"
+                        android:text="@string/alert_dialog_id_type_button" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ext_contract_type_cv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/MyCardView_MarginTop_Zero"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:layout_constraintTop_toBottomOf="@+id/id_card_type_cv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/ext_contract_type_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/custom_bold"
+                        android:textSize="@dimen/text_large_size"
+                        android:textColor="@color/brownish_grey"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/padding_normal"
+                        android:text="@string/alert_dialog_contract_type_button" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_close"
+        app:layout_constraintTop_toTopOf="@+id/card_view"
+        app:layout_constraintEnd_toEndOf="@+id/card_view"
+        app:layout_constraintStart_toEndOf="@+id/card_view"
+        app:layout_constraintBottom_toTopOf="@+id/card_view"
+        android:background="@drawable/bg_circle_active_account_closing"
+        android:padding="@dimen/padding_small"
+        android:layout_width="32dp"
+        android:layout_height="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

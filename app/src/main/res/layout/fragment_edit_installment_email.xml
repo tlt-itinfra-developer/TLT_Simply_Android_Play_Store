@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/padding_normal"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_normal"
+                android:paddingBottom="@dimen/padding_small">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/MyCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="27dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="48dp"
+                            android:layout_marginEnd="32dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/custom_bold"
+                                android:includeFontPadding="false"
+                                android:text="@string/edit_email_header"
+                                android:textColor="@color/text_normal"
+                                android:textSize="@dimen/header_text_size" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/textinput_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/text_normal"
+                                android:textColorHint="@color/text_hint">
+
+                                <tlt.th.co.toyotaleasing.view.OwaspEditText
+                                    android:id="@+id/edittext_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/custom_regular"
+                                    android:hint="@string/edit_email_email_hint"
+                                    android:inputType="textEmailAddress|textNoSuggestions"
+                                    android:maxLines="1"
+                                    android:textColor="@color/text_normal"
+                                    android:textColorHint="@color/text_hint"
+                                    android:textSize="@dimen/form_text_size" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/textinput_phonenumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/text_normal"
+                                android:textColorHint="@color/text_hint">
+
+                                <tlt.th.co.toyotaleasing.view.OwaspEditText
+                                    android:id="@+id/edittext_phonenumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/custom_regular"
+                                    android:hint="@string/edit_email_phonenumber_hint"
+                                    android:inputType="phone|textNoSuggestions"
+                                    android:maxLength="10"
+                                    android:maxLines="1"
+                                    android:textColor="@color/text_normal"
+                                    android:textColorHint="@color/text_hint"
+                                    android:textSize="@dimen/form_text_size" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <tlt.th.co.toyotaleasing.view.TLTButton
+                                android:id="@+id/btn_confirm"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="36dp"
+                                android:background="@drawable/selector_btn_confirm_edit_mailing_address"
+                                android:fontFamily="@font/custom_bold"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:paddingStart="42dp"
+                                android:paddingEnd="42dp"
+                                android:text="@string/edit_email_btn_confirm"
+                                android:textColor="@drawable/selector_text_normal"
+                                android:textSize="@dimen/text_button_size" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_car_contract"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:srcCompat="@drawable/ic_edit_email" />
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

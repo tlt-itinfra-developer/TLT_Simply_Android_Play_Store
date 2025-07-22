@@ -1,0 +1,1157 @@
+<resources>
+    <string name="language_thai">TH</string>
+    <string name="language_english">EN</string>
+
+    <string name="language_thai_display">ภาษาไทย</string>
+    <string name="language_english_display">English</string>
+
+    <string name="loading">กรุณารอสักครู่</string>
+    <string name="currency">%1$s บาท</string>
+
+    <string name="error_cant_back">Can\'t back</string>
+    <string name="error_not_empty">เบอร์โทรศัพท์ไม่ถูกต้อง</string>
+    <string name="error_email_pattern">อีเมลไม่ถูกต้อง</string>
+    <string name="error_password_not_match">ขออภัย รหัสไม่ตรงกัน</string>
+    <string name="error_password_require_6_digits">ขออภัย รหัสต้องมี 6 หลัก</string>
+    <string name="error_idcard_pattern">หมายเลขประจำตัวไม่ถูกต้อง กรุณากรอกใหม่</string>
+    <string name="error_password_pattern">รหัสง่ายต่อการคาดเดา กรุณาเปลี่ยน</string>
+
+    <string name="open_email_app">เลือกแอปฯเมล</string>
+    <string name="home_title">คำนวณค่างวดรถใหม่</string>
+
+    <string name="otp_dialog_description">ระบบจะส่ง OTP ไปยังหมายเลขโทรศัพท์ของคุณ</string>
+    <string name="otp_dialog_btn_confirm">ตกลง</string>
+    <string name="otp_dialog_btn_cancel">ยกเลิก</string>
+
+    <string name="otp_btn_confirm">ยืนยัน</string>
+
+    <string name="default_notification_channel_id">tlt_develop</string>
+
+    <string name="pincode_title_header">ใส่รหัส PIN</string>
+    <string name="pincode_forgot_pin">ลืมรหัสผ่าน</string>
+    <string name="register_title">ลงทะเบียน</string>
+    <string name="verifyemail_title">ยืนยันตัวตน</string>
+    <string name="setuppincode_title">ตั้งรหัส PIN</string>
+    <string name="register_success_title">ตั้งรหัส PIN</string>
+    <string name="fingerprint_setting_title">ตั้งค่าลายนิ้วมือ</string>
+    <string name="filter_car_title">เลือกรถ</string>
+    <string name="quotation_title">ขอใบเสนอราคา</string>
+
+    <string name="verifyemail_title_header">ยืนยันอีเมล</string>
+    <string name="verifyemail_success_title_header">ยินดีต้อนรับ</string>
+    <string name="verifyemail_fail_title_header">ไม่สามารถยืนยันอีเมลได้</string>
+    <string name="policy_title_header">ข้อตกลงและเงื่อนไข</string>
+    <string name="privacy_policy_title">Privacy Policy</string>
+
+    <string name="registerform_title_header">กรุณากรอกข้อมูลผู้เช่าซื้อ เพื่อลงทะเบียนด้วยการกรอก อีเมล และ หมายเลขประจำตัวบัตร Simply Card</string>
+    <string name="otp_header_title">กรุณากรอกหมายเลข OTP ที่ท่านได้รับ \nเพื่อยืนยันตันตนของท่าน</string>
+    <string name="selectphone_header_title">กรุณาเลือกเบอร์โทรศัพท์เพื่อรับรหัส OTP\nเพื่อยืนยันตัวตนของคุณ</string>
+    <string name="setuppincode_header_title">ตั้งรหัส PIN 6 หลัก</string>
+    <string name="register_success_header_title">ลงทะเบียนสำเร็จ</string>
+
+    <string name="verifyemail_description">เพื่อดำเนินการลงทะเบียน\nกรุณากดปุ่มเพื่อยืนยันอีเมลของท่าน</string>
+    <string name="register_success_description">เพื่อความปลอดภัย\nในการเข้าถึงข้อมูลของคุณ\nกรุณาตั้งรหัส PIN ในขั้นต่อไป</string>
+    <string name="verifyemail_success_description">คุณได้ยืนยันอีเมลสำเร็จแล้ว\nเข้าสู่ขั้นตอนการลงทะเบียนในหน้าถัดไป</string>
+    <string name="verifyemail_fail_description">Link สำหรับยืนยันอีเมลได้หมดอายุแล้ว\nกรุณากดปุ่มเพื่อยืนยันอีเมลของท่านอีกครั้ง</string>
+    <string name="fingerprint_setting_description">คุณต้องการเข้าสู่แอปพลิเคชัน\nด้วยการตรวจสอบลายนิ้วมือของคุณ หรือไม่</string>
+
+    <string name="verifyemail_confirm_text">ยืนยันอีเมลของฉัน</string>
+    <string name="verifyemail_success_confirm_text">กลับสู่หน้าการตั้งค่า</string>
+    <string name="register_success_confirm_text">ตั้งรหัส PIN</string>
+    <string name="setuppincode_confirm_text">ยืนยัน</string>
+    <string name="policy_confirm_text">ถัดไป</string>
+    <string name="policy_accept_term_and_condition">ยอมรับเงื่อนไขและข้อตกลง</string>
+    <string name="policy_unaccept_term_and_condition">ไม่ยอมรับเงื่อนไข</string>
+
+
+    <string name="registerform_email_hint">อีเมล</string>
+    <string name="registerform_id_card_hint">กรอกหมายเลขบัตรประชาชน 13 หลัก</string>
+    <string name="registerform_household_id_hint">หมายเลขทะเบียนบ้าน</string>
+    <string name="registerform_birthdate_hint">วันเกิด</string>
+    <string name="registerform_btn_next">ถัดไป</string>
+    <string name="registerform_personal_id_type_title">เลือกประเภทบัตรที่ต้องการกรอกข้อมูล</string>
+    <string name="registerform_radio_id_card">หมายเลชบัตรประชาชน</string>
+    <string name="registerform_radio_passport">หมายเลขหนังสือเดินทาง</string>
+    <string name="registerform_contract_hint">เลขที่สัญญาเช่าซื้อ</string>
+    <string name="registerform_passport_hint">กรุณากรอกหมายเลขหนังสือเดินทาง</string>
+    <string name="registerform_txt_description">*เลขบัตรประชาชน หรือเลขที่หนังสือเดินทาง\nกรอกเพื่อใช้ในการตรวจสอบข้อมูลรถเท่านั้น</string>
+    <string name="registerform_txt_id_card_description">กรอกเลขที่บัตรประชาชน หรือเลขที่หนังสือเดินทาง ที่ท่านใช้ทำสัญญาเช่าซื้อรถยนต์กับโตโยต้า ลีสซิ่ง</string>
+    <string name="registerform_dialog_fragment">ท่านสามารถตรวจสอบหมายเลขประจำตัว 11 หรือ 12 หลัก ได้บนบัตร Simply card หรือ ใบเสร็จรับเงินของท่าน</string>
+    <string name="registerform_fill_email_type_title">กรุณากรอกข้อมูลผู้เช่าซื้อเพื่อลงทะเบียน</string>
+    <string name="registerform_fill_contract_number_title">กรุณาระบุหมายเลขสัญญาของท่าน (10 หลัก)</string>
+
+    <string name="selectphone_contact_staff">ติดต่อเจ้าหน้าที่</string>
+    <string name="selectphone_phone_not_found">หากไม่พบเบอร์โทรศัพท์ของคุณ กรุณาติดต่อเจ้าหน้าที่เพื่อแจ้งเปลี่ยนเบอร์โทรศัพท์</string>
+
+    <string name="callcenter_dialog_description">ติดต่อ Call center\n%1$s</string>
+    <string name="callcenter_dialog_btn_cancel">ยกเลิก</string>
+    <string name="callcenter_dialog_btn_call">โทร</string>
+
+    <string name="fingerprint_setting_confirm_text">ใช่, เชื่อมต่อลายนิ้วมือของฉัน</string>
+    <string name="fingerprint_setting_skip_text">ข้าม, เข้าสู่หน้าหลัก</string>
+    <string name="fingerprint_dialog_description">เข้าใช้งานด้วย Touch ID หรือกด "ยกเลิก" เพื่อกลับไปใช้รหัส PIN</string>
+    <string name="fingerprint_wait_scan">กรุณาสแกนนิ้วของท่านเพื่อยืนยันตัวตน</string>
+    <string name="fingerprint_scan_fail">กรุณาสแกนใหม่อีกครั้ง</string>
+    <string name="fingerprint_scan_success">เชื่อมต่อ Touch ID สำเร็จ</string>
+    <string name="fingerprint_dialog_btn_confirm">เข้าสู่หน้าหลัก</string>
+    <string name="fingerprint_auth_dialog_btn_cancel">ยกเลิก</string>
+    <string name="fingerprint_dialog_please_try_again">โปรดลองอีกครั้ง</string>
+
+    <string name="setuppincode_password_hint">รหัส PIN</string>
+    <string name="setuppincode_password_confirm_hint">ยืนยันรหัส PIN</string>
+
+    <string name="home_content_title">ลงทะเบียน\nสำหรับลูกค้า โตโยต้า ลีสซิ่ง</string>
+    <string name="home_btn_register_by_email">ลงทะเบียนด้วยอีเมล</string>
+    <string name="home_alternative_register">หรือลงทะเบียนผ่าน</string>
+    <string name="home_email_hint">กรอกอีเมลของคุณ</string>
+
+    <string name="sidebar_menu_installment">ค่างวดรถยนต์</string>
+    <string name="sidebar_menu_tax">ภาษีรถยนต์</string>
+    <string name="sidebar_menu_insurance">ประกันภัยรถยนต์</string>
+    <string name="sidebar_menu_other_insurance">ประกันภัยอื่นๆ</string>
+    <string name="sidebar_menu_cal_installment">คำนวนค่างวดรถใหม่</string>
+    <string name="sidebar_menu_mandatorium">พักชำระหนี้</string>
+    <string name="sidebar_menu_ecommerce">ช้อปปิ้งออนไลน์</string>
+    <string name="sidebar_menu_news">ข่าวสารและโปรโมชั่น</string>
+    <string name="sidebar_menu_location">ติดต่อเรา</string>
+    <string name="sidebar_menu_office_location">ที่ตั้งสำนักงานและผู้แทนจำหน่าย</string>
+    <string name="sidebar_menu_chat">Chat Bot</string>
+    <string name="sidebar_menu_document_download">เอกสารดาวน์โหลด</string>
+    <string name="sidebar_menu_question">คำถามที่พบบ่อย</string>
+    <string name="sidebar_menu_policy">ข้อกำหนดและเงื่อนไข</string>
+    <string name="sidebar_menu_setting">การตั้งค่า</string>
+    <string name="sidebar_menu_tracking_ownership">สถานะงานทะเบียน</string>
+    <string name="sidebar_menu_debug">Test Mode</string>
+    <string name="sidebar_menu_logout">ออกจากระบบ</string>
+
+    <string name="sidebar_menu_car_loan">ขอสินเชื่อออนไลน์</string>
+    <string name="sidebar_title_menu_car_loan">สินเชื่อรถยนต์</string>
+    <string name="sidebar_menu_car_loan_login">ขั้นตอนการยืนยันตัวตน</string>
+    <string name="sidebar_menu_privacy_policy">นโยบายคุ้มครองส่วนบุคคล</string>
+    <string name="sidebar_menu_deptmandatorium">พักชำระหนี้</string>
+
+
+    <string name="verifyemail_txt_not_yet_receive_email">ยังไม่ได้รับอีเมล ?</string>
+    <string name="verifyemail_btn_resend_email">ส่งอีกครั้ง</string>
+
+    <string name="installment_status_title">รถของฉัน</string>
+    <string name="payment_history_title">ประวัติการชำระ</string>
+    <string name="notification_title">การแจ้งเตือน</string>
+
+    <string name="my_car_txt_contract">ดูสัญญารถ</string>
+    <string name="my_car_txt_detail_installment">รายละเอียดค่างวด</string>
+    <string name="my_car_txt_status_installment">สถานะค่างวด</string>
+    <string name="my_car_txt_full_payment">ชำระเต็มงวด</string>
+    <string name="my_car_txt_balance">คงเหลือ</string>
+    <string name="my_car_txt_period">%1$s งวด</string>
+    <string name="my_car_txt_total_payment">ยอดที่ต้องชำระ <![CDATA[<font color="%2$s">%1$s</font>]]> บาท</string>
+    <string name="my_car_txt_period_payment">งวดประจำวันที่ %1$s</string>
+    <string name="my_car_txt_contract_number">เลขที่สัญญา : %1$s</string>
+
+    <string name="appintro_tutorial_1_title">ให้คุณง่ายสบายกว่ากับฟังก์ชันที่ครอบคลุมทุกบริการด้านสินเชื่อเพื่ออำนวยความสะดวกให้กับลูกค้าของเรา</string>
+    <string name="appintro_tutorial_2_title">คุณสามารถตรวจสอบข้อมูลเกี่ยวกับบริการด้านสินเชื่อ เช่น สถานะการผ่อนชำระค่างวด ยอดหนี้คงเหลือ งานด้านทะเบียนรถยนต์ รวมถึงการชำระค่างวด ค่าภาษีรถยนต์ประจำปีฯ ได้ง่ายๆ บนแอปพลิเคชัน</string>
+    <string name="appintro_tutorial_3_title">นอกจากนี้ TLT Simply จะเป็นช่องทางให้เราสามารถติดต่อกันได้ง่าย สะดวก และรวดเร็วยิ่งขึ้น</string>
+    <string name="appintro_tutorial_1_description">ปัจฉิมนิเทศ เพียวซีอีโอสเปกแช่แข็งบาร์บีคิว\nพิซซ่าซาดิสม์เยอบีร่าบลอนด์ซีเรียส เวสต์รวมมิตร\nโปรโมชั่นคอมเพล็กซ์ มาม่าป่าไม้รากหญ้าฮิบรูเห่ย\nแจ๊กพ็อตหงวนยอมรับ</string>
+    <string name="appintro_tutorial_2_description">@string/appintro_tutorial_1_description</string>
+    <string name="appintro_tutorial_3_description">@string/appintro_tutorial_1_description</string>
+    <string name="appintro_btn_skip">ข้าม</string>
+
+    <string name="contractcar_title">สัญญารถ</string>
+    <string name="edit_mailing_address_title">แก้ไขข้อมูล</string>
+    <string name="edit_address_tab_title">แก้ไขที่อยู่</string>
+    <string name="edit_email_tab_title">แก้ไขอีเมล</string>
+
+    <string name="account_closing_header">คำนวนยอดปิดบัญชี</string>
+    <string name="account_closing_baht">บาท</string>
+    <string name="account_closing_date">ณ วันที่ %1$s</string>
+    <string name="account_closing_interest_refinance">สนใจรีไฟแนนซ์</string>
+    <string name="account_closing_payoff">กดเพื่อชำระยอดปิด</string>
+    <string name="account_closing_active_staff_contact">ติดต่อเจ้าหน้าที่ </string>
+    <string name="account_closing_inactive_staff_contact">ท่านไม่สามารถตรวจสอบยอดปิดบัญชีได้ในขณะนี้</string>
+    <string name="account_closing_description">* ยอดรวมปิดบัญชี ไม่รวมค่าใช้จ่ายโอนกรรมสิทธิ์\n* หากท่านไม่ได้ปิดบัญชีตามวันที่ตรวจสอบ กรุณาตรวจสอบใหม่อีกครั้ง เนื่องจากยอดปิดอาจมีการเปลี่ยนแปลง </string>
+    <string name="account_payoff_description">* ยอดปิดบัญชีเป็นยอดเบื้องต้นเท่านั้น ท่านจะต้องตรวจสอบกับเจ้าหน้าที่บริษัทเพื่อยืนยันยอดอีกครั้ง</string>
+
+    <string name="refinance_header">สินเชื่อสบายใจรีไฟแนนซ์</string>
+    <string name="refinance_date">ณ วันที่ %1$s</string>
+    <string name="refinance_about_header">เกี่ยวกับสินเชื่อสบายใจ</string>
+    <string name="refinance_baht">บาท</string>
+    <string name="refinance_interest">สนใจรีไฟแนนซ์</string>
+    <string name="refinance_diaglog_description">เจ้าหน้าที่สินเชื่อ สบายใจ\nจะทำการติดต่อกลับเพื่อแจ้งรายละเอียด\nเพิ่มเติม ขอบคุณค่ะ</string>
+    <string name="refinance_diaglog_btn_confirm">ตกลง</string>
+    <string name="refinance_car_price">วงเงินสินเชื่อโดยประมาณ</string>
+    <string name="refinance_can_not_refinance">ขออภัย ขณะนี้สัญญาของท่าน\nยังไม่สามารถรีไฟแนนซ์ได้</string>
+    <string name="refinance_credit_description">สินเชื่อสบายใจ สำหรับลูกค้าที่ยังผ่อนชำระกับ โตโยต้าลีสซิ่ง รีไฟแนนซ์ได้เงินสดเป็นเงินทุนหมุน เวียน หรือเพิ่มสภาพคล่องทางการเงิน</string>
+    <string name="refinance_advantage_1">รับเงินทันใจภายใน 1 วัน</string>
+    <string name="refinance_advantage_2">วงเงินกู้ 50,000 บาทขึ้นไป สำหรับลูกค้าสินเชื่อสบายดี</string>
+    <string name="refinance_advantage_3">วงเงินกู้ 100,000 บาทขึ้นไป สำหรับลูกค้าสินเชื่อปกติ</string>
+    <string name="refinance_advantage_4">ดอกเบี้ยอัตราพิเศษ</string>
+    <string name="refinance_advantage_5">ระยะเวลาผ่อนชำระนานสุด  84 เดือน</string>
+    <string name="refinance_advantage">จุดเด่น</string>
+    <string name="refinance_note">* จำนวนเงินที่ได้รับ อาจมีการเปลี่ยนแปลงเมื่อท่านได้รับอนุมัติสินเชื่อ\n* สงวนสิทธิ์การอนุมัติสินเชื่อตามเงื่อนไขของบริษัท\n* หากมีข้อสงสัย หรือต้องการสมัครสินเชื่อสบายใจรีไฟแนนซ์\nโปรดติดต่อเจ้าหน้าที่ </string>
+    <string name="contractcar_contractcar_tab_title">สัญญารถ</string>
+    <string name="contractcar_account_closing_tab_title">ยอดปิดบัญชี</string>
+    <string name="contractcar_refinance_tab_title">รีไฟแนนซ์</string>
+
+    <string name="car_contract_detail">รายละเอียดสัญญารถ</string>
+    <string name="car_contract_no">เลขที่สัญญา</string>
+    <string name="car_contract_model">รุ่นรถ</string>
+    <string name="car_contract_contract_date">วันที่ทำสัญญา</string>
+    <string name="car_contract_due_date">วันครบกำหนดชำระ</string>
+    <string name="car_contract_txt_due_date">ทุกวันที่ %1$s ของเดือน</string>
+    <string name="car_contract_payment_per_installment">ยอดชำระต่องวด</string>
+    <string name="car_contract_installment_period">จำนวนงวดที่ชำระ/จำนวนงวดทั้งหมด</string>
+    <string name="car_contract_amount_unpaid_installments">จำนวนงวดที่ค้างชำระ</string>
+    <string name="car_contract_unpaid_installment">ค่างวดที่ค้างชำระ</string>
+    <string name="car_contract_total_paid_installment">ค่างวดชำระแล้วทั้งหมด</string>
+    <string name="car_contract_balance">ค่างวดคงเหลือ*</string>
+    <string name="car_contract_payment_penalty">ค่าเบี้ยปรับล่าช้าสะสม</string>
+    <string name="car_contract_followup_fee">ค่าทวงถาม</string>
+    <string name="car_contract_final_balloon">*กรณีโปรแกรมสบายดี รวม ค่างวดงวดสุดท้ายแล้ว</string>
+    <string name="car_contract_where_to_send_document">ที่อยู่ในการจัดส่งเอกสาร</string>
+    <string name="car_contract_note_change_address">แจ้งเปลี่ยนแปลงข้อมูลที่อยู่ของท่านโปรดติดต่อเจ้าหน้าที่โตโยต้า ลีสซิ่ง</string>
+    <string name="car_contract_offer_to_get_new_car">ข้อเสนอหากต้องการออกรถใหม่</string>
+    <string name="car_contract_special_offer">เงื่อนไขพิเศษ</string>
+    <string name="car_contract_contract_the_dealer">ติดต่อผู้แทนจำหน่าย</string>
+    <string name="car_contract_installment">%1$s งวด</string>
+    <string name="car_contract_phonenumber">โทร : %1$s</string>
+    <string name="car_contract_email">อีเมล : %1$s</string>
+    <string name="car_contract_suggest_new_car">ราคากลางรถมือสอง\n%1$s บาท (ราคาประเมิน\nจาก Toyota Leasing)</string>
+    <string name="car_contract_special_offer_detail">ตรวจสอบเงื่อนไขพิเศษ\nของคุณ</string>
+
+    <string name="edit_email_header">เบอร์โทรศัพท์และอีเมล</string>
+    <string name="edit_address_header">แก้ไขที่อยู่ของคุณ</string>
+    <string name="edit_email_email_hint">อีเมล</string>
+    <string name="edit_email_phonenumber_hint">เบอร์โทรศัพท์</string>
+    <string name="edit_email_btn_confirm">ยืนยัน</string>
+
+    <string name="edit_address_address_hint">บ้านเลขที่</string>
+    <string name="edit_address_soi_hint">ซอย</string>
+    <string name="edit_address_road_hint">ถนน</string>
+    <string name="edit_address_subdistrict_hint">ตำบล</string>
+    <string name="edit_address_district_hint">อำเภอ</string>
+    <string name="edit_address_city_hint">จังหวัด</string>
+    <string name="edit_address_postcode_hint">รหัสไปรษณีย์</string>
+    <string name="edit_address_btn_confirm">ยืนยัน</string>
+    <string name="edit_address_btn_upload">อัพโหลด</string>
+    <string name="edit_address_title_description">อัพโหลดสำเนาบัตรประชาชน เพื่อยืนยันการแก้ไขข้อมูล</string>
+    <string name="edit_address_subtitle_description">กรุณาอัพโหลดภาพสำเนาบัตรประชาชนผู้เช่าซื้อ พร้อมเซ็นรับรอง “สำเนาถูกต้อง” และ “ขอเปลี่ยนแปลงที่อยู่ในการส่งเอกสาร”</string>
+
+    <string name="installment_detail_title">รายละเอียดค่างวด</string>
+    <string name="installment_detail_car_no">เลขที่สัญญา</string>
+    <string name="installment_detail_payment">ค่างวดงวดละ</string>
+    <string name="installment_detail_followup_fee">ค่าทวงถาม</string>
+    <string name="installment_detail_currency">%1$s บาท</string>
+    <string name="installment_detail_next_due_date">วันที่ชำระงวดต่อไป %1$s</string>
+    <string name="installment_detail_total_payment">ยอดที่ต้องชำระ <![CDATA[<font color="%2$s">%1$s</font>]]> บาท</string>
+    <string name="installment_detail_payment_method">ช่องทางการชำระเงิน</string>
+    <string name="installment_detail_account_bank">บัญชีธนาคาร</string>
+    <string name="installment_detail_account_number">เลขที่บัญชี</string>
+    <string name="installment_detail_note_can_not_check">ท่านไม่สามารถตรวจสอบข้อมูลค่างวด \nและประวัติการชำระเงินของท่านได้ในขณะนี้ \nโปรดติดต่อเจ้าหน้าที่ call center </string>
+    <string name="installment_detail_contact_staff">*ค่าใช้จ่ายอื่นๆ โปรดติดต่อเจ้าหน้าที่โตโยต้า ลีสซิ่ง</string>
+    <string name="installment_detail_contact_staff_normal">*ค่าใช้จ่ายอื่นๆ โปรดติดต่อเจ้าหน้าที่โตโยต้า ลีสซิ่ง</string>
+
+    <string name="notify_title_header">รายการแจ้งเตือน</string>
+    <string name="notify_default_filter">ทั้งหมด</string>
+    <string name="notify_btn_see_more">รายละเอียดเพิ่มเติม</string>
+    <string name="notify_filter_dialog_btn_confirm">ตกลง</string>
+    <string name="notify_filter_dialog_title">เลือกช่วงเวลา</string>
+    <string name="notice_dialog_text_dont_show_again">ไม่ต้องแสดงข้อความนี้อีก</string>
+    <string name="notice_dialog_confirm">รายละเอียด</string>
+    <string name="notify_remove">ลบ</string>
+
+    <string name="tax_renew_dialog_title">เลือกปีภาษีที่ท่านต้องการอัพเดทการต่ออายุ</string>
+    <string name="tax_renew_dialog_default">ปีปัจจุบัน</string>
+    <string name="tax_expire">ภาษีหมดอายุ</string>
+    <string name="tax_slide_update_tax">สไลด์เพื่ออัพเดทภาษีปีปัจจุบัน</string>
+    <string name="tax_slide_update_tax_success">ขอบคุณสำหรับการอัพเดทข้อมูล ระบบจะทำการตรวจสอบ และอัพเดทข้อมูลการต่อภาษีของท่านในวันทำการถัดไป</string>
+    <string name="tax_payment">รายการชำระ</string>
+    <string name="tax_amount_tax">จำนวนภาษี</string>
+    <string name="tax_service_charge">ค่าบริการ</string>
+    <string name="tax_aol">ค่า พรบ.</string>
+    <string name="tax_penalty">ค่าปรับ</string>
+    <string name="tax_note_plz_check_address">กรุณาตรวจสอบที่อยู่การจัดส่งป้ายภาษีก่อนชำระเงิน</string>
+    <string name="tax_check_transport">ตรวจสอบการจัดส่งป้ายภาษี</string>
+    <string name="tax_address_to_transport">ที่อยู่ในการจัดส่งเอกสารป้ายภาษี</string>
+    <string name="txt_not_permission_tax">ติดต่อทาง Line:@toyotaleasing</string>
+<!--    <string name="tax_staff_contact">หากต้องการต่อภาษี กรุณาแจ้งข้อมูลผ่านทาง Line: TLT_RSD</string>-->
+    <string name="tax_staff_contact">กรุณาติดต่อ Line:@toyotaleasing</string>
+    <string name="tax_note">* ข้อมูลการต่อภาษีข้างต้นเป็นข้อมูลจากฐานข้อมูลโตโยต้าลีสซิ่ง (ไม่รวมค่าปรับจราจร)</string>
+    <string name="tax_document_delivery_title">การจัดส่งป้ายภาษี</string>
+    <string name="tax_document_register_number">เลขลงทะเบียน %1$s</string>
+    <string name="tax_delivery_in_between_proceed">อยู่ระหว่าง\nดำเนินการ</string>
+    <string name="tax_delivery_transport_tax_label">จัดส่ง\nป้ายภาษี</string>
+    <string name="tax_delivery_thaipost_website"><u>https://thailandpost.co.th</u></string>
+    <string name="tax_delivery_check_delivery">ตรวจสอบสถานะการจัดส่งป้ายภาษี</string>
+    <string name="tax_delivery_address_to_delivery">ที่อยู่ในการจัดส่งเอกสารป้ายภาษี</string>
+    <string name="tax_contract_number">เลขที่สัญญา : %1$s</string>
+    <string name="tax_currency">%1$s บาท</string>
+    <string name="tax_total_payment">ยอดที่ต้องชำระ <![CDATA[<font color="%2$s">%1$s</font>]]> บาท</string>
+    <string name="tax_cannot_pay_text">ท่านไม่สามารถชำระค่าภาษี\nและอัพเดทสถานะปีภาษีได้</string>
+    <string name="tax_updating_payment_title">กำลังอัพเดตการชำระภาษี</string>
+    <string name="tax_delivery_no_data">ไม่มีข้อมูลการจัดส่งป้ายภาษี</string>
+
+    <string name="resetpincode_title">เปลี่ยนรหัส PIN</string>
+    <string name="pincode_incorrect">รหัส PIN ผิด กรุณาลองใหม่อีกครั้ง</string>
+    <string name="pincode_incorrect_3_times">รหัส PIN ไม่ถูกต้องใส่ได้อีก2ครั้ง</string>
+    <string name="pincode_incorrect_4_times">รหัส PIN ไม่ถูกต้องใส่ได้อีก1ครั้ง</string>
+    <string name="resetpincode_title_header">ใส่รหัส PIN เดิม</string>
+    <string name="resetpincode_success_title_header">เปลี่ยนรหัส PIN ใหม่สำเร็จ</string>
+    <string name="resetpincode_success_description">ระบบได้ทำการเปลี่ยนแปลงรหัส PIN ใหม่\nเรียบร้อยแล้ว</string>
+    <string name="resetpincode_success_confirm_text">กลับหน้าหลัก</string>
+    <string name="forgotpincode_title">ลืมรหัสผ่าน</string>
+    <string name="forgotpincode_title_header">หากคุณลืมรหัสผ่าน กรุณากรอกเลขประจำตัว 11 หรือ 12 หลัก จะแสดงอยู่บนบัตร Simply Card หรือในใบเสร็จรับเงินของท่าน</string>
+    <string name="forgotpincode_title_id_card">หากคุณลืมรหัสผ่าน กรุณากรอกเลขบัตรประชาชนหรือพาสปอร์ตเพื่อยืนยันตัวตน และตั้งรหัสPINใหม่</string>
+    <string name="forgotpincode_title_contract">กรุณาระบุหมายเลขสัญญาของท่าน (10 หลัก)</string>
+    <string name="forgotpincode_description">*เลขบัตรประชาชน หรือ พาสปอร์ต\nกรอกเพื่อใช้ในการตรวจสอบข้อมูลรถเท่านั้น</string>
+    <string name="forgotpincode_confirm_text">ถัดไป</string>
+    <string name="forgotpincode_id_card_hint">เลขบัตรประชาชน หรือ พาสปอร์ต</string>
+    <string name="car_contract_btn_detail">รายละเอียด</string>
+    <string name="tax_no_have_payment">ไม่มีรายการชำระ</string>
+    <string name="edit_address_use_address_every_contract">ใช้ที่อยู่นี้ในทุกสัญญา</string>
+    <string name="edit_tax_delivery_address_note">*การเปลี่ยนแปลงที่อยู่นี้ สำหรับการจัดส่งป้ายภาษีเท่านั้น เอกสารอื่นๆยังคงจัดส่งตามที่อยู่เดิม</string>
+    <string name="mycar_updating_status">กำลังอัพเดตการชำระ</string>
+    <string name="mycar_nopay">ไม่มีค่างวดค้างชำระ</string>
+    <string name="mycar_legal_other_description">ท่านไม่สามารถตรวจสอบข้อมูลค่างวด \nและประวัติการชำระเงินของท่านได้ในขณะนี้ \nโปรดติดต่อเจ้าหน้าที่ call center </string>
+    <string name="mycar_direct_debit_description">กรุณานำเงินเข้าบัญชีธนาคารที่ท่านสมัครใช้บริการหักบัญชีเงินฝากล่วงหน้า 1 วันทำการ บริษัทฯ จะหักเงินในบัญชีของท่าน ในวันครบกำหนดชำระเงิน</string>
+
+    <string name="otp_did_not_get_otp">ยังไม่ได้รับหมายเลข OTP?</string>
+    <string name="otp_resend_otp">ส่งอีกครั้ง</string>
+    <string name="otp_entered_incorrect">รหัส OTP ไม่ถูกต้อง</string>
+    <string name="otp_timeout_otp">รหัสOTP หมดอายุ กรุณากดส่งอีกครั้ง</string>
+    <string name="edit_address_success_dialog_title">ขอบคุณสำหรับการอัพเดทข้อมูลที่อยู่</string>
+    <string name="edit_address_success_dialog_description">บริษัทจะส่ง SMS ยืนยันอีกครั้ง หลังดำเนินการเปลี่ยนแปลงที่อยู่ในการจัดส่งเอกสารให้ท่าน</string>
+    <string name="edit_installment_email_success_dialog_title">ขอบคุณสำหรับการอัพเดทข้อมูล\nอีเมล เบอร์โทรศัพท์ของท่าน</string>
+    <string name="edit_tax_address_success_dialog_title">อัพเดตขอมูลท่ีอยูใหมในการจัดสง เอกสารปายภาษีสําเร็จ</string>
+    <string name="edit_tax_email_success_dialog_title">อัพเดทขอมูล อีเมล เบอรโทรศัพท ของทานสําเร็จ</string>
+    <string name="noncustomer_register">ลงทะเบียน / เข้าสู่ระบบ</string>
+    <string name="auth_attempt_over_limit_dialog_description">คุณใส่รหัส PIN ผิดครบ 5 ครั้งแล้ว</string>
+    <string name="is_exit_dialog_description">คุณต้องการออกจากแอปฯหรือไม่?</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="line">Line</string>
+
+    <string name="insurance_title">ประกันภัยรถยนต์</string>
+    <string name="insurance_quotation">ขอใบเสนอราคา</string>
+    <string name="insurance_btn_detail">ข้อมูลประกันภัย</string>
+    <string name="insurance_btn_status">สถานะ\nกรมธรรม์</string>
+    <string name="insurance_btn_quotation">ขอใบ\nเสนอราคา</string>
+    <string name="insurance_btn_quotation_2">ขอใบเสนอราคา</string>
+    <string name="insurance_prohibit_detail">กรุณาติดต่อตัวแทนประกันภัยหรือ\nผู้จำหน่ายของท่าน</string>
+    <string name="insurance_checking">กำลังอัพเดตการชำระ</string>
+    <string name="insurance_contract_number">เลขที่สัญญา : %1$s</string>
+    <string name="insurance_total_pay">ยอดที่ต้องชำระ <![CDATA[<font color="%2$s">%1$s</font>]]> บาท</string>
+    <string name="insurance_contactus">ติดต่อสอบถาม</string>
+    <string name="insurance_accident">แจ้งอุบัติเหตุ</string>
+    <string name="insurance_emergency">เบอร์ฉุกเฉิน</string>
+    <string name="insurance_service_center">ศูนย์บริการ\nโตโยต้า</string>
+    <string name="insurance_contactus_information">สอบถามข้อมูล</string>
+    <string name="insurance_club_customer">คลับสำหรับลูกค้าคนพิเศษ</string>
+    <string name="insurance_club_description">กิจกรรมความสนุกสุดจี๊ด สุดโดน! สิทธิพิเศษและส่วนลดร้านค้าดังทั่วประเทศ</string>
+    <string name="insurance_expire_day">%1$s วัน</string>
+    <string name="tib_club_title">คลับสำหรับลูกค้าคนพิเศษ</string>
+    <string name="tib_club_event_other">กิจกรรมต่างๆ</string>
+
+    <!-- INSURANCE INFORMATION-->
+    <string name="insurance_information_title">ข้อมูลการประกันภัย</string>
+    <string name="insurance_information_company">บริษัทประกันภัย</string>
+    <string name="insurance_information_no">เลขที่กรมธรรม์</string>
+    <string name="insurance_information_type">ประเภทความคุ้มครอง</string>
+    <string name="insurance_information_end_of_protection">วันสิ้นสุดการคุ้มครอง</string>
+    <string name="insurance_information_current_year">ปีปัจจุบัน</string>
+    <string name="insurance_information_expire_detail">กรมธรรม์ของท่าน จะหมดอายุภายใน</string>
+    <string name="insurance_information_recommend_premium">เบี้ยประกันภัยที่แนะนำ</string>
+    <string name="insurance_information_faqs">สอบถามข้อมูลเพิ่มเติม</string>
+    <string name="insurance_information_history">ประวัติการต่อประกันที่ผ่านมา</string>
+    <string name="insurance_information_protection_type">ประเภทความคุ้มครอง</string>
+    <string name="insurance_information_insurance">ทุนประกัน</string>
+    <string name="insurance_information_condition">เงื่อนไขการซ่อม</string>
+
+    <string name="insurance_information_all_message">ทั้งหมด</string>
+    <string name="insurance_information_hide_message">ซ่อน</string>
+
+    <string name="recommend_total_value_message">ค่าเบี้ยประกัน</string>
+    <string name="recommend_quotation_or_promotion_message">ขอใบเสนอราคา / เลือกโปรโมชั่น</string>
+
+    <string name="status_insurance_message">สถานะกรมธรรม์</string>
+    <string name="status_insurance_date">กรมธรรม์ของท่าน ได้ส่งออกวันที่</string>
+    <string name="status_insurance_thaipost">ตรวจสอบการจัดส่งไปรษณีย์</string>
+    <string name="status_insurance_no_policy">ไม่มีข้อมูลสถานะกรมธรรม์\nกรุณาติดต่อเจ้าที่ </string>
+
+    <string name="status_insurance_web_url">https://thailandpost.online/</string>
+
+    <!--iten_insurance-->
+    <string name="iten_insurance">ชุดที่ %d</string>
+    <string name="item_insurance_company">บริษัทประกันภัย</string>
+    <string name="item_insurance_converageType">ประเภทความคุ้มครอง</string>
+    <string name="item_insurance_payment">วิธีการชำระ</string>
+
+    <!--activity_quotation-->
+    <string name="activity_quotation_title">แบบฟอร์มขอใบเสนอราคา</string>
+    <string name="activity_quotation_topic_1">1. ข้อมูลรถยนต์และผู้ใช้</string>
+    <string name="activity_quotation_topic_2">2. ข้อมูลประกันภัย</string>
+    <string name="activity_quotation_topic_3">3. รายละเอียดเพิ่มเติม</string>
+    <string name="activity_quotation_btn_add">เพิ่มแบบฟอร์ม ข้อมูลประกันภัย</string>
+    <string name="activity_quotation_hint_add">กด “เพิ่มแบบฟอร์ม” เพื่อขอข้อมูลบริษัทประกันภัย\nสำหรับเปรียบเทียบข้อมูลหลายบริษัท</string>
+    <string name="activity_quotation_btn_converageType"><u>ดูข้อมูล ประเภทความคุ้มครอง</u></string>
+    <string name="activity_quotation_radio_1">ให้เจ้าหน้าที่ติดต่อกลับทางโทรศัพท์</string>
+    <string name="activity_quotation_radio_2">ขอใบเสนอราคาทางอีเมล</string>
+    <string name="activity_quotation_btn_submit">ขอใบเสนอราคา</string>
+    <string name="activity_quotation_name">ชื่อ - นามสกุล</string>
+    <string name="activity_quotation_phone">เบอร์โทรศัพท์</string>
+    <string name="activity_quotation_email">อีเมล</string>
+    <string name="activity_quotation_car_number">เลขทะเบียน</string>
+    <string name="activity_quotation_car_city">จังหวัด</string>
+    <string name="activity_quotation_car_series">รุ่นรถ</string>
+
+    <string name="activity_quotation_name_tv">ชื่อ: %1$s</string>
+    <string name="activity_quotation_car_number_city_tv">ทะเบียน: %1$s</string>
+    <string name="activity_quotation_car_number_contract_tv">เลขที่สัญญา: %1$s</string>
+    <string name="activity_quotation_car_series_tv">รุ่นรถ: %1$s</string>
+    <string name="quotation_insurance_company_hint">บริษัทประกันภัย</string>
+    <string name="quotation_insurance_policy_hint">ประเภทความคุ้มครอง</string>
+    <string name="quotation_insurance_payment_method_hint">วิธีการชำระ</string>
+
+    <string name="receipt_title">ชำระเงิน</string>
+    <string name="receipt_header_paid_success">ทำรายการสำเร็จ</string>
+    <string name="receipt_payment_installment_success">ทำรายการสำเร็จ</string>
+    <string name="receipt_payment_tax_success">ทำรายการสำเร็จ</string>
+    <string name="receipt_description_insatllment_paid_success">หากท่านชำระเงินแล้ว ข้อมูลประวัติการชำระเงินจะอัพเดตภายใน 3 วันทำการ</string>
+    <string name="receipt_description_tax_paid_success"></string>
+    <string name="receipt_description_insurance_paid_success">กรรมธรรม์จะถูกจัดส่งให้ท่าน\nภายใน 14 วันทำการ</string>
+    <string name="receipt_fullname">ชื่อ</string>
+    <string name="receipt_car_license">ทะเบียน</string>
+    <string name="receipt_contract_number">เลขที่สัญญา</string>
+    <string name="receipt_payment_method">ช่องทางชำระ</string>
+    <string name="receipt_total_paid">รวมยอดชำระ</string>
+    <string name="receipt_send_mail">ส่งอีเมล</string>
+    <string name="receipt_save_slip">บันทึก</string>
+    <string name="receipt_contactus">ขอบคุณสำหรับการชำระเงินของท่าน\nหากมีข้อสงสัย กรุณาติดต่อ </string>
+
+    <string name="insurance_payment_detail_title">รายละเอียดการชำระ</string>
+    <string name="insurance_payment_detail_btn">ชำระเบี้ย\nประกันภัย</string>
+
+    <!--activity_insurance_payment_detail-->
+    <string name="insurance_payment_budget_pre">ยอดที่ต้องชำระ </string>
+    <string name="insurance_payment_budget_baht"> บาท</string>
+    <string name="insurance_type_protection_tv">ประเภทความคุ้มครอง</string>
+    <string name="insurance_budget_tv">ทุนประกัน</string>
+    <string name="insurance_condition_tv">เงื่อนไขการซ่อม</string>
+    <string name="insurance_error_tv">ขออภัย ท่านยังไม่สามารถทำการต่อประกันได้ในขณะนี้ โปรดติดต่อเจ้าหน้าที่ TIB Call center  </string>
+
+    <!-- PAYMENT -->
+    <string name="payment_title">ชำระเงิน</string>
+    <string name="payment_summary_list">รายการชำระ</string>
+    <string name="payment_insurance">เบี้ยประกันรถยนต์</string>
+    <string name="payment_method_title">ชำระผ่านอินเทอร์เน็ตแบงก์กิ้ง</string>
+    <string name="wallet_method_title">ชำระผ่านอีวอลเล็ต</string>
+    <string name="mbanking_method_title">ชำระผ่านโมบายแบงก์กิ้ง</string>
+    <string name="qr_method_title">สร้าง QR Code</string>
+
+    <string name="payment_summary">รวมยอดชำระ</string>
+    <string name="summary_insurance_payment_title">ชำระเงิน</string>
+    <string name="summary_insurance_payment_header">ตรวจสอบรายการชำระ</string>
+    <string name="summary_tax_payment_header">รายการชำระ</string>
+    <string name="summary_insurance_payment_item_paid">ค่าเบี้ยประกัน</string>
+    <string name="insurance_recommend_not_found_description">ขออภัย ไม่พบข้อมูลเบี้ยประกันภัยที่แนะนำ\nหากมีข้อสงสัยกรุณาติดต่อ\n</string>
+
+    <string name="insurance_status_tracking_no">เลขลงทะเบียน %1$s</string>
+    <string name="insurance_nodata_description">ขออภัย ไม่พบข้อมูลเบี้ยประกันภัยที่แนะนำ\nหากมีข้อสงสัยกรุณาติดต่อ\ncall center </string>
+    <string name="insurance_information_nodata">ไม่พบข้อมูล\nประวัติต่อประกันของคุณ</string>
+
+    <!-- HOTLINE -->
+    <string name="hotline_title_contact_us">ติดต่อเรา/สอบถามข้อมูล</string>
+    <string name="hotline_accident">แจ้งอุบัติเหตุ</string>
+    <string name="hotline_emergency_call">เบอร์ฉุกเฉิน</string>
+    <string name="hotline_service_center">ศูนย์บริการ\nโตโยต้า</string>
+    <string name="hotline_contact_us">ติดต่อเรา/\nสอบถามข้อมูล</string>
+    <string name="hotline_accident_header">เบอร์โทรแจ้งเคลมอุบัติเหตุ ตลอด 24 ชั่วโมง</string>
+    <string name="hotline_emergency_header">เบอร์โทรฉุกเฉิน</string>
+
+    <string name="hotline_contactus_hint_fullname">ชื่อ - นามสกุล</string>
+    <string name="hotline_contactus_hint_tel">เบอร์โทรศัพท์ *</string>
+    <string name="hotline_contactus_hint_email">อีเมล</string>
+    <string name="hotline_contactus_hint_detail">ตัวอย่างข้อความในกล่องข้อความ</string>
+
+    <string name="hotline_service_location_description">กรุณากดปุ่มข้างใต้\nเพื่อเข้าสู่เมนูที่ตั้งสำนักงานโตโยต้าลีสซิ่ง</string>
+    <string name="hotline_service_location_confirm">ที่ตั้งสำนักงานโตโยต้าลีสซิ่ง</string>
+
+    <string name="summary_payment_add_summary">เพิ่มรายการ หรือปรับจำนวนชำระ</string>
+    <string name="summary_edit_payment_title">ปรับรายการชำระ</string>
+    <string name="summary_edit_payment_confirm">ยืนยัน</string>
+    <string name="summary_edit_payment_add_new">เพิ่มรายการ</string>
+    <string name="summary_edit_payment_price_hint">จำนวนเงิน</string>
+    <string name="summary_edit_payment_select_hint">เลือกค่าใช้จ่ายอื่นๆ</string>
+    <string name="summary_edit_payment_total_amount">รวมยอดชำระ</string>
+
+    <!-- Attach CTPL Insurance -->
+    <string name="tax_txt_skip">ข้าม, ฉันต้องการแนบเอกสารภายหลัง</string>
+    <string name="attach_ctpl_support">รองรับไฟล์ jpeg, jpg, และ png</string>
+    <string name="attach_ctpl_description">(แนบหลักฐาน แสดงการประกันภัย ตามพระราชบัญญัติคุ้มครองผู้ประสบภัยจากรถยนต์)\nเนื่องจากท่านไม่ได้เลือกชำระ พรบ.</string>
+    <string name="attach_ctpl_title">แนบเอกสาร พรบ.</string>
+    <string name="attach_ctpl_title_2">แนบเอกสาร พรบ.</string>
+    <string name="attach_ctpl_date_mock">11 ม.ค. 2561</string>
+    <string name="attach_ctpl_status_title">สถานะ : %1$s</string>
+    <string name="attach_ctpl_not_attach">ยังไม่แนบเอกสาร</string>
+    <string name="attach_ctpl_attach">กำลังตรวจสอบเอกสาร</string>
+    <string name="attach_ctpl_button">ยืนยันการแนบเอกสาร</string>
+
+    <!-- Attach Vehicle inspection Insurance -->
+    <string name="attach_inspection_support">รองรับไฟล์ประเภท jpeg, jpg และ png</string>
+    <string name="attach_inspection_description">(ใบตรวจสภาพรถยนต์) เนื่องจากรถของท่านมีอายุ 7ปีขึ้นไป</string>
+    <string name="attach_inspection_title">แนบเอกสาร ตรอ.</string>
+    <string name="attach_inspection_title_2">แนบเอกสาร ตรอ.</string>
+    <string name="attach_inspection_date_mock">11 ม.ค. 2561</string>
+    <string name="attach_inspection_status_title">สถานะ : %1$s</string>
+    <string name="attach_inspection_not_attach">ยังไม่แนบเอกสาร</string>
+    <string name="attach_inspection_attach">กำลังตรวจสอบเอกสาร</string>
+    <string name="attach_inspection_button">ยืนยันการแนบเอกสาร</string>
+    <string name="attach_inspection_choice_title">หรือแนบเอกสารผ่านทาง</string>
+    <string name="attach_inspection_via_line">LINE</string>
+    <string name="attach_inspection_via_email">อีเมล</string>
+
+    <!-- Attach NGV CNG -->
+    <string name="attach_ngv_title">หนังสือรับรองวิศวกรรมฉบับจริง</string>
+    <string name="attach_ngv_title_2">หนังสือรับรองวิศวกรรมฉบับจริง</string>
+    <string name="attach_ngv_description">เนื่องจากรถของท่านเปลี่ยนชนิดเชื้อเพลิง NGV/CNG</string>
+    <string name="attach_ngv_address"></string>
+    <string name="attach_ngv_ems_title">กรอกหมายเลข EMS ของท่าน\n เพื่อติดตามสถานะเอกสาร</string>
+    <string name="attach_ngv_please_send_title">กรุณาส่งเอกสาร EMS ฉบับจริงมาที่&#8230;</string>
+    <string name="attach_ems_number_hint">หมายเลข EMS</string>
+    <string name="attach_ngv_button">ยืนยันหมายเลข EMS</string>
+
+    <!-- Buy insurance dialog -->
+    <string name="insurance_dialog_title">คุณต้องการแนบ พรบ. หรือไม่</string>
+    <string name="insurance_dialog_buy_button">ซื้อ พรบ.</string>
+    <string name="insurance_dialog_attach_button">ฉันมีเอกสารแล้ว, แนบเอกสาร พรบ.</string>
+
+    <!-- Custom viewgroup status -->
+    <string name="item_header_tv">กรุณาเตรียมเอกสาร พรบ.(ถ้ามี) / ตรอ. / หนังสือรับรอง วิศวกรรมฉบับจริง เพื่อประกอบการต่อภาษี</string>
+    <string name="document_status_title">สถานะเอกสารของฉัน</string>
+    <string name="document_status_ctpl_title">แนบเอกสาร</string>
+    <string name="document_status_inspection_title">กำลังตรวจสอบ เอกสาร</string>
+    <string name="document_status_ngv_title">แนบเอกสาร เรียบร้อย</string>
+    <string name="document_status_verify_button">ตรวจสอบ</string>
+    <string name="document_status_no_item">ไม่มีรายการชำระ</string>
+    <string name="payment_history_payments">ยอดชำระ</string>
+    <string name="payment_history_download">ดาวน์โหลดใบเสร็จ</string>
+    <string name="payment_history_total">%1$s บาท</string>
+    <string name="payment_history_receipt_date">วันที่ออกใบเสร็จ %1$s</string>
+    <string name="payment_history_no_data">ไม่มีประวัติการจ่าย</string>
+
+    <string name="insurance_status_complete">แนบเอกสารเรียบร้อย</string>
+    <string name="insurance_status_pending">กำลังตรวจสอบเอกสาร</string>
+    <string name="insurance_status_warning_ctpl">ซื้อ พรบ. หรือแนบเอกสาร</string>
+    <string name="insurance_status_warning_inspection">ยังไม่แนบเอกสาร</string>
+    <string name="insurance_status_warning_ngv">แนบหนังสือรับรองวิศวกรรมฉบับจริง</string>
+    <string name="insurance_status_incorrect">เอกสารไม่ถูกต้อง</string>
+
+    <string name="gas_status_complete">ส่งเอกสารเรียบร้อย</string>
+    <string name="gas_status_warning_inspection">ยังไม่ส่งเอกสาร</string>
+
+    <!-- QR Code -->
+    <string name="qr_code_title">QR code / Barcode</string>
+    <string name="qr_code_payment_installment_title">ชำระค่างวดรถยนต์</string>
+    <string name="qr_code_payment_insurance_title">ชำระค่าประกันรถยนต์</string>
+    <string name="qr_code_payment_tax_title">ชำระค่าภาษีรถยนต์</string>
+    <string name="qr_code_payment_other_title">ชำระค่าอื่นๆ</string>
+    <string name="qr_code_payment_show_qr_message">กรุณาแสดง Barcode สำหรับชำระ ณ เคาน์เตอร์ผู้ให้บริการ</string>
+    <string name="qr_code_payment_barcode_message">กรุณาระบุจำนวนเงินที่ต้องการชำระ ที่หน้าเคาน์เตอร์</string>
+    <string name="qr_code_save">บันทึก Barcode</string>
+    <string name="qr_code_payment_list">รายการชำระ</string>
+    <string name="qr_code_payment_total">รวมยอดชำระ</string>
+    <string name="hotline_title">สายด่วน</string>
+    <string name="sidebar_menu_qrcode">ชำระด้วย QR code / Barcode</string>
+
+    <string name="ibanking_title">iBanking</string>
+    <string name="btn_payment">ชำระเงิน</string>
+    <string name="btn_tax_renewal">กดเพื่อต่อภาษี</string>
+    <string name="btn_complete_tax_renewal">ต่อภาษี\nสำเร็จ</string>
+    <string name="btn_backhome">กลับหน้าหลัก</string>
+    <string name="btn_checking_payment_amount">กดเพื่อ\nชำระเงิน</string>
+    <string name="btn_pay_installment">ชำระค่างวด</string>
+    <string name="btn_pay_insurance">ชำระเบี้ย\nประกันภัย</string>
+    <string name="btn_pay_insurance_single_line">ชำระเบี้ยประกันภัย</string>
+    <string name="btn_pay_insurance_success">ชำระประกัน\nเรียบร้อย</string>
+    <string name="btn_attach_document_process">เข้าสู่ขั้นตอนการส่งเอกสาร</string>
+
+    <string name="contactus_title">ข้อมูลการติดต่อ</string>
+    <string name="contactus_call_center">Call Center\n</string>
+    <string name="contactus_qa">ส่งคำถาม\nและข้อเสนอแนะ</string>
+    <string name="contactus_line">ToyotaLeasing\nLine official</string>
+    <string name="contactus_facebook">ToyotaLeasing\nThailand</string>
+    <string name="contactus_tlt">บริษัท โตโยต้า ลีสซิ่ง (ประเทศไทย) จำกัด</string>
+    <string name="contactus_tlt_website">www.tlt.co.th</string>
+    <string name="contactus_tib_detail">ติดต่อเรื่องประกันภัย</string>
+    <string name="contactus_tlt_insurance_broker">โตโยต้า อินชัวรันซ์ โบรกเกอร์</string>
+    <string name="contactus_line_dialog">Toyota Leasing Line Official\nจะเปิดให้บริการเร็วๆนี้</string>
+    <string name="contactus_facebook_dialog">Toyota Leasing Facebook Official\nจะเปิดให้บริการเร็วๆนี้</string>
+    <string name="contactus_line_dialog_ok">ตกลง</string>
+
+    <string name="setting_early_notification_title">การแจ้งเตือนล่วงหน้า</string>
+    <string name="setting_advance_notification_payment_title">กำหนดชำระค่างวด</string>
+    <string name="seek_bar_five_day">5</string>
+    <string name="seek_bar_seven_day">7</string>
+    <string name="seek_bar_fifteen_day">15</string>
+    <string name="seek_bar_thirty_day">30</string>
+    <string name="seek_bar_sixty_day">60</string>
+    <string name="setting_advance_notification_payment_description">แจ้งเตือนล่วงหน้าก่อนถึง วันชำระค่างวดของคุณ</string>
+    <string name="setting_advance_notification_tax_title">กำหนดชำระภาษี</string>
+    <string name="setting_advance_notification_tax_description">แจ้งเตือนล่วงหน้าก่อนถึง วันชำระภาษีของคุณ</string>
+    <string name="setting_advance_notification_insurance_title">กำหนดชำระประกัน</string>
+    <string name="setting_advance_notification_insurance_description">แจ้งเตือนล่วงหน้าก่อนถึง วันชำระประกันของคุณ</string>
+    <string name="setting_account_title">บัญชีผู้ใช้</string>
+    <string name="setting_account_email_description">แก้ไขอีเมลที่ใช้ในการเข้าใช้งานแอปพลิเคชัน</string>
+    <string name="setting_account_car_profile_description">อัพโหลดรูปถ่ายรถของคุณ</string>
+    <string name="setting_account_car_profile_title">โปรไฟล์รถ</string>
+    <string name="setting_news_title">การแจ้งเตือนรับข่าวสาร</string>
+    <string name="setting_news_promotion_title"><![CDATA[ ข่าวสารและโปรโมชั่น ]]></string>
+    <string name="setting_tib_club_title">TIB Clubs</string>
+    <string name="setting_language_title">ภาษา</string>
+    <string name="setting_other_security_title">ความปลอดภัย</string>
+    <string name="setting_other_id_touch_title">เปิดใช้งาน Touch ID</string>
+    <string name="setting_other_change_pin_title">เปลี่ยนรหัส PIN</string>
+    <string name="setting_email_pattern">อีเมล : %1$s</string>
+    <string name="setting_change_language_title">ภาษา</string>
+
+    <string name="setting_change_email_toolbar">บัญชีผู้ใช้</string>
+    <string name="setting_old_email_title">กรุณากรอกอีเมลเก่า</string>
+    <string name="setting_old_email_hint">อีเมล์เก่า</string>
+    <string name="setting_new_email_title">กรุณากรอกอีเมลใหม่</string>
+    <string name="setting_new_email_hint">อีเมล์ใหม่</string>
+    <string name="setting_change_email_confirm_button">ยืนยัน</string>
+    <string name="setting_email_success_toolbar">เปลี่ยนอีเมล</string>
+    <string name="setting_email_success_title">เปลี่ยนอีเมลสำเร็จ</string>
+    <string name="setting_email_success_message1">อีเมลปัจจุบันของคุณคือ</string>
+    <string name="setting_email_success_button">กลับสู่หน้าการตั้งค่า</string>
+    <string name="setting_email_verify_success_title">ยืนยันอีเมลสำเร็จ</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="news_toolbar">ข่าวสาร</string>
+    <string name="oil_price_toolbar">น้ำมัน</string>
+    <string name="traffic_toolbar">การจราจร</string>
+    <string name="traffic_title">JS100</string>
+    <string name="oil_price_title">ราคาน้ำมัน</string>
+    <string name="oil_price_unit">(บาท/ลิตร)</string>
+    <string name="oil_price_unit_lo">(บาท/กิโลกรัม)</string>
+    <string name="oil_price_footer">ข้อมูลจาก www.pttlc.com</string>
+    <string name="news_and_promotion_news_title">ข่าวสารและโปรโมชั่น</string>
+    <string name="news_and_promotion_detail_title">ข่าวสารและโปรโมชั่น</string>
+    <string name="news_and_promotion_bookmark_limit_dialog">บุ๊คมาร์คไม่เกิน 3 รายการ</string>
+    <string name="news_and_promotion_today">วันนี้</string>
+    <string name="qrcode_all_car_title">เลือกรายการที่ต้องการชำระ</string>
+    <string name="qrcode_txt_installment">ค่างวด</string>
+    <string name="qrcode_txt_tax">ภาษี</string>
+    <string name="qrcode_txt_insurance">ประกัน</string>
+    <string name="qrcode_txt_others">อื่นๆ</string>
+    <string name="qrcode_ref1_txt">Ref1 : %1$s</string>
+    <string name="qrcode_ref2_txt">Ref2 : %1$s</string>
+    <string name="dialog_button_ok">ตกลง</string>
+    <string name="dialog_button_close">ปิด</string>
+    <string name="dialog_button_cancel">ยกเลิก</string>
+    <string name="dialog_an_error_occurred">มีข้อผิดพลาดเกิดขึ้น</string>
+
+    <string name="quotation_staff_contact_message_dialog">ระบบได้บันทึกข้อมูลของท่านเรียบร้อยแล้ว เจ้าหน้าที่จะรีบติดต่อท่านกลับ</string>
+    <string name="quotation_email_contact_message_dialog">ระบบได้บันทึกข้อมูลของท่านเรียบร้อยแล้ว เจ้าหน้าที่จะรีบติดต่อกลับทางอีเมล์ที่ระบุไว้</string>
+    <string name="porlorbor_upload_success">อัพโหลดรูปเรียบร้อย</string>
+    <string name="porlorbor_upload_fail">อัพโหลดรูปไม่สำเร็จ</string>
+    <string name="gas_upload_fail">บันทึกไม่สำเร็จ</string>
+    <string name="gas_upload_success">บันทึกสำเร็จ</string>
+    <string name="insurance_type_dialog_title">ประเภทความคุ้มครอง</string>
+    <string name="insurance_type_dialog_header_1">ประกันภัยรถยนต์ ประเภท 1</string>
+    <string name="insurance_type_dialog_desc_1">คุ้มครองและรับผิดชอบครอบคลุมมากที่สุด ทั้งรถ และร่างกายของทั้งผู้เอาประกันและคู่กรณี รวมไปถึง แม้ไม่มีคู่กรณี เช่น ถอยชนเสา ชนฟุตบาท เป็นต้น นอกจากนั้นยังคุ้มครองกรณีไฟไหม้ สูญหาย ภัย ธรรมชาติ และค่าใช้จ่ายในการลากจูงด้วย</string>
+    <string name="insurance_type_dialog_header_2">ประกันภัยรถยนต์ ประเภท 2+</string>
+    <string name="insurance_type_dialog_desc_2">คุ้มครองและรับผิดชอบเกือบเทียบเท่าประกันภัยรถ ยนต์ชั้น 1 แต่จะคุ้มครองเฉพาะความเสียหายที่เกิด จากรถชนรถเท่านั้น ไม่สามารถเคลมได้ในกรณีที่ไม่ มีคู่กรณี นอกจากนั้นยังคุ้มครองกรณีไฟไหม้ และ สูญหายด้วย</string>
+    <string name="insurance_type_dialog_header_3">ประกันภัยรถยนต์ ประเภท 2</string>
+    <string name="insurance_type_dialog_desc_3">คุ้มครองและรับผิดชอบทั้งร่างกายและทรัพย์สินเฉพาะ ของคู่กรณี ไม่คุ้มครองรถผู้เอาประกัน ยกเว้นกรณีไฟ ไหม้ หรือสูญหาย</string>
+    <string name="insurance_type_dialog_header_4">ประกันภัยรถยนต์ ประเภท 3+</string>
+    <string name="insurance_type_dialog_desc_4">คุ้มครองและรับผิดชอบทั้งร่างกายและทรัพย์สินของผู้ เอาประกันภัยและคู่กรณี เฉพาะความเสียหายที่เกิดจาก รถชนรถเท่านั้น แต่ไม่คุ้มครองกรณีไฟไหม้ หรือสูญหาย</string>
+    <string name="payment_fail_detail">เกิดเหตุขัดข้อง ชำระเงินไม่สำเร็จ</string>
+    <string name="receipt_payment_type">ประเภทชำระ</string>
+    <string name="receipt_payment_type_installment">ค่างวด</string>
+    <string name="receipt_payment_type_tax">ภาษี</string>
+    <string name="receipt_payment_type_insurance">ประกันรถยนต์</string>
+    <string name="receipt_save_image_success">บันทึกสำเร็จ</string>
+    <string name="location_distance">%1$s กม.</string>
+    <string name="location_direction">เส้นทาง</string>
+    <string name="location_tel">โทร</string>
+    <string name="location_detail">รายละเอียด</string>
+    <string name="location_show_all">ทั้งหมด</string>
+    <string name="location_hide">ซ่อน</string>
+    <string name="location_hq_filter">ที่ตั้งสำนักงานโตโยต้า ลีสซิ่ง</string>
+
+    <string name="location_detail_office">ออฟฟิส, โชว์รูม</string>
+    <string name="location_detail_address">x</string>
+    <string name="location_detail_tel">x</string>
+    <string name="location_detail_time">x</string>
+    <string name="location_detail_website">x</string>
+
+    <string name="location_dealer_filter">ที่ตั้งผู้แทนจำหน่ายโตโยต้า</string>
+    <string name="location_filter_title">ค้นหา</string>
+    <string name="location_filter_dealer_hint">ผู้แทนจำหน่าย</string>
+    <string name="location_filter_dealer_title">ค้นหาผู้แทนจำหน่าย</string>
+    <string name="location_filter_province_hint">เลือกจังหวัด</string>
+    <string name="location_filter_district_hint">เลือกอำเภอ</string>
+    <string name="location_filter_office">ออฟฟิศ</string>
+    <string name="location_filter_showroom">โชว์รูม</string>
+    <string name="location_filter_service">ศูนย์บริการทั่วไป</string>
+    <string name="location_filter_repair">ศูนย์บริการตัวถังและสี</string>
+    <string name="location_filter_dealer_nearly">ค้นหาผู้แทนจำหน่ายที่ใกล้คุณ</string>
+    <string name="location_filter_search">ค้นหา</string>
+    <string name="location_office_title">สำนักงานทั้งหมด (%1$s)</string>
+    <string name="location_showroom_title">ผู้แทนจำหน่าย (%1$s)</string>
+    <string name="location_not_found_description">ขออภัย ไม่พบผลการค้นหา\nกรุณาเลือกคำค้นหาอื่นๆที่ใกล้เคียงกัน</string>
+    <string name="location_back_to_search">กลับสู่หน้าค้นหา</string>
+    <string name="location_switch_on_location_title">กรุณาเปิดบริการเข้าถึงตำแหน่ง เพื่อความแม่นยำในการค้นหาข้อมูล</string>
+
+    <string name="disclosure_title_header">ยินยอมเปิดเผยข้อมูล</string>
+    <string name="disclosure_accept">ยินยอมเปิดเผยข้อมูล</string>
+    <string name="disclosure_unaccept">ไม่ยินยอมเปิดเผยข้อมูล</string>
+
+    <string name="question_and_answer_title">ส่งคำถามและข้อเสนอแนะ</string>
+    <string name="question_and_answer_topic_hint">เลือกเรื่องที่ต้องการติดต่อ</string>
+    <string name="question_and_answer_hint_name">ผู้เยี่ยมชม</string>
+    <string name="question_and_answer_hint_email">อีเมล</string>
+    <string name="question_and_answer_hint_phone">เบอร์โทรศัพท์</string>
+    <string name="question_and_answer_hint_car_license">ทะเบียนรถ</string>
+    <string name="question_and_answer_hint_detail">คำถาม / ข้อเสนอแนะ</string>
+    <string name="question_and_answer_sent_success">บริษัทฯ ได้รับข้อความของท่านเรียบร้อยแล้ว เจ้าหน้าที่จะดำเนินการติดต่อท่านโดยเร็วที่สุด ขอบคุณค่ะ</string>
+
+    <string name="profile_car_title">โปรไฟล์รถ</string>
+    <string name="profile_car_txt_choose_photo">ถ่ายรูป</string>
+    <string name="profile_car_txt_reset">ใช้รูปเริ่มต้น</string>
+    <string name="profile_car_revert_image_descrption">คุณต้องการใช้รูปเริ่มต้นใช่หรือไม่ ?</string>
+    <string name="profile_car_button">ตกลง</string>
+    <string name="profile_car_model_txt">รุ่นรถ : %1$s</string>
+
+    <string name="document_viewer_title">เอกสารดาวน์โหลด</string>
+
+    <string name="policy_title">ข้อกำหนดและเงื่อนไข</string>
+
+    <string name="non_customer_description">ขออภัย คุณยังไม่สามารถดูข้อมูลในหน้านี้\nกรุณาลงทะเบียน เพื่อเข้าถึงข้อมูลจากระบบ\nของลูกค้าโตโยต้า ลีสซิ่ง</string>
+
+    <string name="hotline_contact_us_topic">เลือกเรื่องที่ต้องการติดต่อ *</string>
+    <string name="hotline_contact_us_detail">รายละเอียด*</string>
+    <string name="hotline_contact_us_upload">อัพโหลดไฟล์แนบ (ถ้ามี)</string>
+    <string name="hotline_contact_us_upload_limit_size">รองรับไฟล์ประเภท jpeg, jpg และ png</string>
+    <string name="hotline_contact_us_request_question">ส่งคำถาม</string>
+    <string name="location_responsibility">ขอบเขตความรับผิดชอบ</string>
+
+    <string name="alert_device_logon_title">ขณะนี้คุณได้ออกจากระบบแล้ว</string>
+    <string name="alert_device_logon_description">เนื่องจากมีอุปกรณ์อื่นต้องการเข้า ใช้งานบัญชีนี้หากคุณต้องการเข้าใช้งานอีกครั้ง กรุณาใส่รหัสพิน</string>
+    <string name="alert_device_logon_button">ตกลง</string>
+
+    <string name="alert_no_internet_title">ไม่มีการเชื่อมต่ออินเตอร์เน็ต</string>
+    <string name="alert_no_internet_description">กรุณาตรวจสอบการเชื่อมต่อ และลองอีกครั้ง</string>
+    <string name="alert_no_internet_button">ตกลง</string>
+
+    <string name="alert_device_invalid_title">หมดเวลาในการเชื่อมต่อ</string>
+    <string name="alert_device_invalid_description">้หากคุณต้องการเข้าใช้งานอีกครั้ง กรุณาใส่รหัสพิน</string>
+    <string name="alert_device_invalid_button">ตกลง</string>
+
+    <string name="alert_device_error_title">บัญชีผู้ใช้ไม่พร้อมใช้งาน</string>
+    <string name="alert_device_error_description">ข้อมูลบัญชีของคุณใช้ไม่พร้อมใช้งานในขณะนี้</string>
+    <string name="alert_device_error_button">ตกลก</string>
+
+    //special offer
+    <string name="special_offer_toolbar_title">เงื่อนไขพิเศษ</string>
+    <string name="special_offer_car_contract_title">รายละเอียดสัญญารถ</string>
+    <string name="special_offer_car_date_format">วันที่ส่งข้อความ : %1$s</string>
+
+    //tutorial
+    <string name="tutorial_guide_title_1">เมนูหลัก</string>
+    <string name="tutorial_guide_description_1">ต้องการหาข้อมูลเกี่ยวกับรถยนต์ เช่น\nรถของฉัน, รายละเอียดค่างวด, ภาษี\nรถยนต์ เอกสารสำคัญ</string>
+    <string name="tutorial_guide_title_2">ปัดหน้าจอเพื่อเลื่อนดูรถ</string>
+    <string name="tutorial_guide_description_2">ตรวจสอบสถานะรถแต่ละคันด้วยการ\nปัดหน้าจอ หรือกดปุ่ม “เลือกรถ”</string>
+    <string name="tutorial_guide_title_3">ตรวจสอบการชำระ</string>
+    <string name="tutorial_guide_description_3">ตรวจสอบรายการชำระค่างวด\nรวมถึงบริการอื่นๆ</string>
+
+    //GetPhoneDialog
+    <string name="get_phone_error_title">ข้อผิดพลาด</string>
+    <string name="get_phone_error_description">ไม่พบข้อมูลของท่าน กรุณาตรวจสอบข้อมูลอีกครั้ง</string>
+
+    //FAQ
+    <string name="faq_title_transfer_ownership">โอนกรรมสิทธิ์</string>
+    <string name="faq_title_installment_faq">ค่างวด</string>
+    <string name="faq_title_tax_faq">ทะเบียน/ภาษี</string>
+    <string name="faq_title_insurance">ประกันภัย</string>
+    <string name="faq_title_credit_faq">สินเชื่อรถยนต์</string>
+    <string name="faq_title_vehicle_registration">เล่มทะเบียน</string>
+    <string name="faq_title_receipt">ใบเสร็จ</string>
+    <string name="notify_text_error">ไม่มีข้อมูลการแจ้งเตือน</string>
+    <string name="live_chat_title">Chat Bot</string>
+    <string name="registerform_notice_image">*หมายเลขประจำตัว 11 หรือ 12 หลัก จะแสดงอยู่บนบัตร Simply Card  หรือในใบเสร็จรับเงินของท่าน</string>
+    <string name="registerform_customer_id_hint">หมายเลขประจำตัว*</string>
+    <string name="qr_code_payment_show_message_3">หากเลือกชำระด้วย QR code/Barcode กรณีที่มีการต่อ พรบ. / ตรอ. เอง กรุณาแนบเอกสาร ผ่านทาง Line: TLT_RSD หรือ Fax เพื่อใช้ประกอบการต่อภาษี</string>
+
+    //Server unavailable
+    <string name="server_unavailable_title">ข้อผิดพลาด</string>
+    <string name="server_unavailable_description">ขณะนี้ระบบไม่สามารถให้บริการได้ชั่วคราวและอยู่ระหว่างดำเนินการแก้ไข กรุณาเข้าใช้บริการใหม่ภายหลัง บริษัทฯ ต้องขออภัยในความไม่สะดวกมา ณ ที่นี้</string>
+
+    //STAFF APPLICATION
+    <string name="staff_term_and_condition_title">ข้อตกลงและเงื่อนไข</string>
+    <string name="staff_term_and_condition_header">ยอมรับข้อตกลงและเงื่อนไข</string>
+    <string name="staff_term_and_condition_btn">ยอมรับข้อตกลง</string>
+
+    <string name="alert_dialog_root_title">ขออภัย</string>
+    <string name="alert_dialog_root_description">อุปกรณ์ของคุณไม่ปลอดภัย ไม่สามารถใช้งานแอปพลิเคชันนี้ได้</string>
+
+    <string name="alert_dialog_select_register_type_title">กรุณาเลือกประเภทข้อมูลผู้เช่าซื้อ\nเพื่อลงทะเบียน</string>
+    <string name="alert_dialog_simply_type_button">หมายเลขประจำตัว Simply Card</string>
+    <string name="alert_dialog_id_type_button">หมายเลขประชาชนหรือหนังสือเดินทาง</string>
+    <string name="alert_dialog_contract_type_button">เลขที่สัญญาเช่าซื้อ</string>
+
+    <string name="forgot_pincode_select_type">เลือกประเภท</string>
+    <string name="registerform_select_type_register">* กดเลือกลงทะเบียนด้วยหมายเลขบัตรประชาชน หรือเลขที่สัญญาเช่าซื้อ ที่มุมขวาบน</string>
+
+    <string name="error_idcard_passport_pattern">หมายเลขประจำตัวประชาชนไม่ถูกต้อง กรุณากรอกใหม่</string>
+    <string name="error_contract_id_pattern">เลขที่สัญญาเช่าซื้อไม่ถูกต้องกรุณากรอกใหม่</string>
+    <string name="error_simplycard_pattern">หมายเลขประจำตัวบัตร Simply Card ไม่ถูกต้อง กรุณากรอกใหม่</string>
+
+    <string name="error_please_connect_again">ไม่สามารถเชื่อมตอได้ กรุณาลองอีกครั้ง</string>
+
+    <string name="hotline_insurance_contact_us">ติดต่อเรา/\nสอบถามข้อมูล</string>
+    <string name="status_insurance_contact_staff">ติดต่อเจ้าหน้าที่</string>
+    <string name="txt_insurance_contact_via_phone">ติดต่อเจ้าหน้าที่ : </string>
+    <string name="txt_insurance_contact_phone">x</string>
+    <string name="txt_insurance_contact_phone_day">(จันทร์-ศุกร์ เวลา 08.00 - 17.00 น.)</string>
+    <string name="txt_insurance_contact_via_line">Line :</string>
+    <string name="txt_insurance_contact_via_web">เว็บไซต์ : </string>
+    <string name="status_insurance_contact_tib">ติดต่อเรื่อง\nประกันภัย</string>
+    <string name="payment_text_description">หากท่านชำระเงินแล้ว ข้อมูลประวัติการชำระเงินจะอัพเดตภายใน 3 วันทำการ</string>
+    <string name="payment_list_text_description">หากต้องการชำระค่าปิดบัญชี กรุณากดเลือกเพิ่มรายการ \""ยอดปิดบัญชี\""</string>
+    <string name="txt_insurance_contact_website">wwww.toyotainsurancebroker.com</string>
+    <string name="txt_welcome_to_tlt">เข้าสู่ TLT</string>
+    <string name="txt_web_thaipost">ไปรษณีย์ไทย</string>
+
+
+
+    <!--  Car Loan Feature-->
+    <string name="loan_registerform_id_card_hint">กรอกหมายเลขบัตรประชาชน 13 หลัก</string>
+    <string name="back_to_menu_main_car_loan">ฺกลับสู่หน้าเมนูหลัก</string>
+    <string name="menu_main_car_loan">สินเชื่อรถยนต์</string>
+    <string name="header_select_phone">เลือกเบอร๋โทรศัพท์</string>
+    <string name="header_otp_phone">OTP</string>
+    <string name="header_basic_detail">รายละเอียดเบื้องต้น</string>
+    <string name="header_summary_carloan">สรุปรายการขอสินเชื่อ</string>
+    <string name="header_car_loan">สินเชื่อรถยนต์</string>
+    <string name="header_loan_otp">OTP</string>
+    <string name="header_customer_information">ข้อมูลลูกค้า</string>
+    <string name="header_check_status">ตรวจสอบสถานะ</string>
+    <string name="header_delivery">การส่งมอบ</string>
+
+    <string name="header_idcard_front">อัพโหลดบัตรประชาชน</string>
+    <string name="header_idcard_back">แนบบัตรประชาชน(ด้านหลัง)</string>
+    <string name="header_liveness">ตรวจสอบใบหน้า</string>
+    <string name="header_information">กรอกข้อมูล</string>
+    <string name="header_dopa">สถานะ DOPA</string>
+    <string name="header_cust_profile">โปรไฟล์ลูกค้า</string>
+    <string name="header_upload_document">อัพโหลดเอกสาร</string>
+    <string name="header_personal_information">ข้อมูลส่วนบุคคล</string>
+    <string name="header_e_consent">หนังสือให้ความยินยอม</string>
+    <string name="header_e_consent_otp">OTP</string>
+    <string name="header_information_car_loan">ข้อมูลการขอสินเชื่อ</string>
+    <string name="header_credit_consideration">การพิจารณาสินเชื่อ</string>
+    <string name="header_credit_result_car_loan">ผลพิจารณาสินเชื่อ</string>
+    <string name="header_verify_and_confirm">ตรวจสอบและยืนยัน</string>
+    <string name="header_summary_details">ข้อมูลทั้งหมด</string>
+    <string name="header_car_delivery_summary">ส่งมอบรถยนต์ - สรุปรายการ</string>
+    <string name="header_car_delivery_status">ส่งมอบรถยนต์ - สถานะ</string>
+    <string name="header_car_delivery_scannerqr">ส่งมอบรถยนต์ - แสกน QR</string>
+    <string name="header_upload_doc">อัพโหลดเอกสาร</string>
+    <string name="header_app_check_status">สถานะของคำขอสินเชื่อรถยนต์</string>
+    <string name="header_complete">รายการสำเร็จ</string>
+    <string name="header_wait_NDID">ยืนยันตัวตนผ่านแอปพลิเคชันธนาคาร</string>
+    <string name="header_header_expense">ค่าใช้จ่ายอื่นๆ</string>
+
+    <string name="basic_detail_title">รายละเอียดเบื้องต้น</string>
+    <string name="require_doc_title">อัพโหลดเอกสาร</string>
+    <string name="txt_id_card_front_header">โปรดถ่ายภาพบัตรประจำตัวประชาชน\nด้านหน้าของท่าน</string>
+    <string name="txt_id_card_back_header">อัพโหลดบัตรประชาชน - ด้านหลัง</string>
+    <string name="txt_liveness_header">ตรวจสอบใบหน้า</string>
+    <string name="txt_fill_adjust_header">กรอกข้อมูล</string>
+    <string name="txt_fill_header">กรุณากรอกข้อมูลของท่าน</string>
+    <string name="txt_id_dopa_header">สถานะ DOPA</string>
+    <string name="txt_personal_info_header">ข้อมูลส่วนตัว</string>
+    <string name="txt_prepare_document">กรุณาเตรียมเอกสารตามด้านล่าง\nเพื่อดำเนินการต่อ</string>
+    <string name="txt_personal_current_address">ที่อยู่ปัจจุบัน</string>
+    <string name="hint_laser_code">เลขหลังบัตร</string>
+    <string name="hint_laser_code_example">รหัสเลเซอร์หลังบัตรประชาชน</string>
+    <string name="hint_face_regc_ratio">อัตราส่วนการจดจำใบหน้า</string>
+    <string name="hint_sex">เพศ</string>
+    <string name="hint_name">ชื่อ (ตรงกับบัตรประชาชน)</string>
+    <string name="hint_surname">นามสกุล (ตรงกับบัตรประชาชน)</string>
+    <string name="hint_dateofbirth">วันเดือนปีเกิด (ตรงกับบัตรประชาชน)</string>
+    <string name="hint_address">ที่อยู่ปัจจุบัน</string>
+    <string name="hint_province">จังหวัด</string>
+    <string name="hint_postcode">รหัสไปรษณีย์</string>
+    <string name="hint_district">อำเภอ</string>
+    <string name="hint_city">อำเภอ</string>
+    <string name="txt_male">ชาย</string>
+    <string name="txt_female">หญิง</string>
+    <string name="hint_only_name">ชื่อ-สกุล</string>
+    <!--   End  Fill information-->
+
+    <string name="btn_start">เริ่มต้น</string>
+    <string name="btn_confirm">ยืนยัน</string>
+    <string name="btn_next">ถัดไป</string>
+    <string name="btn_submit">ตกลง</string>
+    <string name="btn_cancel">ยกเลิก</string>
+    <string name="btn_dnotagree">ไม่ยอมรับ</string>
+    <string name="btn_dagree">ยอมรับ</string>
+    <string name="btn_detail_add_more">รายละเอียด</string>
+    <string name="step_idcard_front">บัตรประจำตัว\nประชาชน</string>
+    <string name="step_idcard_back">อัพโหลด\nบัตรประชาชน(ด้านหลัง)</string>
+    <string name="step_liveness">ตรวจสอบใบหน้า</string>
+    <string name="step_information">ข้อมูล</string>
+    <string name="step_dopa">สถานะ DOPA</string>
+    <string name="step_cust_profile">ข้อมูลลูกค้า</string>
+    <string name="step_upload_document">อัพโหลด\nเอกสาร</string>
+    <string name="step_personal_information">ข้อมูลส่วนบุคคล</string>
+    <string name="step_e_consent">หนังสือ\nให้ความยินยอม</string>
+    <string name="step_e_consent_otp">OTP</string>
+    <string name="step_information_car_loan">ข้อมูล\nการขอสินเชื่อ</string>
+    <string name="step_credit_consideration">การพิจารณา\nสินเชื่อ</string>
+    <string name="step_credit_result_car_loan">ผลสินเชื่อ\nรถยนต์</string>
+    <string name="step_verify_and_confirm">ตรวจสอบ\nและยืนยัน</string>
+    <string name="step_summary_details">ข้อมูลสรุป</string>
+    <string name="step_car_delivery_summary">ส่งมอบรถยนต์ - สรุปรายการ</string>
+    <string name="step_car_delivery_status">ส่งมอบรถยนต์ - สถานะ</string>
+    <string name="step_car_delivery_scannerqr">ส่งมอบรถยนต์ - แสกน QR</string>
+    <string name="step_car_delivery_scannerqr_des">ใช้ตำแหน่ง QR code หรือบาร์โค๊ดอยู่ตรงกลางภาพ</string>
+    <string name="step_authentication_ndid">ยืนยันตัวตนผ่านแอปพลิเคชันธนาคาร</string>
+    <string name="step_authentication_ndid_via_bank">ยืนยันตัวตนผ่านแอปพลิเคชันธนาคาร</string>
+    <string name="step_authentication_ndid_via_bank_title">กรุณาเลือกธนาคารที่ท่านเคยถูกอ่านบัตรประชาชนและถ่ายรูป เพื่อยืนยันตัวตนทางดิจิทัล</string>
+
+    <string name="header_location_showroom">ผู้แทนจำหน่าย</string>
+
+    <string name="h_basic_information">ข้อมูลลูกค้า</string>
+    <string name="h_address_information">ข้อมูลที่อยู่</string>
+    <string name="h_Income_information">ข้อมูลรายได้</string>
+    <string name="txtCustName">ชื่อลูกค้า</string>
+    <string name="txt_name">ชื่อ</string>
+    <string name="txt_id_no">หมายเลขบัตรประชาชน</string>
+    <string name="txt_birthdate">วัน/เดือน/ปีเกิด</string>
+    <string name="txt_marital">สถานภาพการสมรส</string>
+    <string name="txt_crr_adress">ที่อยู่ปัจจุบัน</string>
+    <string name="txt_postcode">รหัสไปรษณีย์</string>
+    <string name="txt_property_type">ประเภทของที่อยู่อาศัย</string>
+    <string name="txt_living_time">ระยะเวลาอยู่อาศัย</string>
+    <string name="txt_living_select_year">ปี</string>
+    <string name="txt_living_select_month">เดือน</string>
+    <string name="txt_occupation">ประเภทของอาชีพ</string>
+    <string name="txt_sub_occupation">บริษัทที่ทำงาน/องค์กร</string>
+    <string name="txt_employment_time">ระยะเวลาการทำงาน</string>
+    <string name="txt_income_month">รายได้ต่อเดือน</string>
+    <string name="txt_other_income">รายได้อื่นๆ</string>
+    <string name="txt_househousehold">เลขรหัสประจำบ้าน(11หลัก)</string>
+    <string name="txt_select_year">ปี</string>
+    <string name="txt_select_month">เดือน</string>
+    <string name="txt_personal_birthdate">วันเดือนปีเกิด</string>
+    <string name="txt_personal_id_no">เลขประจำตัวประชาชน</string>
+    <string name="policy_accept_term_and_condition_loan">ฉันยินยอมให้เปิดเผยข้อมูล</string>
+
+    <string name="step_01">ขั้นตอนที่ 1</string>
+    <string name="step_02">ขั้นตอนที่ 2</string>
+    <string name="step_03">ขั้นตอนที่ 3</string>
+    <string name="step_04">ขั้นตอนที่ 4</string>
+    <string name="step_05">ขั้นตอนที่ 5</string>
+
+    <string name="txt_profile_title">โปรไฟล์ลูกค้า</string>
+
+    <string name="txt_tlt_app_check_status">TLT Application ตรวจสอบสถานะ</string>
+    <string name="txt_status_app">สถานะ</string>
+    <string name="txt_loan_no">หมายเลขอ้างอิง</string>
+    <string name="txt_loan_name">ชื่อ สกุล</string>
+    <string name="txt_car_price">ราคา(บาท)</string>
+    <string name="txt_proposal_no">เลขที่ข้อเสนอ</string>
+    <string name="txt_proposal_name">ชื่อข้อเสนอ</string>
+
+    <string name="list_my_car_info">ข้อมูลรถยนต์</string>
+    <string name="list_my_car_delivery_car">ข้อมูลการส่งมอบรถยนต์</string>
+    <string name="list_my_car_address">ที่อยู่</string>
+    <string name="list_my_car_pictures">รูปรถยนต์</string>
+    <string name="list_my_car_model">ซีรี่ย์รถ: </string>
+    <string name="list_my_car_grade">รุ่นรถ:</string>
+    <string name="list_my_car_car_price">ราคา: </string>
+    <string name="list_my_car_down_payment">เงินดาวน์: </string>
+    <string name="list_my_car_payment_term">จำนวนงวด: </string>
+    <string name="list_my_car_interests">อัตราดอกเบี้ย: </string>
+    <string name="list_my_car_monthly_installment">ค่างวดรายเดือนของท่าน: </string>
+    <string name="list_contract_handling_fee">ค่าธรรมเนียมสัญญา: </string>
+    <string name="list_total_expect_cost"><u>ค่าใช้จ่ายอื่นๆ(ไม่รวมเงินดาวน์)</u></string>
+    <string name="list_total_expect_cost_description">*ค่าใช้จ่ายอื่นๆ(ไม่รวมเงินดาวน์) คือ ค่าใช้จ่ายทีเพิ่มที่ท่านตกลงกับผู้แทนจำหน่ายในวันรับรถ</string>
+
+    <string name="list_delivery">ข้อมูลการจัดส่งรถยนต์</string>
+    <string name="list_delivery_dealer">เลือกตัวแทนจำหน่าย</string>
+    <string name="list_delivery_showroom">กรุณาเลือกโชว์รูมที่ท่านต้องการไปรับรถ</string>
+    <string name="list_delivery_appoinment">เลือกวันรับรถของท่าน</string>
+    <string name="list_delivery_due_date">วันที่ครบกำหนด</string>
+    <string name="list_delivery_h_showroom">ตัวแทนจำหน่าย</string>
+    <string name="list_delivery_h_appoinment">เวลานัดหมาย</string>
+
+    <string name="list_address">ที่อยู่</string>
+    <string name="list_address_current">ที่อยู่ปัจจุบัน</string>
+    <string name="list_address_regis">ที่อยู่ทะเบียนบ้าน</string>
+    <string name="list_address_mailing">ที่อยู่จัดส่งเอกสาร</string>
+    <string name="list_address_office">ที่อยู่ที่ทำงาน</string>
+    <string name="list_address_same_current_address">ข้อมูลเดียวกับที่อยู่ปัจจุบัน</string>
+    <string name="list_edt_current_address">ที่อยู่ปัจจุบัน</string>
+    <string name="list_edt_postcode">รหัสไปรษณีย์</string>
+    <string name="list_edt_distric">อำเภอ</string>
+    <string name="list_edt_city">อำเภอ</string>
+    <string name="list_edt_province">จังหวัด</string>
+
+    <string name="list_sign_e_contract">ลงชื่อ E-Contract</string>
+    <string name="list_hire_purchase">สัญญาเช่าซื้อแบบดิจิทัล</string>
+
+    <string-array name="basic_detail_list">
+        <item>@string/step_idcard_front</item>
+        <item>@string/step_idcard_back</item>
+        <item>@string/step_liveness</item>
+        <item>@string/step_information</item>
+        <item>@string/step_dopa</item>
+    </string-array>
+
+
+    <string name="check_icon">&#xf00c;</string>
+    <string name="txt_no">ไม่</string>
+    <string name="txt_Yes">ใช่</string>
+
+    <string name="txt_familie_politician">ครอบครัวของคุณเป็นนักการเมืองหรือไม่</string>
+    <string name="txt_familie_source_income_comming_from">แหล่งที่มาของรายได้ของคุณมาจากรายการหรือไม่?</string>
+    <string name="txt_familie_source_income_comming_from_drop_down">หาก "ใช่" โปรดเลือก</string>
+    <string name="hint_please_select">กรุณาเลือก</string>
+
+    <string name="txt_signature">กรุณาเซ็น</string>
+    <string name="txt_ref_no">หมายเลขอ้างอิง : </string>
+    <string name="txt_status_loan">สถานะปัจจุบัน</string>
+    <string name="txt_expire_date">วันที่หมดอายุ : </string>
+    <string name="txt_day">วัน</string>
+    <string name="txt_stamp_date">วันที่ทำรายการล่าสุด</string>
+
+    <string name="dialog_warning_delete">คุณต้องการลบใบสมัครนี้หรือไม่?</string>
+    <string name="dialog_button_yes">ใช่</string>
+    <string name="dialog_button_no">ไม่</string>
+    <string name="txt_slide_to_delete">ลบ</string>
+    <string name="txt_current_address">ที่อยู่ปัจจุบัน</string>
+    <string name="txt_regis_address">ที่อยู่ทะเบียนบ้าน</string>
+    <string name="txt_mailing_address">ที่อยู่จัดส่งเอกสาร</string>
+    <string name="txt_office_address">ที่อยู่ที่ทำงาน</string>
+
+    <string name="txtStreetviewGEO">มุมมองถนน</string>
+    <string name="txtAddressGEO">ที่อยู่ : </string>
+    <string name="txtPositionGEO">ตำแหน่ง : </string>
+    <string name="btn_acceptLocationGEO">ใช้สถานที่นี้</string>
+    <string name="btn_NavigatorGEO">มุมมองถนน</string>
+    <string name="location_geolocationGEO">ตำแหน่ง</string>
+
+    <string name="txt_e_conset_accept">ฉันยินยอมให้เปิดเผยข้อมูลผ่านทางระบบอินเทอร์เน็ต</string>
+    <string name="txt_e_conset_disagree">ฉันไม่ยินยอมให้เปิดเผยข้อมูลผ่านทางระบบอินเทอร์เน็ต</string>
+
+    <string name="txt_e_conset_termcons_accept">ฉันยอมรับที่จะส่งคำยินยอมสำหรับการใช้ข้อมูล</string>
+    <string name="txt_e_conset_termcons_disagree">ฉันไม่ยอมรับที่จะส่งคำยินยอมสำหรับการใช้ข้อมูล</string>
+
+    <string name="txt_accept">ยอมรับ</string>
+    <string name="txt_not_accept">ไม่ยอมรับ</string>
+
+    <string name="txt_tlt_reference_no">หมายเลขอ้างอิง TLT : </string>
+    <string name="txt_ndid_reference_no">หมายเลขอ้างอิง NDID : </string>
+    <string name="txt_please_login_mbanking_to_verify">กรุณาเข้าแอปพลิเคชันธนาคารของคุณเพื่อทำการยืนยัน</string>
+
+    <string name="h_approved_consideration">อนุมัติแล้ว</string>
+    <string name="h_pre_approve_consideration">อนุมัติล่วงหน้า</string>
+    <string name="h_sorry_consideration">เสียใจด้วย คุณไม่ได้รับการอนุมัติ</string>
+    <string name="h_thank_you_consideration">ขอบคุณ!!</string>
+    <string name="h_best_offer_consideration">ข้อเสนอที่ดีที่สุด</string>
+
+    <string name="txt_approved_consideration">รายการของคุณได้รับการอนุมัติแล้ว กรุณากรอกแบบฟอร์มใบสมัคร</string>
+    <string name="txt_pre_approve_consideration">รายการของคุณได้รับการอนุมัติล่วงหน้า กรุณารอการยืนยันจาก TLT</string>
+    <string name="txt_sorry_consideration">ขอบคุณสำหรับความสนใจในการใช้บริการสินเชื่อเช่าซื้อรถยนต์กับโตโยต้าลีสซิ่ง</string>
+    <string name="txt_thank_you_consideration">ขอบคุณที่สมัครใช้บริการสินเชื่อเช่าซื้อรถยนต์โตโยต้าที่สนใจ เราจะติดต่อคุณเร็ว ๆ นี้</string>
+
+    <string name="txt_to_scan_qrcode">แสกน QR</string>
+    <string name="txt_ref">หมายเลขอ้างอิง</string>
+    <string name="txt_ref_value">xxxxxxx</string>
+
+
+    <string name="location_loan_distance">%1$s กม.</string>
+    <string name="location_loan_direction">เส้นทาง</string>
+    <string name="location_loan_tel">โทร</string>
+    <string name="location_loan_detail">รายละเอียด</string>
+    <string name="location_loan_select">เลือก</string>
+    <string name="location_loan_show_all">ทั้งหมด</string>
+    <string name="location_loan_hide">ซ่อน</string>
+    <string name="location_loan_hq_filter">ที่อยู่สำนักงาน</string>
+    <string name="location_loan_showroom_filter">ที่ตั้งผู้แทนจำหน่ายโตโยต้า</string>
+    <string name="location_loan_filter_title">ค้นหา</string>
+    <string name="location_loan_filter_showroom_hint">ผู้แทนจำหน่าย</string>
+    <string name="location_loan_filter_showroom_title">ค้นหาผู้แทนจำหน่าย</string>
+    <string name="location_loan_filter_province_hint">ระบุจังหวัด</string>
+    <string name="location_loan_filter_district_hint">ระบุอำเภอ</string>
+    <string name="location_loan_filter_office">เลือกจังหวัด</string>
+    <string name="location_loan_filter_showroom">เลือกอำเภอ</string>
+    <string name="location_loan_filter_service">ศูนย์บริการทั่วไป</string>
+    <string name="location_loan_filter_repair">ศูนย์บริการตัวถังและสี</string>
+    <string name="location_loan_filter_showroom_nearly">ค้นหาผู้แทนจำหน่ายที่ใกล้คุณ</string>
+    <string name="location_loan_filter_search">ค้นหา</string>
+    <string name="location_loan_office_title">สำนักงานทั้งหมด (%1$s)</string>
+    <string name="location_loan_showroom_title">ผู้แทนจำหน่าย (%1$s)</string>
+    <string name="location_loan_not_found_description">ขออภัย ไม่พบผลการค้นหา\nกรุณาเลือกคำค้นหาอื่นๆที่ใกล้เคียงกัน</string>
+    <string name="location_loan_back_to_search">กลับสู่หน้าค้นหา</string>
+    <string name="location_loan_switch_on_location_title">กรุณาเปิดบริการเข้าถึงตำแหน่ง เพื่อความแม่นยำในการค้นหาข้อมูล</string>
+
+    <string name="dialog_please_try_again">กรุณาลองอีกครั้ง</string>
+    <string name="dialog_upload_image_limt">ไม่สามารถอัพโหลดรูปได้เนื่องจากเกินลิมิต</string>
+    <string name="dialog_upload_image_limt_button">ปิด</string>
+    <string name="dialog_upload_encrypt_pdf">ปฎิเสธเอกสาร , คุณไม่สามารถอัพโหลดไฟล์เอกสารเข้ารหัสได้</string>
+    <string name="dialog_upload_large_pdf">ขนาดไฟล์เกินกำหนด</string>
+    <string name="dialog_upload_pdf_limt">ไม่สามารถอัพโหลดไฟล์เอกสารได้เนื่องจากเกินลิมิต</string>
+    <string name="dialog_delete_file_pdf">คุณต้องการลบไฟล์นี้หรือไม่?</string>
+    <string name="dialog_upload_encrypt_pdf_button">ปิด</string>
+    <string name="dialog_please_wait_process">กำลังดำเนินการ</string>
+    <string name="dialog_please_select_location">กรุณาระบุตำแหน่ง</string>
+    <string name="upload_history">ที่มีอยู่</string>
+    <string name="txt_system_process_des">กรุณารอสักครู่...</string>
+    <string name="dialog_question_choose_bank_ndid">กรุณาไปทำรายการยืนยันตัวตนที่แอปพลิเคชั่นของผู้ให้บริการยืนยันตัวตนที่ท่านเลือก</string>
+    <string name="txt_add_document">เลือกไฟล์</string>
+    <string name="fillout_personal_data">กรุณาระบุข้อมูลที่จำเป็น</string>
+    <string name="register_car_loan">ลงทะเบียนเช่าซื่อรถยนต์</string>
+    <string name="car_loan_customer_description">ขออภัยคุณไม่ได้รับอนุญาตให้เข้าถึงหน้านี้ \n กรุณาลงทะเบียนเพื่อเข้าถึงข้อมูลของคุณ</string>
+    <string name="car_loan_customer_description_no_data">ขออภัย ไม่พบข้อมูลของคุณ \n กรุณารีเฟรชอีกครั้ง</string>
+    <string name="txt_welcome_to_toyota">ยินดีต้อนรับสู่ครอบครัวโตโยต้าลีสซิ่ง</string>
+    <string name="txt_baht">บาท</string>
+
+    <string name="insert_id_card_13hint">เลขประจำตัวประชาชน 13 หลัก</string>
+    <string name="btn_back">กลับ</string>
+    <string name="btn_ok">ตกลง</string>
+
+    <string name="txt_require">จำนวนเอกสาร : </string>
+    <string name="txt_doc_instruction_manual">คู่มือการใช้บริการ</string>
+    <string name="txt_doc_econtract">ดูสัญญาเช่าซื้อ</string>
+    <string name="txt_doc_instalment">ดูตารางการผ่อนชำระ</string>
+    <string name="txt_credit_consideration">ทางบริษัท โตโยต้า ลีสซิ่ง จำกัด ได้รับข้อมูลคำขอสินเชื่อของท่านแล้ว\nขณะนี้ทางบริษัทกำลังทำการประมวลผลคำขอของท่าน</string>
+    <string name="list_change_delivery_showroom">เปลี่ยนตัวแทนจำหน่าย/โชว์รูม</string>
+    <string name="txt_header_howto_connect_bank">วิธีการยืนยันตัวตนทางดิจิทัล ผ่านแอปพลิเคชั่นธนาคาร</string>
+    <string name="txt_howto_connect_bank">1. เลือกธนาคารที่ท่านเคยถูกอ่านบัตรประชาชนและถ่ายรูป (จำเป็นต้องมีแอปพลิเคชั่นของธนาคารนั้นอยู่ในโทรศัพท์ของท่านด้วย) \n2. หลังได้รับข้อความจากธนาคาร เข้าแอปพลิเคชันของธนาคารที่ท่านเลือก \n3. ทำรายการยืนยันตัวตนผ่านแอปพลิเคชั่นธนาคาร \n4. กลับมาขอสินเชื่อออนไลน์ในแอปพลิเคชั่น TLT simply ในขั้นตอนถัดไป</string>
+    <string name="txt_waiting_dealer24"> ระยะเวลาพิจารณาคำขอของท่าน ประมาณ 24 ชั่งโมง</string>
+    <string name="btn_back_home">หน้าแรก</string>
+    <string name="txt_title_document">เอกสาร</string>
+    <string name="txt_title_PDF">PDF</string>
+    <string name="txt_title_uploaddes_PDF">*(อัพโหลดไฟล์ได้ไม่เกิน 2MB)</string>
+    <string name="btn_back_to_main">กลับสู่หน้าหลัก</string>
+    <string name="hint_laser_id">ตัวอย่างเลขหลังบัตร: RT0-1234567-89</string>
+    <string name="hint_search_location">ค้นหาโดย ซอย,ถนน,ตำบล,อำเภอ หรือ จังหวัด</string>
+    <string name="txt_btn_close">ปิด</string>
+    <string name="txt_warning">แจ้งเตือนผู้ใช้งาน</string>
+    <string name="btn_papdnext">ตกลง</string>
+    <string name="txt_copied_ems">คัดลอกหมายเลขลงทะเบียนสำเร็จแล้ว</string>
+    <string name="btn_sign_e_contract">ลงนามดิจิทัล</string>
+    <string name="header_txt_e_contract_confirm">ท่านยืนยันลงนามสัญญาเช่าซื้อแบบดิจิทัลด้วยลายเซนต์ดิจิทัล</string>
+    <string name="txt_problem_open_pdf">ไม่สามารถเปิดไฟล์ได้ กรุณาลองอีกครั้ง</string>
+    <string name="ownership_pdf_download">ดาวน์โหลดเอกสาร</string>
+    <string name="txt_h_company_detail">ที่ทำงาน ( ชื่อบริษัทฯ , สถานที่ประกอบการ )</string>
+
+</resources>
+
+
+

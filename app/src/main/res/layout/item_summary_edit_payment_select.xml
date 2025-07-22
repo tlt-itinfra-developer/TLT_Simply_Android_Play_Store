@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_clear"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/edittext_summary_payment"
+        app:layout_constraintEnd_toStartOf="@id/edittext_summary_payment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_clear_2"
+        app:tint="@color/grey" />
+
+    <tlt.th.co.toyotaleasing.view.OwaspEditText
+        android:id="@+id/edittext_summary_payment"
+        style="@style/Text_Bold_Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:focusable="false"
+        android:gravity="start|center_vertical"
+        android:hint="@string/summary_edit_payment_select_hint"
+        android:inputType="textNoSuggestions"
+        app:layout_constraintEnd_toStartOf="@id/edittext_summary_payment_price"
+        app:layout_constraintHorizontal_weight="1.4"
+        app:layout_constraintStart_toEndOf="@id/btn_clear"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <tlt.th.co.toyotaleasing.view.OwaspEditText
+        android:id="@+id/edittext_summary_payment_price"
+        style="@style/Text_Bold_Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_edit"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:gravity="end|bottom"
+        android:hint="0.00"
+        android:inputType="number|textNoSuggestions"
+        android:textColor="@color/text_normal_lighter"
+        android:digits="0123456789"
+        app:layout_constraintBottom_toBottomOf="@+id/edittext_summary_payment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/edittext_summary_payment"
+        app:layout_constraintTop_toTopOf="@id/edittext_summary_payment"
+        tools:text="15,000.00" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="edittext_summary_payment,edittext_summary_payment_price" />
+</androidx.constraintlayout.widget.ConstraintLayout>

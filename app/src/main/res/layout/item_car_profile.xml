@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="tlt.th.co.toyotaleasing.modules.otp.OTPActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_car_profile"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/bg_carpic" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_small"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_car_license"
+        app:srcCompat="@drawable/ic_chevron_left" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_car_license"
+        app:srcCompat="@drawable/ic_chevron_right" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="btn_previous" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="btn_next" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_car_license"
+        style="@style/Text_Bold_Large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/barrier_forward"
+        app:layout_constraintStart_toEndOf="@id/barrier_previous"
+        app:layout_constraintTop_toBottomOf="@id/img_car_profile"
+        tools:text="กต - 1528 กรุงเทพมหานคร" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_car_model"
+        style="@style/Text_Bold_Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_normal_lighter"
+        app:layout_constraintEnd_toStartOf="@id/barrier_forward"
+        app:layout_constraintStart_toEndOf="@id/barrier_previous"
+        app:layout_constraintTop_toBottomOf="@id/txt_car_license"
+        tools:text="รุ่นรถ : VIOS 1.5 J A/T GREY ABS" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_car_no"
+        style="@style/Text_Bold_Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_normal_lighter"
+        app:layout_constraintEnd_toStartOf="@id/barrier_forward"
+        app:layout_constraintStart_toEndOf="@id/barrier_previous"
+        app:layout_constraintTop_toBottomOf="@id/txt_car_model"
+        tools:text="เลขที่สัญญา : APH1789534" />
+</androidx.constraintlayout.widget.ConstraintLayout>

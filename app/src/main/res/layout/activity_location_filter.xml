@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/location_filter_title"
+        app:toolbarSize="normal" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/header"
+            style="@style/MyCardView_Margin_Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_normal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_header"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location_filter_dealer_title"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text_normal"
+                    android:textColorHint="@color/text_hint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_header">
+
+                    <tlt.th.co.toyotaleasing.view.OwaspEditText
+                        android:id="@+id/edittext_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/custom_regular"
+                        android:hint="@string/location_filter_dealer_hint"
+                        android:maxLines="1"
+                        android:inputType="textNoSuggestions"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="@dimen/form_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <tlt.th.co.toyotaleasing.view.SpinnerView
+                    android:id="@+id/spinner_province"
+                    style="@style/MySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/brownish_grey"
+                    android:textSize="@dimen/text_large_size"
+                    app:hint="@string/location_filter_province_hint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textinput_company" />
+
+                <tlt.th.co.toyotaleasing.view.SpinnerView
+                    android:id="@+id/spinner_district"
+                    style="@style/MySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_large_size"
+                    app:hint="@string/location_filter_district_hint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_province" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_office"
+                    style="@style/Text_Regular_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="start|center_vertical"
+                    android:checked="true"
+                    android:text="@string/location_filter_office"
+                    app:buttonTint="@color/green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_district" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_showroom"
+                    style="@style/Text_Regular_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="start|center_vertical"
+                    android:checked="true"
+                    android:text="@string/location_filter_showroom"
+                    app:buttonTint="@color/green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/checkbox_office"
+                    app:layout_constraintTop_toBottomOf="@id/checkbox_office" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_service"
+                    style="@style/Text_Regular_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:checked="true"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/location_filter_service"
+                    app:buttonTint="@color/green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/checkbox_showroom"
+                    app:layout_constraintTop_toBottomOf="@id/checkbox_showroom" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_repair"
+                    style="@style/Text_Regular_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:checked="true"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/location_filter_repair"
+                    app:buttonTint="@color/green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/checkbox_service"
+                    app:layout_constraintTop_toBottomOf="@id/checkbox_service" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_filter_nearly"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:background="@drawable/selector_btn_confirm_green"
+                    android:enabled="false"
+                    android:fontFamily="@font/custom_bold"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/location_filter_dealer_nearly"
+                    android:textColor="@drawable/selector_text_normal"
+                    android:textSize="@dimen/text_button_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/checkbox_repair" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_filter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:background="@drawable/selector_btn_confirm_green"
+                    android:enabled="false"
+                    android:fontFamily="@font/custom_bold"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/location_filter_search"
+                    android:textColor="@drawable/selector_text_normal"
+                    android:textSize="@dimen/text_button_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_filter_nearly" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_large"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_filter" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+         </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

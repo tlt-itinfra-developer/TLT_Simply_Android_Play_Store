@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tlt.th.co.toyotaleasing.modules.otp.OTPActivity">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menuTitle="@string/filter_car_title"
+        app:title="@string/profile_car_title"
+        app:toolbarSize="normal" />
+
+    <LinearLayout
+        android:id="@+id/button_header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:gravity="center|top"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/take_picture_layout"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_choose_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/ic_tlt_camera" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_choose_photo"
+                style="@style/Text_Bold_Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_car_txt_choose_photo"
+                android:textColor="@color/terracotta" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select_default_layout"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_reset"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/selector_btn_revert" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_reset"
+                style="@style/Text_Bold_Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_car_txt_reset"
+                android:textColor="@color/terracotta" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--<androidx.appcompat.widget.AppCompatImageView-->
+    <!--android:id="@+id/btn_choose_image"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_marginTop="24dp"-->
+    <!--app:layout_constraintEnd_toStartOf="@id/btn_reset"-->
+    <!--app:layout_constraintHorizontal_chainStyle="packed"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/toolbar"-->
+    <!--app:srcCompat="@drawable/ic_tlt_camera" />-->
+
+    <!--<androidx.appcompat.widget.AppCompatButton-->
+    <!--android:id="@+id/btn_reset"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_marginStart="@dimen/margin_large"-->
+    <!--android:background="@drawable/selector_btn_revert"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toEndOf="@id/btn_choose_image"-->
+    <!--app:layout_constraintTop_toTopOf="@id/btn_choose_image" />-->
+
+    <!--<androidx.support.v7.widget.AppCompatTextView-->
+    <!--android:id="@+id/title_choose_photo"-->
+    <!--style="@style/Text_Bold_Small"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/profile_car_txt_choose_photo"-->
+    <!--android:textColor="@color/terracotta"-->
+    <!--app:layout_constraintEnd_toEndOf="@id/btn_choose_image"-->
+    <!--app:layout_constraintStart_toStartOf="@id/btn_choose_image"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/btn_choose_image" />-->
+
+    <!--<androidx.support.v7.widget.AppCompatTextView-->
+    <!--android:id="@+id/title_reset"-->
+    <!--style="@style/Text_Bold_Small"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/profile_car_txt_reset"-->
+    <!--android:textColor="@color/terracotta"-->
+    <!--app:layout_constraintEnd_toEndOf="@id/btn_reset"-->
+    <!--app:layout_constraintStart_toStartOf="@id/btn_reset"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/btn_reset" />-->
+
+    <!--<androidx.constraintlayout.widget.Barrier-->
+    <!--android:id="@+id/barrier_header"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:barrierDirection="bottom"-->
+    <!--app:constraint_referenced_ids="take_picture_layout,select_default_layout" />-->
+
+    <com.lsjwzh.widget.recyclerviewpager.RecyclerViewPager
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_header_layout"
+        tools:listitem="@layout/item_car_profile" />
+
+    <include
+        android:id="@+id/layout_item_car_profile"
+        layout="@layout/item_car_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerview"
+        app:layout_constraintEnd_toEndOf="@id/recyclerview"
+        app:layout_constraintStart_toStartOf="@id/recyclerview"
+        app:layout_constraintTop_toTopOf="@id/recyclerview" />
+
+<!--    <com.rbrooks.indefinitepagerindicator.IndefinitePagerIndicator-->
+<!--        android:id="@+id/indicator"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:dotColor="@color/indicator_unactive"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/recyclerview"-->
+<!--        app:selectedDotColor="@color/indicator_active"-->
+<!--        tools:background="#ff00ff" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

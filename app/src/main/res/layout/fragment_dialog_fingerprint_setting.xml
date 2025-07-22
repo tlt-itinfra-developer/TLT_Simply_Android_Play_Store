@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:background="#3fff00ff">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/dialog_padding_horizontal"
+        android:layout_marginStart="@dimen/dialog_padding_horizontal"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_white_corner_radius"
+        android:paddingBottom="30dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_fingerprint"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_fingerprint_setting" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_scan_success"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/img_fingerprint"
+            app:layout_constraintEnd_toEndOf="@id/img_fingerprint"
+            app:layout_constraintStart_toEndOf="@id/img_fingerprint"
+            app:layout_constraintTop_toBottomOf="@id/img_fingerprint"
+            app:srcCompat="@drawable/ic_check_circle_black"
+            app:tint="#3eb358"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_scan_fail"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/img_fingerprint"
+            app:layout_constraintEnd_toEndOf="@id/img_fingerprint"
+            app:layout_constraintStart_toEndOf="@id/img_fingerprint"
+            app:layout_constraintTop_toBottomOf="@id/img_fingerprint"
+            app:srcCompat="@drawable/ic_info_black"
+            app:tint="@color/libstick_red"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_fingerprint_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/custom_bold"
+            android:gravity="center"
+            android:text="@string/fingerprint_wait_scan"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/header2_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_fingerprint" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/selector_btn_confirm_green"
+            android:fontFamily="@font/custom_bold"
+            android:gravity="center"
+            android:text="@string/fingerprint_dialog_btn_confirm"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/header2_text_size"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_fingerprint_description"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

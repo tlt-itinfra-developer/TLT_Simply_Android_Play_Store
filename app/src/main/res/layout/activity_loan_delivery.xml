@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/header_delivery"
+        app:toolbarSize="normal"
+        tools:background="@color/bg_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <FrameLayout
+            android:id="@+id/header_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--        <androidx.appcompat.widget.AppCompatImageView-->
+            <!--            android:id="@+id/bg_header"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:scaleType="fitXY"-->
+            <!--            app:srcCompat="@drawable/bg_setting_header" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_normal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            style="@style/MyCardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/top_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/margin_normal"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/txt_top_customer">
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/txt_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="8dp"
+                                        android:fontFamily="@font/custom_bold"
+                                        android:gravity="center_vertical"
+                                        android:includeFontPadding="false"
+                                        android:textColor="#b3b3b3"
+                                        android:textSize="15sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:text="11 ม.ค. 2561" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/id_card_img"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:layout_marginTop="@dimen/margin_12"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/txt_date"
+                                        app:srcCompat="@drawable/ic_person_black_24dp" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                         </androidx.cardview.widget.CardView>
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layout_contractdetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            style="@style/MyCardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="0dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="@dimen/margin_large"
+                                android:background="@color/white">
+
+
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/cust_profile"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/txt_id_card"
+                                    app:srcCompat="@drawable/ic_person_black_24dp" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txt_cust_name"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/custom_bold"
+                                    android:gravity="left"
+                                    android:layout_marginLeft="@dimen/margin_large"
+                                    android:includeFontPadding="false"
+                                    android:text="นางสาว หนึ่งฤทัย เมืองเรือง"
+                                    android:textColor="@color/text_disable"
+                                    android:textSize="@dimen/car_contract_text_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/cust_profile"
+                                    app:layout_constraintTop_toTopOf="@+id/cust_profile" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/m_idcard"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    app:layout_constraintStart_toStartOf="@+id/cust_profile"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_id_card" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txt_id_card"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/custom_bold"
+                                    android:gravity="left"
+                                    android:includeFontPadding="false"
+                                    android:text="1100405500606"
+                                    android:textColor="@color/text_disable"
+                                    android:textSize="@dimen/car_contract_text_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/m_idcard"
+                                    app:layout_constraintTop_toTopOf="@+id/m_idcard" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/m_address"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/txt_cust_name"
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txt_real_address"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/custom_bold"
+                                    android:gravity="left"
+                                    android:includeFontPadding="false"
+                                    android:text="NEUNRUTHAI MUNANGRUANG"
+                                    android:textColor="@color/text_disable"
+                                    android:textSize="@dimen/car_contract_text_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/m_address"
+                                    app:layout_constraintTop_toTopOf="@+id/m_address" />
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/m_tel"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginEnd="8dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/txt_real_address"
+                                    app:srcCompat="@drawable/ic_birthdate" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txt_mobile_phone"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/custom_bold"
+                                    android:gravity="left"
+                                    android:includeFontPadding="false"
+                                    android:text="23 มีนาคม 2535"
+                                    android:textColor="@color/text_disable"
+                                    android:textSize="@dimen/car_contract_text_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/m_tel"
+                                    app:layout_constraintTop_toTopOf="@+id/m_tel" />
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/m_tel_home"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginEnd="8dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/txt_mobile_phone"
+                                    app:srcCompat="@drawable/ic_edit" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txt_mobile_home"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/custom_bold"
+                                    android:gravity="left"
+                                    android:includeFontPadding="false"
+                                    android:text="-"
+                                    android:textColor="@color/text_disable"
+                                    android:textSize="@dimen/car_contract_text_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/m_location"
+                                    app:layout_constraintTop_toTopOf="@+id/m_tel_home" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/m_location"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/txt_mobile_home"
+                                    app:srcCompat="@drawable/ic_location" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txt_location"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:fontFamily="@font/custom_bold"
+                                    android:gravity="left"
+                                    android:includeFontPadding="false"
+                                    android:text="location"
+                                    android:textColor="@color/text_disable"
+                                    android:textSize="@dimen/car_contract_text_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/m_location"
+                                    app:layout_constraintTop_toTopOf="@+id/m_location" />
+
+
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                         </androidx.cardview.widget.CardView>
+                    </FrameLayout>
+
+
+                </FrameLayout>
+
+                <tlt.th.co.toyotaleasing.view.TLTButton
+                    android:id="@+id/btn_next_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/selector_btn_confirm_edit_mailing_address"
+                    android:enabled="true"
+                    android:fontFamily="@font/custom_bold"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/btn_next"
+                    android:textColor="@drawable/selector_text_normal"
+                    android:textSize="@dimen/text_button_size"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/space3" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

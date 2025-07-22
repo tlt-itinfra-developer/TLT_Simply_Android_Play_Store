@@ -1,0 +1,32 @@
+package tlt.th.co.toyotaleasing.modules.custloan.loanmodule.carloan.common
+
+data class PersonalData (
+    var name: String = "",
+    var citizen: String = "",
+    var dateBirth: String = "",
+    var marital_status: String = "",
+    var marital_id: String = "",
+    var real_address: String = "",
+    var district: String = "",
+    var distric_code: String = "",
+    var aumphur: String = "",
+    var aumphur_code: String = "",
+    var province: String = "",
+    var province_code: String = "",
+    var postcode: String = "",
+    var prop_name: String = "",
+    var prop_id: String = "",
+    var liv_year: String = "",
+    var liv_month: String = "",
+    var sub_oc : String = "",
+    var sub_oc_id: String = "",
+    var oc : String = "",
+    var oc_id: String = "",
+    var emp_year: String = "",
+    var emp_month: String = "",
+    var income: String = "",
+    var other_income : String = "" ,
+    var lat : String = "" ,
+    var lng : String = "" ,
+    var company_detail : String = ""
+)

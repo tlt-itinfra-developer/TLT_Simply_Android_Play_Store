@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/qr_code_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/qr_code_title"
+        app:toolbarSize="medium" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/toolbar_large_content_margin_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/qr_code_cardview"
+            style="@style/MyCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            tools:background="#00ff00">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/qr_code_logo_iv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/logo" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/qr_code_title_message_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:gravity="center"
+                    android:text="@string/qr_code_payment_installment_title"
+                    android:textSize="@dimen/title_toolbar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_code_logo_iv" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/qr_code_title_payment_message_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:gravity="center"
+                    android:text="@string/qr_code_payment_show_qr_message"
+                    android:textSize="@dimen/text_small_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_code_title_message_tv" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/qr_code_title_header_qr_message_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@color/terracotta_2"
+                    android:fontFamily="@font/rsu_bold"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/qr_code_payment_barcode_message"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/title_toolbar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_code_title_payment_message_tv" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/qr_barcode_iv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_code_title_header_qr_message_tv" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/barcode_txt"
+                    style="@style/Text_Regular_Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/qr_barcode_iv"
+                    app:layout_constraintStart_toStartOf="@id/qr_barcode_iv"
+                    app:layout_constraintTop_toBottomOf="@id/qr_barcode_iv"
+                    tools:text="wadawdwadwadwadwadwad" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/qr_code_section"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/grey_4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_barcode_iv">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/qr_qrcode_iv"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/logo" />
+
+                    <tlt.th.co.toyotaleasing.view.TLTTextView
+                        android:id="@+id/qr_code_owner_name_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:textSize="@dimen/text_small_size"
+                        app:layout_constraintBottom_toTopOf="@+id/qr_code_owner_license_car_tv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/qr_qrcode_iv"
+                        tools:text="นายอนุพล รักจริง" />
+
+                    <tlt.th.co.toyotaleasing.view.TLTTextView
+                        android:id="@+id/qr_code_owner_license_car_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:textSize="@dimen/text_small_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/qr_qrcode_iv"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="กต -1528 กรุงเทพมหานคร" />
+
+                    <tlt.th.co.toyotaleasing.view.TLTTextView
+                        android:id="@+id/qr_code_title_contract_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:textSize="@dimen/text_small_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/qr_qrcode_iv"
+                        app:layout_constraintTop_toBottomOf="@+id/qr_code_owner_license_car_tv"
+                        tools:text="เลขที่สัญญา : AHP1789534" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/qr_code_footer_payment_message_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginEnd="24dp"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:fontFamily="@font/rsu_bold"
+                    android:gravity="start"
+                    android:text="@string/qr_code_payment_show_message_3"
+                    android:textColor="@color/cherry_red"
+                    android:visibility="gone"
+                    android:textSize="@dimen/text_small_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_code_section" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/qr_code_save_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="24dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableStart="@drawable/download"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="@string/qr_code_save"
+                    android:textColor="@color/terracotta"
+                    android:textSize="@dimen/text_medium_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_code_footer_payment_message_tv" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group_pay_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="txt_payment_list_price_currency_tv,qr_code_payment_total_tv,qr_code_payment_title_total_tv,qr_code_payment_list_rv,qr_code_payment_header_tv,qr_code_reference_no_2_tv,qr_code_reference_no_1_tv" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/qr_code_reference_no_1_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:fontFamily="@font/rsu_bold"
+                    android:textSize="@dimen/text_small_size"
+                    app:layout_constraintEnd_toStartOf="@+id/qr_code_save_tv"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_code_footer_payment_message_tv"
+                    tools:text="Ref1 : 12345678" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/qr_code_reference_no_2_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:textSize="@dimen/text_small_size"
+                    app:layout_constraintEnd_toStartOf="@+id/qr_code_save_tv"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_code_reference_no_1_tv"
+                    tools:text="Ref2 : 98765432" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/qr_code_payment_header_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:text="@string/qr_code_payment_list"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_code_reference_no_2_tv" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/qr_code_payment_list_rv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_code_payment_header_tv"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_payment_list_view" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/qr_code_payment_title_total_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:fontFamily="@font/rsu_bold"
+                    android:gravity="start"
+                    android:text="@string/qr_code_payment_total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_code_payment_list_rv" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/qr_code_payment_total_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_size"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_payment_list_price_currency_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_payment_list_price_currency_tv"
+                    app:layout_constraintTop_toTopOf="@+id/txt_payment_list_price_currency_tv"
+                    tools:text="21,216.00 " />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payment_list_price_currency_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:gravity="center"
+                    android:text="@string/refinance_baht"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_size"
+                    app:layout_constraintBottom_toBottomOf="@+id/qr_code_payment_title_total_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/qr_code_payment_title_total_tv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

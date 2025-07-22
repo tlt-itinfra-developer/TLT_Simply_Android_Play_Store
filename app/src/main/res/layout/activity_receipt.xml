@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/toolbar_medium_height"
+        app:enableNavigationIcon="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/receipt_title"
+        app:toolbarSize="medium"
+        tools:background="#ff00ff" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/toolbar_large_content_margin_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_paid_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_receipt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_receipt">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_success"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_paid_success" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/receipt_header"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="@string/receipt_header_paid_success"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_success" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_current_date"
+                    style="@style/Text_Regular_Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/receipt_header"
+                    tools:text="11 ม.ค. 2561 - 11:55" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/description"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:text="@string/receipt_description_insatllment_paid_success"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_current_date" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_payment_type"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="start"
+                    android:text="@string/receipt_payment_type"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_fullname"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/description" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payment_type"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:gravity="end"
+                    android:text="@string/receipt_payment_type_insurance"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/title_payment_type"
+                    app:layout_constraintTop_toBottomOf="@id/description"
+                    tools:text="ค่างวด" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_fullname"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="start"
+                    android:text="@string/receipt_fullname"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_fullname"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title_payment_type" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_fullname"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:gravity="end"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/title_fullname"
+                    app:layout_constraintTop_toBottomOf="@id/txt_payment_type"
+                    tools:text="นายอนุพล สุขใจ" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier_fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="title_fullname,txt_fullname" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_car_license"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:gravity="start"
+                    android:text="@string/receipt_car_license"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_car_license"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_fullname" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_car_license"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:gravity="end"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/title_car_license"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_fullname"
+                    tools:text="กต -1528 กรุงเทพมหานคร" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier_car_license"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="title_car_license,txt_car_license" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_contract_number"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:gravity="start"
+                    android:text="@string/receipt_contract_number"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_car_license"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_car_license" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_contract_number"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:gravity="end"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/title_car_license"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_car_license"
+                    tools:text="AHPZ3456789" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier_contract_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="title_contract_number,txt_contract_number" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_payment_method"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:gravity="start"
+                    android:text="@string/receipt_payment_method"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_car_license"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_contract_number" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payment_method"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:gravity="end"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/title_car_license"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_contract_number"
+                    tools:text="ธนาคารกรุงเทพ" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier_payment_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="title_payment_method,txt_payment_method" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_total_paid"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:gravity="start"
+                    android:text="@string/receipt_total_paid"
+                    android:textColor="@color/text_normal"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_car_license"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_payment_method" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_total_paid"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:gravity="end"
+                    android:textColor="@color/text_normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/title_car_license"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_payment_method"
+                    tools:text="15,000.00 บาท" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier_total_paid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="title_total_paid,txt_total_paid" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_send_email_and_save_slip"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="|"
+                    android:textColor="@color/text_disable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_total_paid" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_send_email"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:drawableStart="@drawable/ic_envelope_orange"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:text="@string/receipt_send_mail"
+                    android:textColor="@color/terracotta"
+                    app:layout_constraintBottom_toBottomOf="@id/title_send_email_and_save_slip"
+                    app:layout_constraintEnd_toStartOf="@id/title_send_email_and_save_slip"
+                    app:layout_constraintTop_toTopOf="@id/title_send_email_and_save_slip" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_save_slip"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:drawableStart="@drawable/ic_download_orange"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:text="@string/receipt_save_slip"
+                    android:textColor="@color/terracotta"
+                    app:layout_constraintBottom_toBottomOf="@id/title_send_email_and_save_slip"
+                    app:layout_constraintStart_toEndOf="@id/title_send_email_and_save_slip"
+                    app:layout_constraintTop_toTopOf="@id/title_send_email_and_save_slip" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title_send_email_and_save_slip" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bg_zigzag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_zigzag_repeat" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_insurance_contact"
+                style="@style/Text_Regular_Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/receipt_contactus"
+                android:textColor="@color/text_normal_lighter" />
+
+            <tlt.th.co.toyotaleasing.view.TLTButtonWidget
+                android:id="@+id/btn_backhome"
+                android:layout_width="@dimen/btn_circular_size"
+                android:layout_height="@dimen/btn_circular_size"
+                app:iconDrawable="@drawable/ic_home"
+                app:title="@string/btn_backhome" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

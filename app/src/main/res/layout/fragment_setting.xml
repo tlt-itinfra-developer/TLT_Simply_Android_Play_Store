@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_menubars"
+        app:title="@string/sidebar_menu_setting"
+        app:toolbarSize="normal" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/header_frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/bg_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/bg_setting_header" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/profile_image_layout"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:layout_gravity="center_horizontal"
+                        android:visibility="visible">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_iv"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="3dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/camera_iv_bg"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:srcCompat="@drawable/bg_circle_white" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/camera_iv"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/camera_iv_bg"
+                            app:layout_constraintEnd_toEndOf="@+id/camera_iv_bg"
+                            app:layout_constraintStart_toStartOf="@+id/camera_iv_bg"
+                            app:layout_constraintTop_toTopOf="@+id/camera_iv_bg"
+                            app:srcCompat="@drawable/ic_tlt_camera" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/full_name"
+                style="@style/Text_Bold_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textColor="@color/brownish_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_frame_layout" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/early_notification_cv"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/full_name">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_normal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/early_notification_title_tv"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setting_early_notification_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/installment_due_date_title"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:gravity="start"
+                        android:text="@string/setting_advance_notification_payment_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toStartOf="@+id/installment_seekbar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/early_notification_title_tv" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/installment_due_date_description"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/setting_advance_notification_payment_description"
+                        android:textColor="@color/text_normal_lighter"
+                        app:layout_constraintEnd_toStartOf="@+id/installment_seekbar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/installment_due_date_title" />
+
+                    <tlt.th.co.toyotaleasing.view.seekbar.IndicatorSeekBar
+                        android:id="@+id/installment_seekbar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/installment_due_date_title"
+                        app:layout_constraintTop_toTopOf="@+id/installment_due_date_title"
+                        app:tlt_max="6"
+                        app:tlt_min="0"
+                        app:tlt_progress="1"
+                        app:tlt_seek_smoothly="true"
+                        app:tlt_show_tick_texts="true"
+                        app:tlt_thumb_color="@color/terracotta_2"
+                        app:tlt_thumb_size="16dp"
+                        app:tlt_tick_texts_color="@color/text_normal_lighter"
+                        app:tlt_tick_texts_size="20sp"
+                        app:tlt_ticks_count="7"
+                        app:tlt_track_background_color="@color/grey"
+                        app:tlt_track_progress_color="@color/green" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/payment_due_date_barrier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="bottom"
+                        app:constraint_referenced_ids="installment_due_date_description,installment_seekbar" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tax_due_date_title"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:gravity="start"
+                        android:text="@string/setting_advance_notification_tax_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toStartOf="@+id/tax_seekbar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/payment_due_date_barrier" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tax_due_date_description"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/setting_advance_notification_tax_description"
+                        android:textColor="@color/text_normal_lighter"
+                        app:layout_constraintEnd_toStartOf="@+id/tax_seekbar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tax_due_date_title" />
+
+                    <tlt.th.co.toyotaleasing.view.seekbar.IndicatorSeekBar
+                        android:id="@+id/tax_seekbar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tax_due_date_title"
+                        app:layout_constraintTop_toTopOf="@+id/tax_due_date_title"
+                        app:tlt_max="3"
+                        app:tlt_min="0"
+                        app:tlt_progress="1"
+                        app:tlt_seek_smoothly="true"
+                        app:tlt_show_tick_texts="true"
+                        app:tlt_thumb_color="@color/terracotta_2"
+                        app:tlt_thumb_size="16dp"
+                        app:tlt_tick_texts_color="@color/text_normal_lighter"
+                        app:tlt_tick_texts_size="20sp"
+                        app:tlt_ticks_count="4"
+                        app:tlt_track_background_color="@color/grey"
+                        app:tlt_track_progress_color="@color/green" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/tax_due_date_barrier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="bottom"
+                        app:constraint_referenced_ids="tax_due_date_description,tax_seekbar" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/insurance_due_date_title"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:gravity="start"
+                        android:text="@string/setting_advance_notification_insurance_title"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/insurance_seekbar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tax_due_date_barrier" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/insurance_due_date_description"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/setting_advance_notification_insurance_description"
+                        android:textColor="@color/text_normal_lighter"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/insurance_seekbar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/insurance_due_date_title" />
+
+                    <tlt.th.co.toyotaleasing.view.seekbar.IndicatorSeekBar
+                        android:id="@+id/insurance_seekbar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/insurance_due_date_title"
+                        app:layout_constraintTop_toTopOf="@+id/insurance_due_date_title"
+                        app:tlt_max="3"
+                        app:tlt_min="0"
+                        app:tlt_progress="1"
+                        app:tlt_seek_smoothly="true"
+                        app:tlt_show_tick_texts="true"
+                        app:tlt_thumb_color="@color/terracotta_2"
+                        app:tlt_thumb_size="16dp"
+                        app:tlt_tick_texts_color="@color/text_normal_lighter"
+                        app:tlt_tick_texts_size="20sp"
+                        app:tlt_ticks_count="4"
+                        app:tlt_track_background_color="@color/grey"
+                        app:tlt_track_progress_color="@color/green" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/insurance_due_date_barrier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:barrierDirection="bottom"
+                        app:constraint_referenced_ids="insurance_due_date_description,insurance_seekbar" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/account_cv"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/early_notification_cv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_normal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/account_title_tv"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setting_account_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/change_email_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/account_title_tv">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/email_tv"
+                            style="@style/Text_Bold_Large"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_normal"
+                            android:drawablePadding="@dimen/padding_small"
+                            android:gravity="start"
+                            app:layout_constraintEnd_toStartOf="@id/email_arrow"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="อีเมล : test@test.com" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/email_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/email_tv"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/email_tv"
+                            app:srcCompat="@drawable/ic_arrow_right" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/email_description_tv"
+                            style="@style/Text_Bold_Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/setting_account_email_description"
+                            android:textColor="@color/text_normal_lighter"
+                            app:layout_constraintEnd_toStartOf="@+id/email_arrow"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/email_tv" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/car_profile_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/change_email_layout">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/car_profile_tv"
+                            style="@style/Text_Bold_Large"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/setting_account_car_profile_title"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toStartOf="@+id/car_profile_arrow"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/car_profile_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/car_profile_tv"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/car_profile_tv"
+                            app:srcCompat="@drawable/ic_arrow_right" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/car_profile_description_tv"
+                            style="@style/Text_Bold_Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/setting_account_car_profile_description"
+                            android:textColor="@color/text_normal_lighter"
+                            app:layout_constraintEnd_toStartOf="@+id/car_profile_arrow"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/car_profile_tv" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/news_notification_cv"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/account_cv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_normal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/news_notification_title"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setting_news_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/news_promotion_title"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:gravity="start"
+                        android:text="@string/setting_news_promotion_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toStartOf="@+id/news_promotion_switch"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/news_notification_title" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/news_promotion_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        app:layout_constraintBottom_toBottomOf="@id/news_promotion_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/news_promotion_title"
+                        app:thumbTint="@color/terracotta_2"
+                        app:trackTint="@color/selector_switch_track" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tib_club_title"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:gravity="start"
+                        android:text="@string/setting_tib_club_title"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/tib_club_switch"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/news_promotion_title" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/tib_club_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/tib_club_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tib_club_title"
+                        app:thumbTint="@color/terracotta_2"
+                        app:trackTint="@color/selector_switch_track" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/language_cv"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/news_notification_cv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_normal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/language_title"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setting_language_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/language_selected"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:textColor="@color/brownish_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/language_arrow"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/language_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_normal"
+                        app:layout_constraintBottom_toBottomOf="@id/language_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/language_title"
+                        app:srcCompat="@drawable/ic_arrow_right" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/other_cv"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/language_cv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_normal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/security_title"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setting_other_security_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/id_touch_title"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:text="@string/setting_other_id_touch_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/security_title" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/id_touch_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:checked="false"
+                        app:layout_constraintBottom_toBottomOf="@id/id_touch_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/id_touch_title"
+                        app:thumbTint="@color/terracotta_2"
+                        app:trackTint="@color/selector_switch_track" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_change_pincode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/id_touch_title">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/change_pin_title"
+                            style="@style/Text_Bold_Large"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/setting_other_change_pin_title"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/change_pin_arrow"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/change_pin_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/change_pin_title"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/change_pin_title"
+                            app:srcCompat="@drawable/ic_arrow_right" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="early_notification_cv,account_cv,other_cv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

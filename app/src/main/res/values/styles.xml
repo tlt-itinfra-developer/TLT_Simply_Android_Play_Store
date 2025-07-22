@@ -1,0 +1,123 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/bg_metal</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/layer_splashscreen</item>
+    </style>
+
+    <style name="TabLayoutTextAppeareance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/tablayout_font_size</item>
+        <item name="android:fontFamily">@font/custom_bold</item>
+    </style>
+
+    <style name="ThemeSpinner">
+        <item name="colorAccent">@color/text_normal</item>
+        <item name="colorControlNormal">@color/text_normal</item>
+        <item name="android:fontFamily">@font/custom_regular</item>
+        <item name="android:textSize">@dimen/form_text_size</item>
+    </style>
+
+    <style name="MySpinner" parent="Widget.AppCompat.Spinner.Underlined">
+        <item name="colorAccent">@color/text_normal</item>
+        <item name="colorControlNormal">@color/text_normal</item>
+        <item name="android:fontFamily">@font/custom_regular</item>
+        <item name="android:textSize">@dimen/text_medium_size</item>
+    </style>
+
+    <style name="Button_Success" parent="Text_Bold_Large">
+        <item name="android:background">@drawable/selector_btn_confirm_green</item>
+        <item name="android:textColor">@drawable/selector_font_confirm_green_color</item>
+    </style>
+
+    <style name="MyCardView">
+        <item name="android:layout_marginTop">-12dp</item>
+        <item name="android:layout_marginBottom">-12dp</item>
+        <item name="android:layout_marginStart">-8dp</item>
+        <item name="android:layout_marginEnd">-8dp</item>
+        <item name="cardCornerRadius">3dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="MyCardView_MarginTop_Zero">
+        <item name="android:layout_marginStart">-8dp</item>
+        <item name="android:layout_marginEnd">-8dp</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="MyCardView_Margin_Normal">
+        <item name="android:layout_marginTop">-4dp</item>
+        <item name="android:layout_marginBottom">-4dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="cardCornerRadius">3dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="Text_Bold_Small">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/custom_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/text_normal</item>
+        <item name="android:textSize">@dimen/text_small_size</item>
+    </style>
+
+    <style name="Text_Bold_Medium">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/custom_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/text_normal</item>
+        <item name="android:textSize">@dimen/text_medium_size</item>
+    </style>
+
+    <style name="Text_Bold_Large">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/custom_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/text_normal</item>
+        <item name="android:textSize">@dimen/text_large_size</item>
+    </style>
+
+    <style name="Text_Regular_Small">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/custom_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/text_normal</item>
+        <item name="android:textSize">@dimen/text_small_size</item>
+    </style>
+
+    <style name="Text_Regular_Medium">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/custom_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/text_normal</item>
+        <item name="android:textSize">@dimen/text_medium_size</item>
+    </style>
+
+    <style name="Text_Regular_Large">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/custom_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/text_normal</item>
+        <item name="android:textSize">@dimen/text_large_size</item>
+    </style>
+
+    <style name="dialogBlur" parent="android:style/Theme.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+
+</resources>

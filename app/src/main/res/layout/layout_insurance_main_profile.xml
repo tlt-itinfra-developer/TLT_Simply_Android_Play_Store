@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_insurance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:text="@string/insurance_title"
+        android:textColor="@color/text_normal"
+        android:textSize="@dimen/text_large_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_insurance_license"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_extra_large_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_insurance"
+        tools:text="กต 1528 - กรุงเทพมหานคร" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_insurance_fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/text_normal_lighter"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_insurance_license"
+        tools:text="นายอนุพล รักจริง" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_insurance_contract_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/text_normal_lighter"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_insurance_fullname"
+        tools:text="เลขที่สัญญา : AHP1789534" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_insurance_customer_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/text_normal_lighter"
+        android:textSize="@dimen/text_small_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_insurance_contract_number"
+        tools:text="11 ม.ค. 2561" />
+</androidx.constraintlayout.widget.ConstraintLayout>

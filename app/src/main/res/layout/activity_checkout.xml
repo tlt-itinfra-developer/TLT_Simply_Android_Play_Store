@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/toolbar_medium_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/payment_title"
+        app:toolbarSize="medium" />
+
+    <androidx.cardview.widget.CardView
+        style="@style/MyCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/toolbar_large_content_margin_top"
+        android:layout_marginEnd="@dimen/margin_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar"
+        tools:background="#00ff00">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payment_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:fontFamily="@font/custom_regular"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_small_size"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_payment_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="14 ก.พ. 2561" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payment_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:fontFamily="@font/custom_regular"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large_size"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/payment_summary_list" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payment_license_car_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/custom_regular"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_medium_size"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_payment_title"
+                    tools:text="กต -1528 กรุงเทพมหานคร" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payment_contract_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/custom_regular"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_medium_size"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_payment_license_car_no"
+                    tools:text="เลขที่สัญญา : AHP1789534" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payment_file_document_informationff"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/custom_regular"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_medium_size"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_payment_license_car_no"
+                    tools:text="เลขที่สัญญา : AHP1789534" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_payment_file_document_information"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_payment_contract_no"
+                    tools:itemCount="3"
+                    tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/item_payment_document_view"
+                    tools:spanCount="3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_payment_information"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_payment_file_document_information"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_payment_list_view" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payment_total_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/grey_4"
+                    android:fontFamily="@font/rsu_bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/padding_normal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_payment_information"
+                    tools:text="รวมยอดชำระ 2,045.50 บาท" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_wallet_method_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:fontFamily="@font/custom_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/wallet_method_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large_size"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_payment_total_tv" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_wallet_method_choice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_wallet_method_title"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_payment_method" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_mbank_method_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:fontFamily="@font/custom_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/mbanking_method_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large_size"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_wallet_method_choice" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_mbank_method_choice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_mbank_method_title"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_payment_method" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payment_method_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:fontFamily="@font/custom_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/payment_method_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large_size"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_mbank_method_choice" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_payment_method_choice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_payment_method_title"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_payment_method" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_qr_method_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:fontFamily="@font/custom_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/qr_method_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large_size"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_payment_method_choice" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_qr_method_choice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"
+                    app:layout_constraintStart_toStartOf="@+id/txt_payment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_qr_method_title"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_payment_method" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_qr_method_choice" />
+
+                <!--<tlt.th.co.toyotaleasing.view.TLTButtonWidget-->
+                <!--android:id="@+id/iv_payment_cash"-->
+                <!--android:layout_width="@dimen/btn_circular_size"-->
+                <!--android:layout_height="@dimen/btn_circular_size"-->
+                <!--android:layout_margin="@dimen/padding_normal"-->
+                <!--android:layout_marginBottom="@dimen/margin_small"-->
+                <!--android:visibility="gone"-->
+                <!--app:iconDrawable="@drawable/ic_wallet"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintEnd_toEndOf="@+id/txt_payment_date"-->
+                <!--app:layout_constraintStart_toStartOf="@+id/txt_payment_title"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/rv_payment_method_choice"-->
+                <!--app:title="@string/btn_payment" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

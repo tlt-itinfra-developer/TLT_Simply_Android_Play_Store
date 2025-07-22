@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tlt.th.co.toyotaleasing.modules.pincode.AuthPincodeActivity">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/header_otp_phone"
+        app:toolbarSize="normal" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:layout_weight="2">
+
+            <tlt.th.co.toyotaleasing.view.TLTTextView
+                android:id="@+id/page_title_verify_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/custom_bold"
+                android:gravity="center"
+                android:text="@string/otp_header_title"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/header_text_size" />
+
+            <tlt.th.co.toyotaleasing.view.OTPEdittext
+                android:id="@+id/edittext_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:fontFamily="@font/custom_bold"
+                android:textColor="@color/text_normal"
+                android:textSize="30sp"
+                app:textAutoSizing="true"
+                tools:text="  2   8   3   5   5   3  " />
+
+            <View
+                android:id="@+id/otp_underline"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/otp_underline_width"
+                android:layout_marginEnd="@dimen/otp_underline_width"
+                android:background="@color/unactive" />
+
+            <tlt.th.co.toyotaleasing.view.TLTTextView
+                android:id="@+id/txt_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:fontFamily="@font/custom_regular"
+                android:gravity="center"
+                android:text="@string/otp_entered_incorrect"
+                android:textColor="@color/cherry_red"
+                android:textSize="@dimen/text_large_size"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <tlt.th.co.toyotaleasing.view.TLTTextView
+                android:id="@+id/txt_resend_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/custom_regular"
+                android:gravity="center"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_medium_size"
+                tools:text="00:59" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/custom_regular"
+                    android:gravity="center"
+                    android:text="@string/otp_did_not_get_otp"
+                    android:textColor="@color/text_normal"
+                    android:textSize="20sp" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/btn_resend_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/custom_bold"
+                    android:gravity="center"
+                    android:text="@string/otp_resend_otp"
+                    android:textColor="@color/terracotta"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <tlt.th.co.toyotaleasing.view.KeyboardNumberWidget
+            android:id="@+id/keyboard_number_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

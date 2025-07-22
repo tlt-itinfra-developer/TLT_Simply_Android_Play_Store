@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_menubars"
+        app:title="@string/contactus_title"
+        app:toolbarSize="normal" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_logo"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:adjustViewBounds="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo_leasing" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_company_name"
+                style="@style/Text_Bold_Large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/contactus_tlt"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_logo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_company_website"
+                style="@style/Text_Bold_Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:gravity="center"
+                android:text="@string/contactus_tlt_website"
+                android:textColor="@color/appintro_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_company_name" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_detail"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="240dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_company_website">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/padding_small">
+
+                    <View
+                        android:id="@+id/vertical_line"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:background="#ddd8e6"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/horizontal_line"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="#ddd8e6"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_call_center"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:layout_constraintBottom_toTopOf="@id/txt_call_center"
+                        app:layout_constraintEnd_toStartOf="@id/vertical_line"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_contactus_phone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_call_center"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="all"
+                        android:gravity="center"
+                        android:text="@string/contactus_call_center"
+                        app:layout_constraintBottom_toTopOf="@id/horizontal_line"
+                        app:layout_constraintEnd_toStartOf="@id/vertical_line"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img_call_center" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_qa"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:layout_constraintBottom_toTopOf="@id/txt_qa"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/vertical_line"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_contactus_qa" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_qa"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="all"
+                        android:gravity="center"
+                        android:text="@string/contactus_qa"
+                        app:layout_constraintBottom_toTopOf="@id/horizontal_line"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/vertical_line"
+                        app:layout_constraintTop_toBottomOf="@id/img_qa" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_line"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:layout_constraintBottom_toTopOf="@id/txt_line"
+                        app:layout_constraintEnd_toStartOf="@id/vertical_line"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/horizontal_line"
+                        app:layout_constraintVertical_weight="1"
+                        app:srcCompat="@drawable/ic_contactus_line" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_line"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="all"
+                        android:gravity="center"
+                        android:text="@string/contactus_line"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/vertical_line"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img_line" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_facebook"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:layout_constraintBottom_toTopOf="@id/txt_facebook"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/vertical_line"
+                        app:layout_constraintTop_toBottomOf="@id/horizontal_line"
+                        app:srcCompat="@drawable/ic_contactus_facebook" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_facebook"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="all"
+                        android:gravity="center"
+                        android:text="@string/contactus_facebook"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/vertical_line"
+                        app:layout_constraintTop_toBottomOf="@id/img_facebook" />
+
+                    <View
+                        android:id="@+id/group_call_center"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toTopOf="@id/horizontal_line"
+                        app:layout_constraintEnd_toStartOf="@id/vertical_line"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/group_qa"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toTopOf="@id/horizontal_line"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/vertical_line"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/group_line"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/vertical_line"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/horizontal_line" />
+
+                    <View
+                        android:id="@+id/group_facebook"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/vertical_line"
+                        app:layout_constraintTop_toBottomOf="@id/horizontal_line" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_tib"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="190dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_detail">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/logo_tib"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toTopOf="@id/txt_tlt_broker"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/logo_tib" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_tlt_broker"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contactus_tlt_insurance_broker"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toTopOf="@id/btn_tib_detail"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/logo_tib" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_tib_detail"
+                        style="@style/Text_Bold_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="@drawable/btn_white"
+                        android:text="@string/contactus_tib_detail"
+                        android:textColor="@color/teal_500"
+                        android:paddingStart="@dimen/padding_small"
+                        android:paddingEnd="@dimen/padding_small"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_tlt_broker" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_tib" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

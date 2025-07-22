@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="tlt.th.co.toyotaleasing">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:allowBackup">
+
+        <activity android:name=".modules.staff.main.nonstaff.MainNonStaffActivity"/>
+        <activity android:name=".modules.staff.termcon.StaffTermAndConditionActivity"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider> <!-- [START - Facebook Login] -->
+<!--        <meta-data-->
+<!--            android:name="com.facebook.sdk.ApplicationId"-->
+<!--            android:value="@string/facebook_app_id" />-->
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity> <!-- [END - Facebook Login] -->
+        <!-- [START - Firebase Cloud Messaging] -->
+        <service android:name=".manager.notification.AppFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".manager.notification.AppFirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" /> <!-- [END - Firebase Cloud Messaging] -->
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+
+        <activity
+            android:name=".modules.main.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".modules.deeplink.DeeplinkActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"
+                    android:exported="false"/>
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".modules.otp.OTPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.home.noncustomer.MainNonCustomerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".modules.home.customer.MainCustomerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".modules.pincode.AuthPincodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.verifyemail.VerifyEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.register.RegisterFormActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".modules.selectphone.SelectPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.verifyemail.VerifyEmailSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.verifyemail.VerifyEmailFailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.termcondition.TermAndConditionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.disclosure.DisclosureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.register.RegisterSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.pincode.SetupPincodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".modules.fingerprint.FingerprintSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.appintro.AppIntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.contract.ContractDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.editaddress.installment.EditInstallmentAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".modules.editaddress.taxdelivery.EditTaxDeliveryAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".modules.installmentdetail.InstallmentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.filtercar.FilterCarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.tax.TaxDocumentDeliveryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.pincode.ChangePincodeSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.pincode.ForgotPincodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".modules.insurance.information.InsuranceInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.insurance.recommend.InsuranceRecommendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.insurance.status.InsuranceStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.insurance.tibclub.TIBClubActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.insurance.tibclub.tibclubdetail.TIBClubDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.insurance.quotation.QuotationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".modules.insurance.paymentdetail.PaymentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.emergency.EmergencyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.insurance.hotline.HotLineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.tax.porlorbor.PorlorborTaxActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.tax.torloraor.TorloraorTaxActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.tax.gas.GasTaxActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.cart.customize.CartCustomizeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".modules.qrcode.detail.QRActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".modules.ibanking.IBankingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.cart.installment.CartInstallmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.cart.tax.CartTaxActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.cart.insurance.CartInsuranceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.checkout.CheckoutInstallmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.checkout.CheckoutTaxActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.checkout.CheckoutInsuranceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.receipt.ReceiptInstallmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.receipt.ReceiptTaxActivity"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".modules.payment.receipt.ReceiptDelayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.receipt.ReceiptInsuranceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.setting.changelanguage.ChangeLanguageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.setting.changeemail.ChangeEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.setting.changeemail.ChangeEmailSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.setting.changeemail.ChangeEmailVerifySuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.newsandpromotion.newsdetail.NewsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.debug.DebugActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.payfail.PaymentInstallmentFailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.payfail.PaymentTaxFailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.payment.payfail.PaymentInsuranceFailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.location.detail.LocationDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.location.filter.LocationFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.faq.detail.FAQDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.contactus.question_and_answer.QuestionAndAnswerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".modules.setting.changeprofilecar.ChangeCarProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.web.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.ecommerce.ECommerceActiviy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.livechat.LiveChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.contract.specialoffer.SpecialOfferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.tutorial.TutorialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.checkstatusfrombank.CheckStatusFromBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.test.TestActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+        <activity
+            android:name=".modules.appintro.IntroPAPDActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.checkmasterdata.CheckVersionMasterActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".modules.tax.TaxWebActivity"
+            android:screenOrientation="portrait" />
+
+        <!--         ONLINE APP         -->
+
+        <activity
+            android:name=".activity.CarLoanCalculateWebActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.carloan.GuidlineRequireDocActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.center.LoanAuthenActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.center.LoanSelectPhoneActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.center.LoanOTPActivity"
+            android:screenOrientation="portrait" />
+
+<!--        <activity-->
+<!--            android:name=".modules.custloan.facedetect.kycfacedetect.activity.FaceDetectActivity"-->
+<!--            android:screenOrientation="portrait" />-->
+
+<!--        <activity-->
+<!--            android:name=".modules.custloan.facedetect.kycfacedetect.activity.ResultActivity"-->
+<!--            android:screenOrientation="portrait" />-->
+
+        <activity
+            android:name=".modules.custloan.loanmodule.cstatus.PreviewEContractActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.ndid.LoanEconsentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.ndid.LoanEContractWaitNDIDActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.ndid.LoanEContractSelectBankNDIDActivity"
+            android:screenOrientation="portrait" />
+        <!--  FOR ACTIVITY STEP -->
+
+
+        <activity
+            android:name=".modules.custloan.MenuStepController" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.basicdetail.BasicIDCardFrontActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.basicdetail.BasicLivenessActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.basicdetail.BasicInformationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.basicdetail.BasicCustProfileActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.carloan.LoanUploadDocumentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.carloan.LoanPersonalInfomationActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".modules.custloan.loanmodule.carloan.CarLoanDetailOTPActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.custinfo.CInfoInformationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.custinfo.CInfoCreditConsiderationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.custinfo.CInfoCreditResultActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.cstatus.VerifyandConfirmActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".modules.custloan.loanmodule.delivery.DeliveryQRActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.delivery.SignatureEConsentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.cstatus.SummaryLoanActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.carloan.SyncDocumentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.carloan.LoanPersonalCDDctivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.ndid.LoanWaitNDIDActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.ndid.LoanSelectBankNDIDActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.ndid.LoanTermsConNDIDActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.geo.GeoLocationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.geo.GeoStreetViewLocationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.cstatus.extend.ScannerQRcodeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.geo.location.LoanLocationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.geo.location.filter.LoanLocationFilterActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.cstatus.CompleteCarLoanActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.cstatus.ViewEContractActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.custloan.loanmodule.cstatus.LoanAuthPincodeActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".modules.custloan.loanmodule.cstatus.OtherExpenseLoanActivity"
+            android:screenOrientation="portrait" />
+
+
+
+
+
+
+
+
+
+        <!--  END  ACTIVITY STEP -->
+
+   <!--        END ONLINE APP -->
+
+
+
+    </application>
+
+</manifest>

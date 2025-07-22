@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/margin_normal"
+    android:paddingBottom="@dimen/margin_normal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_title"
+        style="@style/Text_Bold_Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/form_quotation_radio_call"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Offer " />
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rad_best_offer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rsu_bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_medium_size"
+        android:visibility="visible"
+        app:buttonTint="@color/terracotta"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detail"
+        app:layout_constraintTop_toTopOf="@+id/txt_detail" />
+
+    <tlt.th.co.toyotaleasing.view.DrawableTextViewWidget
+        android:id="@+id/txt_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:paddingEnd="5dp"
+        app:iconDrawable="@drawable/shape_circle_faq_detail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rad_best_offer"
+        app:layout_constraintStart_toStartOf="@id/txt_title"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

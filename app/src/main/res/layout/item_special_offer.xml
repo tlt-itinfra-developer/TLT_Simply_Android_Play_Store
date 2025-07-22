@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        style="@style/MyCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:paddingStart="10dp"
+            android:paddingEnd="20dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_check_bg_green" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_txt"
+                style="@style/Text_Bold_Large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:gravity="start"
+                android:textColor="@color/pincode_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icon_check"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="โปรแกรม Repurchase" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/send_date_txt"
+                style="@style/Text_Regular_Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/title_txt"
+                app:layout_constraintTop_toBottomOf="@+id/title_txt"
+                tools:text="วันที่ส่งข้อความ : 19 ก.ค. 2561" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/description_txt"
+                style="@style/Text_Bold_Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:gravity="start"
+                android:textColor="@color/text_normal_lighter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/send_date_txt"
+                tools:text="รับข้อเสนอพิเศษเมื่อซื้อรถโตโยต้าวันนี้ กับโตโยต้าลิสซิ่ง เท่านั้น รับเลยสิทธิพิเศษ\n*ดาวน์เริ่มต้น 0%\n*ไม่ใช้ผู้ค้ำประกัน\n*ดอกเบี้ยพิเศษ\n*พร้อมรับวงเงินสินเชื่ออนุมัติทันที 652,000 บาท ภายใน 31 ส.ค. 61" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

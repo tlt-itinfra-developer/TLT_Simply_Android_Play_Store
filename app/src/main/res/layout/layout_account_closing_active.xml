@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <View
+        android:id="@+id/bg_behind_the_circle"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="45dp"
+        android:background="#e2dada"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_active_account_closing"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_circle_active_account_closing"
+        app:layout_constraintBottom_toBottomOf="@id/bg_behind_the_circle"
+        app:layout_constraintEnd_toEndOf="@id/bg_behind_the_circle"
+        app:layout_constraintStart_toStartOf="@id/bg_behind_the_circle"
+        app:layout_constraintTop_toTopOf="@id/bg_behind_the_circle">
+
+        <tlt.th.co.toyotaleasing.view.TLTTextView
+            android:id="@+id/txt_total_price"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            tools:text="522,741.00"
+            android:textColor="@color/terracotta_200"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_bold"
+            android:includeFontPadding="false"
+            android:text="@string/account_closing_baht"
+            android:textColor="@color/text_disable"
+            android:textSize="@dimen/text_medium_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_total_price" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <tlt.th.co.toyotaleasing.view.TLTButton
+        android:id="@+id/btn_payoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_green_light"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/custom_bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:paddingEnd="42dp"
+        android:paddingStart="42dp"
+        android:visibility="visible"
+        android:text="@string/account_closing_payoff"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_button_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_active_account_closing" />
+
+    <tlt.th.co.toyotaleasing.view.TLTButton
+        android:id="@+id/btn_interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_green_light"
+        android:drawableEnd="@drawable/ic_flag"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/custom_bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:paddingEnd="42dp"
+        android:paddingStart="42dp"
+        android:text="@string/account_closing_interest_refinance"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_button_size"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_payoff" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_staff_contact_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:text="@string/account_closing_active_staff_contact"
+        android:textColor="@color/text_disable"
+        android:textSize="@dimen/text_small_size"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_interest" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/unactive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_staff_contact_active" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_credit_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:text="@string/account_closing_description"
+        android:textColor="@color/text_disable"
+        android:textSize="@dimen/text_small_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_payoff_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:text="@string/account_payoff_description"
+        android:textColor="@color/text_disable"
+        android:textSize="@dimen/text_small_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_credit_description"
+        android:visibility="gone"/>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_payoff_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_behind_in_payment_normal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/car_contract_content_margin"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/text_disable"
+        android:textSize="@dimen/car_contract_text_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txt_behind_in_payment_normal"
+        tools:text="ค่างวดที่ค้างชำระเดือน ก.พ." />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_behind_in_payment_normal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/text_disable"
+        android:textSize="@dimen/car_contract_text_content"
+        android:gravity="end"
+        app:layout_constraintStart_toEndOf="@id/title_behind_in_payment_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title_behind_in_payment_normal"
+        tools:text="10,608.00 บาท" />
+</androidx.constraintlayout.widget.ConstraintLayout>

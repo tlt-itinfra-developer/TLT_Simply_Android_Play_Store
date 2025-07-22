@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/insurance_information_title"
+        app:toolbarSize="normal" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/insurance_information_nestedscrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants">
+
+            <tlt.th.co.toyotaleasing.view.insurance.CarInformationWidget
+                android:id="@+id/insurance_information_car_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <tlt.th.co.toyotaleasing.view.insurance.InsuranceWidget
+                android:id="@+id/insurance_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_information_car_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/insurance_information_current_year_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rsu_bold"
+                android:gravity="center"
+                android:text="@string/insurance_information_current_year"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/insurance_information_expire_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rsu_regular"
+                android:gravity="center"
+                android:text="@string/insurance_information_expire_detail"
+                android:textColor="@color/text_normal_lighter"
+                android:textSize="@dimen/text_medium_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_information_current_year_tv" />
+
+            <tlt.th.co.toyotaleasing.view.LazyImageView
+                android:id="@+id/insurance_information_calendar_iv"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:imageResource="@drawable/bg_calendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_information_expire_tv"
+                tools:srcCompat="@drawable/bg_calendar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/insurance_information_calendar_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/rsu_bold"
+                android:gravity="center"
+                android:textColor="@color/terracotta"
+                android:textSize="@dimen/text_large_size"
+                app:layout_constraintBottom_toBottomOf="@+id/insurance_information_calendar_iv"
+                app:layout_constraintEnd_toEndOf="@+id/insurance_information_calendar_iv"
+                app:layout_constraintStart_toStartOf="@+id/insurance_information_calendar_iv"
+                app:layout_constraintTop_toTopOf="@+id/insurance_information_calendar_iv"
+                tools:text="42 วัน" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/insurance_information_recommend_card"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_information_calendar_iv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/insurance_information_recommend_cl"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_filter_car_unselect"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_bookmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="26dp"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_bookmark"
+                        app:tint="@color/terracotta" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/insurance_information_recommend_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/custom_bold"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="@string/insurance_information_recommend_premium"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_large_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ic_bookmark"
+                        app:layout_constraintTop_toTopOf="parent"
+                  />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_angle_right_dark" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/insurance_information_faqs_card"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_information_recommend_card">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/insurance_information_faqs_cl"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_filter_car_unselect">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_faqs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="26dp"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_question_orange" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/insurance_information_faqs_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/custom_bold"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="@string/insurance_information_faqs"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_large_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ic_faqs"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_angle_right_dark" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/insurance_information_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_information_faqs_card" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/insurance_information_history_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:drawableStart="@drawable/history"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/rsu_bold"
+                android:text="@string/insurance_information_history"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_information_line" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/insurance_information_expand_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@drawable/ic_arrow_up"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/rsu_bold"
+                android:gravity="end"
+                android:padding="8dp"
+                android:text="@string/insurance_information_hide_message"
+                android:textColor="@color/text_normal_lighter"
+                android:textSize="@dimen/text_small_size"
+                app:layout_constraintBottom_toBottomOf="@+id/insurance_information_history_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/insurance_information_history_tv" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/insurance_information_history_nodata_card_view"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_information_history_tv">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_normal"
+                    android:gravity="center"
+                    android:text="@string/insurance_information_nodata" />
+
+             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/insurance_information_history_card_view"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_information_history_tv">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/insurance_information_history_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_insurance_history" />
+             </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/insurance_information_history_card_view" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

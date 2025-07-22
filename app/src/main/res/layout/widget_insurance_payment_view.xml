@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_normal"
+    android:paddingEnd="@dimen/margin_large"
+    android:paddingStart="@dimen/margin_large"
+    android:paddingTop="@dimen/margin_normal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/insurance_company_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/rsu_bold"
+            android:gravity="start"
+            android:text="@string/insurance_information_company"
+            android:textSize="@dimen/text_medium_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/insurance_company_field_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/rsu_bold"
+            android:gravity="end"
+            android:textSize="@dimen/text_medium_size"
+            tools:text="บริษัทวิริยะ ประกันภัย" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/insurance_type_protection_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/rsu_bold"
+            android:text="@string/insurance_type_protection_tv"
+            android:textSize="@dimen/text_medium_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/insurance_type_protection_field_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/rsu_bold"
+            android:gravity="end"
+            android:textSize="@dimen/text_medium_size"
+            tools:text="ประกันภัยชั้น 1 (รวม พ.ร.บ.)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/insurance_budget_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/rsu_bold"
+            android:text="@string/insurance_budget_tv"
+            android:textSize="@dimen/text_medium_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/insurance_budget_field_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/rsu_bold"
+            android:gravity="end"
+            android:textSize="@dimen/text_medium_size"
+            tools:text="500,000 บาท" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/insurance_condition_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/rsu_bold"
+            android:text="@string/insurance_condition_tv"
+            android:textSize="@dimen/text_medium_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/insurance_condition_field_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/rsu_bold"
+            android:gravity="end"
+            android:textSize="@dimen/text_medium_size"
+            tools:text="xxxxxxxxxxxxxxxxxxxxx" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/insurance_end_of_protection_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/rsu_bold"
+            android:text="@string/insurance_information_end_of_protection"
+            android:textSize="@dimen/text_medium_size"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insurance_condition_field_tv" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/insurance_end_of_protection_field_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/rsu_bold"
+            android:gravity="end"
+            android:textSize="@dimen/text_medium_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/insurance_barrier"
+            app:layout_constraintTop_toBottomOf="@+id/insurance_condition_field_tv"
+            tools:text="xx / xx / 2558" />
+    </LinearLayout>
+
+
+</LinearLayout>

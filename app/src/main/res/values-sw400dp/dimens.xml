@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_drawable">12dp</dimen>
+    <dimen name="home_img_banner_height">150dp</dimen>
+    <dimen name="toolbar_large_height">180dp</dimen>
+    <dimen name="home_banner_padding_start">16dp</dimen>
+    <dimen name="home_banner_padding_end">16dp</dimen>
+    <dimen name="otp_underline_width">90dp</dimen>
+    <dimen name="mycar_btn_payment_size">170dp</dimen>
+    <dimen name="mycar_thumbnail_size">150dp</dimen>
+    <dimen name="btn_circular_size">150dp</dimen>
+    <dimen name="mycar_margin_btn_check_payment">24dp</dimen>
+
+
+    <dimen name="mycar_thumbnail_tutorial_size">110dp</dimen>
+    <dimen name="tutorial_text_size_normal">17sp</dimen>
+    <dimen name="tutorial_text_size_small">15sp</dimen>
+    <dimen name="tutorial_image_mock_size">150dp</dimen>
+</resources>

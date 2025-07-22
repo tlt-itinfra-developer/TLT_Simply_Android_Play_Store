@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MyCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/header_layout"
+            layout="@layout/item_header_insurance_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_title_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:fontFamily="@font/custom_bold"
+            android:includeFontPadding="false"
+            android:text="@string/tax_payment"
+            android:textColor="@color/brownish_grey"
+            android:textSize="@dimen/text_large_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_layout" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_txt_payment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:fontFamily="@font/custom_regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_small_size"
+            app:layout_constraintBottom_toBottomOf="@id/tax_duedate_title_payment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tax_duedate_title_payment"
+            tools:text="11 ม.ค. 2561" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_tax_duedate_txt_payment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tax_duedate_title_payment,tax_duedate_txt_payment_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_title_amount_tax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_bold"
+            android:includeFontPadding="false"
+            android:text="@string/tax_amount_tax"
+            android:textColor="@color/text_normal_lighter"
+            android:textSize="@dimen/text_medium_size"
+            app:layout_constraintEnd_toStartOf="@id/tax_duedate_txt_amount_tax"
+            app:layout_constraintStart_toStartOf="@id/tax_duedate_title_payment"
+            app:layout_constraintTop_toTopOf="@id/barrier_tax_duedate_txt_payment_date" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_txt_amount_tax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:fontFamily="@font/custom_bold"
+            android:gravity="end"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_normal_lighter"
+            android:textSize="@dimen/text_medium_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tax_duedate_title_amount_tax"
+            app:layout_constraintTop_toTopOf="@id/tax_duedate_title_amount_tax"
+            tools:text="1,645.50 บาท" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_tax_duedate_title_amount_tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tax_duedate_title_amount_tax,tax_duedate_txt_amount_tax"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_title_service_charge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_bold"
+            android:includeFontPadding="false"
+            android:text="@string/tax_service_charge"
+            android:textColor="@color/text_normal_lighter"
+            android:textSize="@dimen/text_medium_size"
+            app:layout_constraintEnd_toStartOf="@id/tax_duedate_txt_service_charge"
+            app:layout_constraintStart_toStartOf="@id/tax_duedate_title_amount_tax"
+            app:layout_constraintTop_toTopOf="@id/barrier_tax_duedate_title_amount_tax" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_txt_service_charge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:fontFamily="@font/custom_bold"
+            android:gravity="end"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_normal_lighter"
+            android:textSize="@dimen/text_medium_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tax_duedate_title_service_charge"
+            app:layout_constraintTop_toTopOf="@id/tax_duedate_title_service_charge"
+            tools:text="400.00 บาท" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_tax_duedate_title_service_charge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tax_duedate_title_service_charge,tax_duedate_txt_service_charge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_title_aol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_bold"
+            android:includeFontPadding="false"
+            android:text="@string/tax_aol"
+            android:textColor="@color/text_normal_lighter"
+            android:textSize="@dimen/text_medium_size"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/tax_duedate_txt_aol"
+            app:layout_constraintStart_toStartOf="@id/tax_duedate_title_service_charge"
+            app:layout_constraintTop_toTopOf="@id/barrier_tax_duedate_title_service_charge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_txt_aol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:fontFamily="@font/custom_bold"
+            android:gravity="end"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_normal_lighter"
+            android:textSize="@dimen/text_medium_size"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tax_duedate_title_aol"
+            app:layout_constraintTop_toTopOf="@id/tax_duedate_title_aol"
+            tools:text="645.21 บาท" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_tax_duedate_title_aol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tax_duedate_title_aol,tax_duedate_txt_aol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_title_penalty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_bold"
+            android:includeFontPadding="false"
+            android:text="@string/tax_penalty"
+            android:textColor="@color/text_normal_lighter"
+            android:textSize="@dimen/text_medium_size"
+            app:layout_constraintEnd_toStartOf="@id/tax_duedate_txt_penalty"
+            app:layout_constraintStart_toStartOf="@id/tax_duedate_title_aol"
+            app:layout_constraintTop_toTopOf="@id/barrier_tax_duedate_title_aol" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_txt_penalty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:fontFamily="@font/custom_bold"
+            android:gravity="end"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_normal_lighter"
+            android:textSize="@dimen/text_medium_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tax_duedate_title_penalty"
+            app:layout_constraintTop_toTopOf="@id/tax_duedate_title_penalty"
+            tools:text="0.00 บาท" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_tax_duedate_title_penalty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tax_duedate_title_penalty,tax_duedate_txt_penalty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginEnd="26dp"
+            android:background="#d7d7d7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/barrier_tax_duedate_title_penalty" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_txt_total_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:fontFamily="@font/custom_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            tools:text="ยอดชำระ 47,616.00 บาท" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tax_duedate_title_note_please_check_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:drawableStart="@drawable/ic_info_green_circle"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:fontFamily="@font/custom_bold"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="@string/tax_note_plz_check_address"
+            android:textColor="@color/text_normal_lighter"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tax_duedate_txt_total_payment" />
+
+        <tlt.th.co.toyotaleasing.view.TLTButtonWidget
+            android:id="@+id/tax_duedate_btn_against_the_tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:iconDrawable="@drawable/ic_filepercent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tax_duedate_title_note_please_check_address"
+            app:title="@string/btn_tax_renewal" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tax_duedate_btn_against_the_tax" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/header_complete"
+        app:toolbarSize="normal" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/lay_ref"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="right"
+        android:background="@drawable/bg_header_ref"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <tlt.th.co.toyotaleasing.view.TLTTextView
+            android:id="@+id/h_ref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_ref"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:textColor="@color/grey_4"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <tlt.th.co.toyotaleasing.view.TLTTextView
+            android:id="@+id/txt_ref_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"
+            android:textColor="@color/grey_4"
+            app:text="@string/txt_ref_value" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.cardview.widget.CardView
+        style="@style/MyCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/margin_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lay_ref">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lay_ref">
+
+        <androidx.legacy.widget.Space
+            android:id="@+id/space0"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_contract_title"
+                style="@style/Text_Bold_Large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:gravity="center"
+                android:text="@string/txt_welcome_to_toyota"
+                android:textColor="@color/brownish_grey"
+                android:textSize="@dimen/text_xxlarge_header_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_next_confirm"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/home_success"
+            android:enabled="true"
+            android:fontFamily="@font/custom_bold"
+            android:gravity="center"
+            android:padding="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/txt_to_home" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_to_home"
+                style="@style/Text_Bold_Large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/btn_back_home"
+                android:textColor="@color/brownish_grey"
+                android:textSize="@dimen/text_medium_size"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/space3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Space
+            android:id="@+id/space3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:background="@color/unactive"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/space9"
+            app:layout_constraintStart_toStartOf="@+id/space9" />
+
+            <tlt.th.co.toyotaleasing.view.TLTTextView
+                android:id="@+id/txt_view_manual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:text="@string/txt_doc_instruction_manual"
+                android:textStyle="bold"
+                style="@style/Text_Bold_Large"
+                app:layout_constraintStart_toStartOf="@+id/car_contract_title"
+                app:layout_constraintTop_toBottomOf="@+id/car_contract_title" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bt_view_manual"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:src="@drawable/ic_download_circle"
+                android:textStyle="bold"
+                style="@style/Text_Bold_Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txt_view_manual" />
+
+            <View
+                android:id="@+id/divider0"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="@color/grey_2"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_view_manual" />
+
+            <tlt.th.co.toyotaleasing.view.TLTTextView
+                android:id="@+id/txt_view_ecotract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/txt_doc_econtract"
+                android:textStyle="bold"
+                style="@style/Text_Bold_Large"
+                app:layout_constraintStart_toStartOf="@+id/car_contract_title"
+                app:layout_constraintTop_toBottomOf="@+id/divider0" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_view_ecotract"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:src="@drawable/ic_download_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txt_view_ecotract" />
+
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="@color/grey_2"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_view_ecotract" />
+
+            <tlt.th.co.toyotaleasing.view.TLTTextView
+                android:id="@+id/txt_view_installment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/txt_doc_instalment"
+                android:textStyle="bold"
+                android:visibility="gone"
+                style="@style/Text_Bold_Large"
+                app:layout_constraintStart_toStartOf="@+id/car_contract_title"
+                app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_view_installment"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:visibility="gone"
+                android:src="@drawable/ic_download_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txt_view_installment" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

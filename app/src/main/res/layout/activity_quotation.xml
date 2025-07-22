@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tlt.th.co.toyotaleasing.modules.otp.OTPActivity">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/quotation_title"
+        app:toolbarSize="normal"
+        tools:background="@color/bg_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_quotation"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                app:elevation="88dp"
+                app:layout_anchorGravity="bottom">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:text="@string/activity_quotation_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_extra_large_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/activity_quotation_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rsu_regular"
+                    android:textColor="@color/appintro_description"
+                    android:textSize="@dimen/text_small_size"
+                    tools:text="11 ม.ค. 2561" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/activity_quotation_topic_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:text="@string/activity_quotation_topic_1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_extra_large_size" />
+
+                <LinearLayout
+                    android:id="@+id/activity_quotation_layout_non"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <tlt.th.co.toyotaleasing.view.OwaspEditText
+                        android:id="@+id/form_quotation_input_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:hint="@string/activity_quotation_name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textNoSuggestions"
+                        android:singleLine="true"
+                        android:textColor="@color/brownish_grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="@dimen/text_large_size" />
+
+                    <tlt.th.co.toyotaleasing.view.OwaspEditText
+                        android:id="@+id/form_quotation_input_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:hint="@string/activity_quotation_phone"
+                        android:imeOptions="actionDone"
+                        android:inputType="number|textNoSuggestions"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/brownish_grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="@dimen/text_large_size" />
+
+                    <tlt.th.co.toyotaleasing.view.OwaspEditText
+                        android:id="@+id/form_quotation_input_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:hint="@string/activity_quotation_email"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:singleLine="true"
+                        android:textColor="@color/brownish_grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="@dimen/text_large_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <tlt.th.co.toyotaleasing.view.OwaspEditText
+                            android:id="@+id/form_quotation_input_car_number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/rsu_bold"
+                            android:hint="@string/activity_quotation_car_number"
+                            android:inputType="textNoSuggestions"
+                            android:textColor="@color/brownish_grey"
+                            android:textColorHint="@color/grey"
+                            android:textSize="@dimen/text_large_size" />
+
+                        <tlt.th.co.toyotaleasing.view.OwaspEditText
+                            android:id="@+id/form_quotation_input_province"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/rsu_bold"
+                            android:hint="@string/activity_quotation_car_city"
+                            android:inputType="textNoSuggestions"
+                            android:textColor="@color/brownish_grey"
+                            android:textColorHint="@color/grey"
+                            android:textSize="@dimen/text_large_size"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+                            <tlt.th.co.toyotaleasing.view.SpinnerView
+                                android:id="@+id/activity_quotation_car_city_edit_spinner"
+                                style="@style/MySpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/text_large_size"
+                                app:hint="@string/activity_quotation_car_city" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@color/brownish_grey" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <tlt.th.co.toyotaleasing.view.OwaspEditText
+                        android:id="@+id/form_quotation_car_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:hint="@string/activity_quotation_car_series"
+                        android:inputType="textNoSuggestions"
+                        android:textColor="@color/brownish_grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="@dimen/text_large_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_quotation_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/form_quotation_txt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:textColor="@color/brownish_grey"
+                        android:textColorHint="@color/appintro_description"
+                        android:textSize="@dimen/text_medium_size"
+                        tools:text="@string/activity_quotation_name_tv" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/activity_quotation_car_number_city_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:textColor="@color/brownish_grey"
+                        android:textColorHint="@color/appintro_description"
+                        android:textSize="@dimen/text_medium_size"
+                        tools:text="@string/activity_quotation_car_number_city_tv" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/activity_quotation_car_number_contract_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:textColor="@color/brownish_grey"
+                        android:textColorHint="@color/appintro_description"
+                        android:textSize="@dimen/text_medium_size"
+                        tools:text="@string/activity_quotation_car_number_contract_tv" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/activity_quotation_car_series_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:textColor="@color/brownish_grey"
+                        android:textColorHint="@color/appintro_description"
+                        android:textSize="@dimen/text_medium_size"
+                        tools:text="@string/activity_quotation_car_series_tv" />
+
+                    <tlt.th.co.toyotaleasing.view.OwaspEditText
+                        android:id="@+id/activity_quotation_phone_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:hint="@string/activity_quotation_phone"
+                        android:imeOptions="actionDone"
+                        android:inputType="number|textNoSuggestions"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/brownish_grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="@dimen/text_large_size" />
+
+
+                    <tlt.th.co.toyotaleasing.view.OwaspEditText
+                        android:id="@+id/activity_quotation_email_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:hint="@string/activity_quotation_email"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:singleLine="true"
+                        android:textColor="@color/brownish_grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="@dimen/text_large_size" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/bg_main_customer" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/activity_quotation_topic_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:text="@string/activity_quotation_topic_2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_extra_large_size" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_insurance" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/form_quotation_btn_add_insurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="4dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:drawableStart="@drawable/ic_add_circle_outline_png"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:gravity="center_vertical"
+                        android:paddingStart="24dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="24dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/activity_quotation_btn_add"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium_size" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:gravity="center_horizontal"
+                    android:text="@string/activity_quotation_hint_add"
+                    android:textColor="@color/appintro_description"
+                    android:textSize="@dimen/text_medium_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/form_quotation_txt_view_coverage_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawableStart="@drawable/ic_info_png"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:text="@string/activity_quotation_btn_converageType"
+                    android:textColor="@color/terracotta" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/bg_main_customer" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/activity_quotation_topic_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/rsu_bold"
+                    android:text="@string/activity_quotation_topic_3"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_extra_large_size" />
+
+                <tlt.th.co.toyotaleasing.view.OwaspEditText
+                    android:id="@+id/form_quotation_input_more_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/bg_edittext"
+                    android:fontFamily="@font/rsu_bold"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:lines="4"
+                    android:maxLines="4"
+                    android:textColor="@color/brownish_grey"
+                    android:textSize="@dimen/text_large_size" />
+
+                <RadioGroup
+                    android:id="@+id/activity_quotation_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/form_quotation_radio_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:text="@string/activity_quotation_radio_1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium_size"
+                        app:buttonTint="@color/terracotta" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/form_quotation_radio_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:text="@string/activity_quotation_radio_2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium_size"
+                        app:buttonTint="@color/terracotta" />
+                </RadioGroup>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/form_quotation_btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/selector_btn_confirm_green"
+                    android:enabled="false"
+                    android:fontFamily="@font/rsu_bold"
+                    android:text="@string/activity_quotation_btn_submit"
+                    android:textColor="@color/text_normal_lighter"
+                    android:textSize="@dimen/text_large_size" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:elevation="10dp"
+                app:layout_anchor="@+id/layout_top"
+                app:layout_anchorGravity="top|center_horizontal"
+                app:srcCompat="@drawable/ic_quotation" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

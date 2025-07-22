@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="tlt.th.co.toyotaleasing.modules.pincode.AuthPincodeActivity">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/sidebar_menu_setting"
+        app:toolbarSize="normal"
+        tools:background="@color/bg_toolbar" />
+
+    <tlt.th.co.toyotaleasing.view.TLTButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/btn_green_light"
+        android:fontFamily="@font/custom_bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Reset Pincode"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_button_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_description" />
+</LinearLayout>

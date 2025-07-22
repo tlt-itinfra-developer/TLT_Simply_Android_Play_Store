@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="tlt.th.co.toyotaleasing.modules.register.RegisterFormActivity">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menuTitle="@string/forgot_pincode_select_type"
+        app:title="@string/register_title"
+        app:toolbarSize="normal" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/padding_large"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_large">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/page_title_register_form"
+                style="@style/Text_Bold_Large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:gravity="center"
+                android:text="@string/registerform_title_header"
+                android:textColor="@color/brownish_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_1"
+                android:layout_width="215dp"
+                android:layout_height="147dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/page_title_register_form"
+                app:srcCompat="@drawable/simply_card_register" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/page_notice_register_form"
+                style="@style/Text_Bold_Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/registerform_notice_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_1" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_large"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/page_notice_register_form">
+
+                <tlt.th.co.toyotaleasing.view.OwaspEditText
+                    android:id="@+id/input_register_form_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_envelope"
+                    android:drawablePadding="16dp"
+                    android:fontFamily="@font/custom_regular"
+                    android:hint="@string/registerform_email_hint"
+                    android:inputType="textEmailAddress|textNoSuggestions"
+                    android:maxLines="1"
+                    android:textColor="@color/text_normal"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/form_text_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<com.google.android.material.textfield.TextInputLayout-->
+            <!--android:id="@+id/textinput_birthdate"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginTop="@dimen/margin_small"-->
+            <!--android:textColor="@color/text_normal"-->
+            <!--android:textColorHint="@color/text_hint"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/textinput_email">-->
+
+            <!--<tlt.th.co.toyotaleasing.view.OwaspEditText-->
+            <!--android:id="@+id/input_register_form_birthdate"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:clickable="false"-->
+            <!--android:drawableStart="@drawable/ic_birthdate"-->
+            <!--android:drawablePadding="16dp"-->
+            <!--android:focusable="false"-->
+            <!--android:fontFamily="@font/custom_regular"-->
+            <!--android:hint="@string/registerform_birthdate_hint"-->
+            <!--android:inputType="textNoSuggestions"-->
+            <!--android:maxLines="1"-->
+            <!--android:textColor="@color/text_normal"-->
+            <!--android:textColorHint="@color/text_hint"-->
+            <!--android:textSize="@dimen/form_text_size" />-->
+            <!--</com.google.android.material.textfield.TextInputLayout>-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/select_input_type_txt"
+                style="@style/Text_Bold_Large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:gravity="start|center_vertical"
+                android:text="@string/registerform_personal_id_type_title"
+                android:textColor="@color/brownish_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textinput_email" />
+
+            <RadioGroup
+                android:id="@+id/radio_input_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/select_input_type_txt">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radio_id_card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="@font/custom_regular"
+                    android:gravity="top"
+                    android:text="@string/registerform_radio_id_card"
+                    android:textColor="@color/text_normal"
+                    android:textSize="@dimen/text_button_size"
+                    app:buttonTint="@color/teal_500" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radio_passport_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:fontFamily="@font/custom_regular"
+                    android:gravity="top"
+                    android:text="@string/registerform_radio_passport"
+                    android:textColor="@color/text_normal"
+                    android:textSize="@dimen/text_button_size"
+                    app:buttonTint="@color/teal_500" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput_id_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio_input_type">
+
+                <tlt.th.co.toyotaleasing.view.OwaspEditText
+                    android:id="@+id/input_register_form_id_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_id_card"
+                    android:drawablePadding="16dp"
+                    android:fontFamily="@font/custom_regular"
+                    android:maxLength="13"
+                    android:hint="@string/registerform_id_card_hint"
+                    android:inputType="number|textNoSuggestions"
+                    android:textColor="@color/text_normal"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/form_text_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/contract_type_txt"
+                style="@style/Text_Bold_Large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:gravity="start|center_vertical"
+                android:text="@string/registerform_fill_contract_number_title"
+                android:textColor="@color/brownish_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textinput_id_card" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput_contract"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contract_type_txt">
+
+                <tlt.th.co.toyotaleasing.view.OwaspEditText
+                    android:id="@+id/input_register_form_contract"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_id_card"
+                    android:drawablePadding="16dp"
+                    android:fontFamily="@font/custom_regular"
+                    android:hint="@string/registerform_contract_hint"
+                    android:inputType="textNoSuggestions"
+                    android:maxLength="10"
+                    android:textColor="@color/text_normal"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/form_text_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput_simply_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textinput_contract">
+
+                <tlt.th.co.toyotaleasing.view.OwaspEditText
+                    android:id="@+id/input_register_form_citizen_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_simply_id"
+                    android:drawablePadding="16dp"
+                    android:fontFamily="@font/custom_regular"
+                    android:hint="@string/registerform_customer_id_hint"
+                    android:inputType="number|textNoSuggestions"
+                    android:maxLength="12"
+                    android:textColor="@color/text_normal"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/form_text_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/notice_dialog_fragment_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/padding_small"
+                android:src="@drawable/ic_info_alert"
+                app:layout_constraintBottom_toBottomOf="@+id/textinput_simply_id"
+                app:layout_constraintEnd_toEndOf="@+id/textinput_simply_id"
+                app:layout_constraintTop_toTopOf="@+id/textinput_simply_id" />
+
+            <!--<androidx.appcompat.widget.AppCompatTextView-->
+            <!--android:id="@+id/txt_id_card_description"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:fontFamily="@font/custom_regular"-->
+            <!--android:gravity="start"-->
+            <!--android:includeFontPadding="false"-->
+            <!--android:text="@string/Group_txt_id_card_description"-->
+            <!--android:textColor="@color/text_normal"-->
+            <!--android:textSize="15sp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/textinput_id_card" />-->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit_register_form"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:background="@drawable/selector_btn_confirm_green"
+                android:fontFamily="@font/custom_bold"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/registerform_btn_next"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_button_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textinput_simply_id" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/register_simply_id_type_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="image_1,page_notice_register_form,textinput_simply_id,notice_dialog_fragment_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/register_id_card_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:constraint_referenced_ids="select_input_type_txt,radio_input_type,textinput_id_card,txt_description"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/register_contract_number_group"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
+                app:constraint_referenced_ids="contract_type_txt,textinput_contract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:fontFamily="@font/custom_regular"
+                android:gravity="bottom|center_horizontal"
+                android:text="@string/registerform_txt_description"
+                android:textColor="@color/text_normal"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_submit_register_form" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/page_footer_register_form"
+                style="@style/Text_Bold_Large"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:gravity="center"
+                android:text="@string/registerform_select_type_register"
+                android:textColor="@color/brownish_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_description" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

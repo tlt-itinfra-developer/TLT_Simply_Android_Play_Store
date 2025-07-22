@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout_thaipost_track_website"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#efefef"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_register_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_regular"
+            android:includeFontPadding="false"
+            android:textColor="#4ba48c"
+            android:textSize="@dimen/text_medium_size"
+            tools:text="เลขลงทะเบียน Z1234856f8" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_thaipost_track_website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_regular"
+            android:includeFontPadding="false"
+            android:text="@string/tax_delivery_thaipost_website"
+            android:textColor="@color/cherry_red"
+            android:textSize="@dimen/text_medium_size" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_sending"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_thaipost_track_website"
+        app:srcCompat="@drawable/ic_sending" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_address_to_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:text="@string/tax_delivery_address_to_delivery"
+        android:textColor="@color/brownish_grey"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_sending" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_address_to_delivery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/custom_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingStart="@dimen/padding_normal"
+        android:paddingEnd="@dimen/padding_normal"
+        android:textColor="@color/text_normal_lighter"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_address_to_delivery"
+        tools:text="171 ซอย11, ถนนสุขุมวิท กรุงเทพ 10110" />
+
+    <View
+        android:id="@+id/divier"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginEnd="24dp"
+        android:background="@color/unactive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_address_to_delivery" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divier" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

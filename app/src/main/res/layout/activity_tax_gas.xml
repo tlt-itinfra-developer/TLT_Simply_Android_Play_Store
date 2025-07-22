@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modules.tax.gas.GasTaxActivity">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/attach_ngv_title_2"
+        app:toolbarSize="medium" />
+
+    <androidx.cardview.widget.CardView
+        style="@style/MyCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="38dp"
+        android:layout_marginRight="@dimen/margin_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/header_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/date_tv"
+                        style="@style/Text_Regular_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:text="@string/attach_ctpl_date_mock"
+                        android:textColor="@color/grey"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/act_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/date_tv"
+                        app:srcCompat="@drawable/ic_tax_c" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/attach_documents_title"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/attach_ngv_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/act_image_view" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/attach_description_tv"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/attach_ngv_description"
+                        android:textColor="@color/terracotta_253"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/attach_documents_title" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/status_title_tv"
+                        style="@style/Text_Bold_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_alert_warning"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:textColor="@color/brownish_grey"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/attach_description_tv" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/please_send_ems_title_tv"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:text="@string/attach_ngv_please_send_title"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/status_title_tv" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/brand_address_tv"
+                        style="@style/Text_Bold_Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:text="@string/attach_ngv_address"
+                        android:textColor="@color/appintro_description"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/please_send_ems_title_tv" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ems_number_title_tv"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/terracotta_background"
+                    android:paddingStart="@dimen/padding_normal"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingEnd="@dimen/padding_normal"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="@string/attach_ngv_ems_title"
+                    android:textColor="@color/terracotta"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/header_layout" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/attach_footer_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ems_number_title_tv">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ems_number_text_input"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/margin_large"
+                        android:layout_marginEnd="@dimen/margin_large"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_hint"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <tlt.th.co.toyotaleasing.view.OwaspEditText
+                            android:id="@+id/ems_number_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_edit"
+                            android:fontFamily="@font/custom_regular"
+                            android:gravity="center"
+                            android:hint="@string/attach_ems_number_hint"
+                            android:inputType="textNoSuggestions"
+                            android:maxLines="1"
+                            android:textColor="@color/text_normal"
+                            android:textColorHint="@color/text_hint"
+                            android:textSize="@dimen/form_text_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textview_ems_number"
+                        style="@style/Text_Bold_Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_edit"
+                        android:drawablePadding="@dimen/margin_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="BHU 75435689" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/barrier_ems_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="bottom"
+                        app:constraint_referenced_ids="ems_number_text_input,textview_ems_number" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/attach_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:background="@drawable/selector_btn_confirm_green"
+                        android:enabled="false"
+                        android:fontFamily="@font/custom_bold"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/attach_ngv_button"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_button_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/barrier_ems_form" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/group_ems_sent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:constraint_referenced_ids="textview_ems_number" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/group_ems_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:constraint_referenced_ids="ems_number_text_input" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_large"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/attach_footer_layout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sts_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_corner_radius"
+        android:paddingStart="15dp"
+        android:paddingTop="30dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_approve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_bold"
+            android:gravity="center"
+            android:text="@string/h_approved_consideration"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xxlarge_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_description_approve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_bold"
+            android:gravity="center"
+            android:text="@string/txt_approved_consideration"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_medium_size"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_approve" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintBottom_toTopOf="@+id/card_view"
+            card_view:layout_constraintTop_toBottomOf="@+id/txt_description_approve" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#ffffff"
+            android:layout_marginTop="0dp"
+            card_view:layout_constraintTop_toBottomOf="@+id/view6"
+            card_view:cardCornerRadius="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lay_status_car"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:orientation="vertical">
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/txt_ref"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/txt_ref_no"
+                    android:textSize="@dimen/text_small_size"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txt_notify_type_1_datetime" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/txt_unique_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="RF-2019000000005"
+                    android:textColor="@color/grey_dark1"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    card_view:layout_constraintEnd_toStartOf="@+id/txt_status"
+                    card_view:layout_constraintStart_toEndOf="@+id/txt_ref"
+                    card_view:layout_constraintTop_toTopOf="@+id/txt_ref" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/txt_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_status_loan"
+                    android:textSize="@dimen/text_small_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_dark1"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/txt_cuurent_sts_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="pending"
+                    android:textColor="@color/Green"
+                    android:textSize="@dimen/text_medium_size"
+                    android:textStyle="bold"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toEndOf="@+id/txt_expire_date"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txt_status" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/txt_expire"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="left"
+                    android:src="@drawable/icon_expire"
+                    android:textColor="#000"
+                    android:textSize="@dimen/text_small_size"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/txt_expire_date"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txt_status" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/txt_expire_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="21/03/2020"
+                    android:textSize="@dimen/text_small_size"
+                    card_view:layout_constraintStart_toEndOf="@+id/txt_expire"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txt_unique_id" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/txt_stamp_date"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="left"
+                    android:src="@drawable/icon_stamp_date"
+                    android:textColor="#000"
+                    android:textSize="@dimen/text_small_size"
+                    android:visibility="visible"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/txt_stamp_date_des"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="@+id/txt_stamp_date_des" />
+
+                <tlt.th.co.toyotaleasing.view.TLTTextView
+                    android:id="@+id/txt_stamp_date_des"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="10/10/1010"
+                    android:textSize="@dimen/text_small_size"
+                    android:visibility="visible"
+                    card_view:layout_constraintStart_toEndOf="@+id/txt_expire"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txt_expire_date" />
+
+                <!--            <tlt.th.co.toyotaleasing.view.TLTTextView-->
+                <!--                android:id="@+id/txt_day"-->
+                <!--                android:layout_width="0dp"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:paddingLeft="10dp"-->
+                <!--                android:text="@string/txt_day"-->
+                <!--                android:textColor="#000"-->
+                <!--                android:textSize="@dimen/text_small_size"-->
+                <!--                card_view:layout_constraintStart_toEndOf="@+id/txt_expire_date"-->
+                <!--                card_view:layout_constraintTop_toTopOf="@+id/txt_expire" />-->
+
+                <Space
+                    android:id="@+id/space_1"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txt_stamp_date_des" />
+
+                <ImageView
+                    android:id="@+id/img_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/space_1"
+                    card_view:srcCompat="@drawable/image_car" />
+
+                <Space
+                    android:id="@+id/space_2"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/img_car" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_car_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="C-HR"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_dark1"
+                    android:textSize="@dimen/text_small_size"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/space_2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="HV Hi"
+                    android:textSize="12dp"
+                    card_view:layout_constraintStart_toStartOf="@+id/title_car_model"
+                    card_view:layout_constraintTop_toBottomOf="@+id/title_car_model" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="1,159,000"
+                    android:textColor="@color/grey_dark1"
+                    android:textSize="@dimen/text_small_size"
+                    android:textStyle="bold"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txt_model" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_cost_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:gravity="left"
+                    android:text="@string/txt_baht"
+                    android:textColor="@color/grey_dark1"
+                    android:textSize="@dimen/text_small_size"
+                    android:textStyle="bold"
+                    card_view:layout_constraintStart_toEndOf="@+id/txt_price"
+                    card_view:layout_constraintTop_toTopOf="@+id/txt_price" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

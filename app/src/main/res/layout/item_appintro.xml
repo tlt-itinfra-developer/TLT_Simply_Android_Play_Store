@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/txt_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bg_appintro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            tools:srcCompat="@drawable/bg_tutorial_1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_icon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            tools:srcCompat="@drawable/ic_appintro_mobile" />
+    </FrameLayout>
+
+    <tlt.th.co.toyotaleasing.view.TLTTextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/custom_bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_text_size"
+        app:layout_constraintBottom_toTopOf="@id/txt_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="ให้คุณชำระได้ง่ายๆ ค่างวด ภาษี และประกัน" />
+
+    <tlt.th.co.toyotaleasing.view.TLTTextView
+        android:id="@+id/txt_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/custom_bold"
+        android:gravity="center"
+        android:textColor="@color/appintro_description"
+        android:textSize="@dimen/appintro_description"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="ปัจฉิมนิเทศ เพียวซีอีโอสเปกแช่แข็งบาร์บีคิว
+พิซซ่าซาดิสม์เยอบีร่าบลอนด์ซีเรียส เวสต์รวมมิตร
+โปรโมชั่นคอมเพล็กซ์ มาม่าป่าไม้รากหญ้าฮิบรูเห่ย
+แจ๊กพ็อตหงวนยอมรับ" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MyCardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="0dp"
+    android:layout_marginEnd="0dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/padding_small">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_car_license"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/custom_bold"
+                android:gravity="bottom"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="กต 1528 - กรุงเทพมหานคร" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_contract_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/custom_bold"
+                android:gravity="bottom"
+                android:includeFontPadding="false"
+                android:textColor="@color/text_normal_lighter"
+                android:textSize="@dimen/text_small_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_car_license"
+                tools:text="เลขที่สัญญา : AHP1789534" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_home_contract_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/ic_fle"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/custom_bold"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="@string/my_car_txt_contract"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_small_size"
+                app:layout_constraintEnd_toStartOf="@id/divider1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_contract_number" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/margin_normal"
+                android:background="#cccccc"
+                app:layout_constraintBottom_toTopOf="@id/btn_home_contract_detail"
+                app:layout_constraintEnd_toStartOf="@id/btn_home_installment_detail"
+                app:layout_constraintStart_toEndOf="@id/btn_home_contract_detail"
+                app:layout_constraintTop_toBottomOf="@id/btn_home_contract_detail" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_home_installment_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/ic_list"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/custom_bold"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="@string/my_car_txt_detail_installment"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_small_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/divider1"
+                app:layout_constraintTop_toBottomOf="@id/txt_contract_number" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_car"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mycar_thumbnail_size"
+                android:layout_marginTop="@dimen/margin_small"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_home_installment_detail"
+                app:srcCompat="@drawable/bg_placeholder" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_installment_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_small"
+                android:fontFamily="@font/custom_bold"
+                android:includeFontPadding="false"
+                android:text="@string/my_car_txt_status_installment"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_car" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_installment_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/custom_regular"
+                android:includeFontPadding="false"
+                android:textColor="#b3b3b3"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_installment_status"
+                tools:text="11 ม.ค. 2561" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/progress_installment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="64dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_installment_date"
+                app:lottie_rawRes="@raw/lottie_car_progress"
+                tools:background="#8dff3300"
+                tools:layout_height="10dp"
+                tools:layout_width="200dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_full_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/custom_regular"
+                android:includeFontPadding="false"
+                android:text="@string/my_car_txt_full_payment"
+                android:textColor="@color/brownish_grey"
+                android:textSize="@dimen/text_small_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_installment" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_full_payment_installment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/custom_bold"
+                android:includeFontPadding="false"
+                android:textColor="@color/terracotta"
+                android:textSize="@dimen/text_medium_size"
+                app:layout_constraintStart_toStartOf="@id/txt_full_payment"
+                app:layout_constraintTop_toTopOf="@id/txt_full_payment"
+                tools:text="36 งวด" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="36dp"
+                android:fontFamily="@font/custom_regular"
+                android:includeFontPadding="false"
+                android:text="@string/my_car_txt_balance"
+                android:textColor="@color/brownish_grey"
+                android:textSize="@dimen/text_small_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_installment" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_balance_installment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/custom_bold"
+                android:includeFontPadding="false"
+                android:textColor="@color/terracotta"
+                android:textSize="@dimen/text_medium_size"
+                app:layout_constraintEnd_toEndOf="@id/txt_balance"
+                app:layout_constraintTop_toTopOf="@id/txt_full_payment"
+                tools:text="9 งวด" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="#d7d7d7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_balance_installment" />
+
+            <include
+                android:id="@+id/layout_mycar_status_normal"
+                layout="@layout/layout_mycar_status_normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <include
+                android:id="@+id/layout_mycar_status_direct_debit"
+                layout="@layout/layout_mycar_status_direct_debit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <include
+                android:id="@+id/layout_mycar_status_updating"
+                layout="@layout/layout_mycar_status_updating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <include
+                android:id="@+id/layout_mycar_status_close"
+                layout="@layout/layout_mycar_status_close"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <include
+                android:id="@+id/layout_mycar_status_legal_other"
+                layout="@layout/layout_mycar_status_legal_other"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_installment_date" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.cardview.widget.CardView>

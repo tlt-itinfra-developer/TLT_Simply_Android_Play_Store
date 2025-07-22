@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MyCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_license"
+            style="@style/Text_Bold_Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/space"
+            tools:text="กต - 1528 กรุงเทพมหานคร" />
+
+        <tlt.th.co.toyotaleasing.view.TLTButton
+            android:id="@+id/btn_installment"
+            style="@style/Text_Bold_Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:background="@drawable/selector_btn_confirm_edit_mailing_address"
+            android:padding="8dp"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingEnd="@dimen/margin_normal"
+            android:text="@string/qrcode_txt_installment"
+            android:textAllCaps="false"
+            android:textColor="@drawable/selector_text_normal"
+            app:layout_constraintEnd_toStartOf="@id/space_installment_tax"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_license" />
+
+        <Space
+            android:id="@+id/space_installment_tax"
+            android:layout_width="@dimen/margin_normal"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/btn_tax"
+            app:layout_constraintStart_toEndOf="@id/btn_installment" />
+
+        <tlt.th.co.toyotaleasing.view.TLTButton
+            android:id="@+id/btn_tax"
+            style="@style/Text_Bold_Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:background="@drawable/selector_btn_confirm_edit_mailing_address"
+            android:padding="8dp"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingEnd="@dimen/margin_normal"
+            android:text="@string/qrcode_txt_tax"
+            android:textAllCaps="false"
+            android:textColor="@drawable/selector_text_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/space_installment_tax"
+            app:layout_constraintTop_toTopOf="@id/btn_installment" />
+
+        <tlt.th.co.toyotaleasing.view.TLTButton
+            android:id="@+id/btn_insurance"
+            style="@style/Text_Bold_Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:background="@drawable/selector_btn_confirm_edit_mailing_address"
+            android:padding="8dp"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingEnd="@dimen/margin_normal"
+            android:text="@string/qrcode_txt_insurance"
+            android:textAllCaps="false"
+            android:textColor="@drawable/selector_text_normal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/space_insurance_other"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_installment" />
+
+        <Space
+            android:id="@+id/space_insurance_other"
+            android:layout_width="@dimen/margin_normal"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/btn_others"
+            app:layout_constraintStart_toEndOf="@id/btn_insurance" />
+
+        <tlt.th.co.toyotaleasing.view.TLTButton
+            android:id="@+id/btn_others"
+            style="@style/Text_Bold_Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:background="@drawable/selector_btn_confirm_edit_mailing_address"
+            android:padding="8dp"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingEnd="@dimen/margin_normal"
+            android:text="@string/qrcode_txt_others"
+            android:textAllCaps="false"
+            android:textColor="@drawable/selector_text_normal"
+            app:layout_constraintEnd_toEndOf="@+id/btn_installment"
+            app:layout_constraintStart_toEndOf="@id/space_insurance_other"
+            app:layout_constraintTop_toBottomOf="@id/btn_installment" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_others" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

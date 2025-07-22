@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/register_title"
+        app:toolbarSize="normal" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <tlt.th.co.toyotaleasing.view.TLTTextView
+                android:id="@+id/page_title_select_phone"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/custom_bold"
+                android:gravity="center"
+                android:text="@string/selectphone_header_title"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/header_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_mail"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="39dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_welcome"
+                app:srcCompat="@drawable/ic_phone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_phonenumber_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_mail"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_select_phone" />
+
+            <tlt.th.co.toyotaleasing.view.TLTTextView
+                android:id="@+id/txt_contact_staff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:drawableEnd="@drawable/ic_chevron_circle_right"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/custom_bold"
+                android:gravity="center"
+                android:text="@string/selectphone_contact_staff"
+                android:textColor="@color/text_normal"
+                android:textSize="20sp"
+                app:fontType="bold" />
+
+            <tlt.th.co.toyotaleasing.view.TLTTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:fontFamily="@font/custom_regular"
+                android:gravity="center"
+                android:text="@string/selectphone_phone_not_found"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

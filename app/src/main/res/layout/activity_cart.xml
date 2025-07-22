@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/toolbar_medium_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/summary_insurance_payment_title"
+        app:toolbarSize="medium" />
+
+    <androidx.cardview.widget.CardView
+        style="@style/MyCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/toolbar_large_content_card_margin_top"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginBottom="0dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_normal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_summary_insurance_payment_title"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/summary_insurance_payment_header"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_summary_insurance_payment_date"
+                    style="@style/Text_Regular_Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey"
+                    app:layout_constraintBottom_toBottomOf="@id/text_summary_insurance_payment_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text_summary_insurance_payment_title"
+                    tools:text="11 ม.ค. 2561" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_summary_insurance_payment_car_license"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_summary_insurance_payment_title"
+                    tools:text="กต - 1528 กรุงเทพมหานคร" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_summary_insurance_payment_contract_number"
+                    style="@style/Text_Bold_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_normal_lighter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_summary_insurance_payment_car_license"
+                    tools:text="เลขที่สัญญา : AHP1789534" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_summary_insurance_payment_contract_number"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_cart" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_add_summary"
+                    style="@style/MyCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_view"
+                    tools:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text_Bold_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:drawableStart="@drawable/ic_add_circle_outline_png"
+                        android:drawablePadding="@dimen/drawable_padding"
+                        android:fontFamily="@font/rsu_bold"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingEnd="@dimen/padding_normal"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:text="@string/summary_payment_add_summary"
+                        android:textColor="@color/black" />
+                 </androidx.cardview.widget.CardView>
+
+
+
+                <View
+                    android:id="@+id/divier"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/grey_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_add_summary"
+                    android:visibility="gone"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_detail_description_payment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/custom_bold"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/payment_text_description"
+                    android:textColor="@color/text_disable"
+                    android:textSize="@dimen/text_small_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divier"
+                    android:visibility="gone"/>
+
+                <Space
+                    android:id="@+id/spacing"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title_detail_description_payment" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_summary_insurance_payment_total_paid"
+                    style="@style/Text_Bold_Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toTopOf="@id/button_barrier"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spacing"
+                    app:layout_constraintVertical_bias="1"
+                    tools:text="รวมยอดชำระ 15,000.00 บาท" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/button_barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="top"
+                    app:constraint_referenced_ids="btn_attach_document_process, btn_summary_insurance_payment_total_paid" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_attach_document_process"
+                    style="@style/Button_Success"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/btn_attach_document_process"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <tlt.th.co.toyotaleasing.view.TLTButtonWidget
+                    android:id="@+id/btn_summary_insurance_payment_total_paid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:iconDrawable="@drawable/ic_wallet"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:title="@string/btn_payment" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+     </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

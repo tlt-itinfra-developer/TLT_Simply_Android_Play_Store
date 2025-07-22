@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <tlt.th.co.toyotaleasing.view.ToolbarWidget
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/insurance_information_recommend_premium"
+        app:toolbarSize="normal" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/insurance_information_nestedscrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <tlt.th.co.toyotaleasing.view.insurance.CarInformationWidget
+                android:id="@+id/recommend_car_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <tlt.th.co.toyotaleasing.view.insurance.InsuranceWidget
+                android:id="@+id/recommend_information_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recommend_car_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/recommend_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rsu_bold"
+                android:gravity="center"
+                android:text="@string/insurance_information_recommend_premium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recommend_information_view" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recommend_card_view"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recommend_title_tv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <tlt.th.co.toyotaleasing.view.LazyImageView
+                        android:id="@+id/recommend_iv"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:srcCompat="@drawable/logo_company" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_no_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:gravity="start"
+                        android:paddingEnd="16dp"
+                        android:text="@string/insurance_information_no"
+                        android:textSize="@dimen/text_medium_size"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_iv"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_company_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:gravity="start"
+                        android:paddingEnd="16dp"
+                        android:text="@string/insurance_information_company"
+                        android:textSize="@dimen/text_medium_size"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/recommend_no_title_tv"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_no_field_tv"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_protection_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:paddingEnd="16dp"
+                        android:text="@string/insurance_information_protection_type"
+                        android:textSize="@dimen/text_medium_size"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/recommend_no_title_tv"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_company_field_tv"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_insurance_value_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:paddingEnd="16dp"
+                        android:text="@string/insurance_information_insurance"
+                        android:textSize="@dimen/text_medium_size"
+                        android:visibility="gone"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/recommend_no_title_tv"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_protection_type_field_tv"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_condition_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:paddingEnd="16dp"
+                        android:visibility="gone"
+                        android:text="@string/insurance_information_condition"
+                        android:textSize="@dimen/text_medium_size"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/recommend_no_title_tv"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_insurance_value_field_tv"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_end_of_protection_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:text="@string/insurance_information_end_of_protection"
+                        android:textSize="@dimen/text_medium_size"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/recommend_no_title_tv"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_condition_field_tv" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/recommend_barrier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="end"
+                        app:constraint_referenced_ids="recommend_no_title_tv,recommend_no_title_tv,recommend_protection_type_tv,recommend_end_of_protection_tv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_no_field_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:gravity="end"
+                        android:textSize="@dimen/text_medium_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/recommend_barrier"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_iv"
+                        tools:text="บริษัทวิริยะ ประกันภัย" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_company_field_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:gravity="end"
+                        android:textSize="@dimen/text_medium_size"
+                        app:layout_constraintEnd_toEndOf="@+id/recommend_no_field_tv"
+                        app:layout_constraintStart_toEndOf="@+id/recommend_barrier"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_no_field_tv"
+                        tools:text="12345678901821821828" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_protection_type_field_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:gravity="end"
+                        android:textSize="@dimen/text_medium_size"
+                        app:layout_constraintEnd_toEndOf="@+id/recommend_no_field_tv"
+                        app:layout_constraintStart_toEndOf="@+id/recommend_barrier"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_company_field_tv"
+                        tools:text="1234567890182182188828" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_insurance_value_field_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:gravity="end"
+                        android:visibility="gone"
+                        android:textSize="@dimen/text_medium_size"
+                        app:layout_constraintEnd_toEndOf="@+id/recommend_no_field_tv"
+                        app:layout_constraintStart_toEndOf="@+id/recommend_barrier"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_protection_type_field_tv"
+                        tools:text="5000000 บาท" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_condition_field_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rsu_bold"
+                        android:gravity="end"
+                        android:visibility="gone"
+                        android:textSize="@dimen/text_medium_size"
+                        app:layout_constraintEnd_toEndOf="@+id/recommend_no_field_tv"
+                        app:layout_constraintStart_toEndOf="@+id/recommend_barrier"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_insurance_value_field_tv"
+                        tools:text="123123213123" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/recommend_end_of_protection_field_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:fontFamily="@font/rsu_bold"
+                        android:gravity="end"
+                        android:textSize="@dimen/text_medium_size"
+                        app:layout_constraintEnd_toEndOf="@+id/recommend_no_field_tv"
+                        app:layout_constraintStart_toEndOf="@+id/recommend_barrier"
+                        app:layout_constraintTop_toBottomOf="@+id/recommend_condition_field_tv"
+                        tools:text="xx / xx / 2558" />
+
+                    <View
+                        android:id="@+id/barrier_btn_insurance"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginEnd="35dp"
+                        android:background="#d7d7d7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/recommend_end_of_protection_tv" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_insurance_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:fontFamily="@font/custom_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_large_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/barrier_btn_insurance"
+                        tools:text="ยอดชำระ 15,000.00 บาท" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_insurance_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginEnd="@dimen/margin_large"
+                        android:background="@drawable/selector_btn_confirm_green"
+                        android:fontFamily="@font/custom_bold"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/btn_pay_insurance_single_line"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_button_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_insurance_pay" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/btn_insurance_pay" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/not_found_recommend_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recommend_title_tv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_large"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:paddingEnd="@dimen/margin_large"
+                    android:paddingBottom="@dimen/margin_normal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/not_found_recommend_img_title"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_lock_greybg" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/not_found_recommend_no_title_tv"
+                        style="@style/Text_Bold_Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:fontFamily="@font/rsu_bold"
+                        android:gravity="center"
+                        android:text="@string/insurance_recommend_not_found_description"
+                        android:textColor="@color/text_normal_lighter"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/not_found_recommend_img_title" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="recommend_card_view,not_found_recommend_card_view" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recommend_promotion_card"
+                style="@style/MyCardView_Margin_Normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier_recommend">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/insurance_information_faqs_cl"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_filter_car_unselect">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_faqs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="26dp"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/requirement" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/insurance_information_faqs_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/custom_bold"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="@string/recommend_quotation_or_promotion_message"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_large_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ic_faqs"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_angle_right_dark" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommend_promotion_card" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_found_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="recommend_card_view" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_not_found_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="not_found_recommend_card_view" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

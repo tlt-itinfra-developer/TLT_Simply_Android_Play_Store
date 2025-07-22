@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_notify"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_fle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_notify_type_3_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/custom_bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/text_disable"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ic_notify"
+        app:layout_constraintTop_toTopOf="@id/ic_notify"
+        tools:text="ท่านเหลืองวดสุดท้ายที่ต้องชำระอีก 1 งวด ทาง
+บริษัทได้ทำการจัดส่งเอกสารชุดโอนกรรมสิทธิ์
+ให้กับท่านตามที่อยู่ โปรกจัดเตรียมเอกสารแนบ
+ประกอบการโอนรถยนต์ของท่านหลังจากชำระ
+ค่างวดสุดท้ายครบถ้วน
+เอกสารเบื้องต้น :
+- สำเนาบัตรประชาชน 2 ชุด
+- สำเนาบัตรทะเบียนบ้าน 2 ชุด
+- ใบเปลี่ยนแปลง ชื่อ - นามสกุล (ถ้ามี)
+- สำเนาป้ายภาษีต่ออายุปีปัจจุบัน
+- เอกสารชุดโอนกรรมสิทธิ์ (ที่ทางบริษัท
+  จัดส่งให้)" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_see_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@drawable/btn_green_light"
+        android:fontFamily="@font/custom_bold"
+        android:gravity="center"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_small"
+        android:text="@string/notify_btn_see_more"
+        android:textColor="@drawable/selector_text_normal"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintEnd_toEndOf="@id/txt_notify_type_3_detail"
+        app:layout_constraintTop_toBottomOf="@id/txt_notify_type_3_detail" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/unactive"
+        app:layout_constraintEnd_toEndOf="@id/txt_notify_type_3_detail"
+        app:layout_constraintStart_toStartOf="@id/txt_notify_type_3_detail"
+        app:layout_constraintTop_toBottomOf="@id/btn_see_more" />
+</androidx.constraintlayout.widget.ConstraintLayout>

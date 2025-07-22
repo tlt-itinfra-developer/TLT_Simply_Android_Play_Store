@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_payment_list_name_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rsu_bold"
+        android:gravity="start"
+        android:textColor="@color/appintro_description"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txt_payment_list_price_tv"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ค่างวดรถยนต์" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_payment_list_price_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rsu_bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_payment_list_price_currency_tv"
+        app:layout_constraintEnd_toStartOf="@+id/txt_payment_list_price_currency_tv"
+        app:layout_constraintTop_toTopOf="@+id/txt_payment_list_price_currency_tv"
+        tools:text="21,216.00 " />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_payment_list_price_currency_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rsu_bold"
+        android:gravity="center"
+        android:text="@string/refinance_baht"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_medium_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
